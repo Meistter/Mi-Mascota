@@ -1,12 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+// @import '../node_modules/@syncfusion/ej2-material-theme/styles/material.css';
 :root{
-    --header-background : #102937
-    --background-gray  : #D9D9D9    // To use on header and navbar 
-    --card-background-gray : #EEEEEE // to be used on cards
-    --card-button-background: #E3EAEC 
-    --navbar-selected-first: #C2C2C2
-    --navbar-selected-second: #ADACAC
-    --navbar-selected-third: #A1A1A1        
+    --header-background : #102937;
+    --background-gray  : #D9D9D9;    // To use on header and navbar 
+    --card-background-gray : #EEEEEE; // to be used on cards
+    --card-button-background: #E3EAEC; 
+    --navbar-selected-first: #C2C2C2;
+    --navbar-selected-second: #ADACAC;
+    --navbar-selected-third: #A1A1A1;        
 }
 *{
     margin: 0;
@@ -18,3 +18,5 @@ html{
     font-family: 'IBM Plex Sans KR', sans-serif;
 
 }      
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
