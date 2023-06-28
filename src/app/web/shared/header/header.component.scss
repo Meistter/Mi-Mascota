@@ -1,5 +1,59 @@
-.header__container {
+.header__top {
     background-color: var(--header-background);
-    height: 115px;
+    height: 88px;
+    width: 100%;
+    padding: 6px 20px 10px 20px;
+
+    img {
+        width: 66px;
+        height: 36px;
+        margin-left: 16px;
+    }
+}
+
+.header__menu {
+    background-color: var(--background-gray);
+    height: 28px;
     width: 100%;
 }
+
+.header__top__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__top__menu .header__top__login {
+    display: flex;
+    align-items: center;
+
+    p {
+        padding: 5px;
+        color: white;
+        font-size: 14px;
+        font-family: 'IBM Plex Sans KR';
+    }
+}
+
+.header__top__search {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    button {
+        width: 26px;
+        height: 26px;
+        border-radius: 5px;
+        border-width: 0px;
+        background-color: var(--background-gray);
+    }
+}
+.header__top__search .header__top__searchForm {
+    // min-width: 317px;
+    height: 26px;
+    background-color: var(--background-gray);
+    border-radius: 5px;
+    border-width: 0px;
+    margin-right: 8px;
+}
+

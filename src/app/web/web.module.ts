@@ -6,6 +6,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     imports: [
         CommonModule,
         WebRoutingModule,
-        SharedModule
+        SharedModule,
+        MaterialModule
     ]
 })
 export class WebModule { }
