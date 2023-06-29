@@ -1,4 +1,4 @@
-.header__top {
+.header-top {
     background-color: var(--header-background);
     height: 88px;
     width: 100%;
@@ -11,26 +11,36 @@
     }
 }
 
-.header__menu {
+.header-menu {
     background-color: var(--background-gray);
     height: 28px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
     a{
         font-family: 'IBM Plex Sans KR';
-    }
-    
+        font-size: 14px;
+        text-decoration: none;
+        color: var(--black);
+    }        
 }
-
-.header__top__menu {
+.header-menu .header-menu__left {
+    display: flex;
+    align-items: center;
+}
+.header-menu .header-menu__right {
+    @extend .header-menu__left
+}
+.header-top__menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.header__top__menu .header__top__login {
+.header-top__menu .header-top__login {
     display: flex;
     align-items: center;
 
@@ -42,7 +52,7 @@
     }
 }
 
-.header__top__search {
+.header-top__search {
     display: flex;
     align-items: center;
     margin-top: 10px;
@@ -55,11 +65,11 @@
         background-color: var(--background-gray);
     }
 }
-.header__top__form {
+.header-top__form {
    width: 100%;
    padding-right: 8px
 }
-.header__top__search .header__top__searchForm {   
+.header-top__search .header-top__searchForm {   
     width: 100%;
     height: 26px;
     background-color: var(--background-gray);

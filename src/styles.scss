@@ -6,7 +6,8 @@
     --card-button-background: #E3EAEC; 
     --navbar-selected-first: #C2C2C2;
     --navbar-selected-second: #ADACAC;
-    --navbar-selected-third: #A1A1A1;        
+    --navbar-selected-third: #A1A1A1;  
+    --black: #000000;      
 }
 *{
     margin: 0;
@@ -15,5 +16,9 @@
 }
 html{
     font-size: 62.5%; //Usaremos rems para que desde el explorador se pueda cambiar el tamaño de la fuente    
-    //font-family: 'IBM Plex Sans KR', sans-serif;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }      
+.mat-icon {
+    width: auto !important;
+    height: auto !important;
+}
