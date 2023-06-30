@@ -1,4 +1,8 @@
 // @import '../node_modules/@syncfusion/ej2-material-theme/styles/material.css';
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
+
 :root{
     --header-background : #102937;
     --background-gray  : #D9D9D9;    // To use on header and navbar 

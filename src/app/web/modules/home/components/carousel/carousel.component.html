@@ -1,1 +1,9 @@
-<p>carousel works!</p>
+<div class="container">
+    <swiper [config]="config" (swiper)="automatico($event)" >
+         <ng-template swiperSlide *ngFor="let slide of slides">
+             <a [href]="" target="_blank">
+                  <img class="swiper-image" [src]="slide.image" alt="foto" />
+             </a>
+        </ng-template>
+   </swiper>
+</div>
