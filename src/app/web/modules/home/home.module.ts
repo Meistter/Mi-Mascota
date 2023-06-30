@@ -4,12 +4,18 @@ import { SwiperModule } from 'swiper/angular';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { SwitcherComponent } from './components/switcher/switcher.component';
+import { CardComponent } from './components/card/card.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    CarouselComponent
+    CarouselComponent,
+    SwitcherComponent,
+    CardComponent,
+    CardsComponent
   ],
   imports: [
     CommonModule,
