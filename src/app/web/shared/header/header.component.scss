@@ -43,8 +43,10 @@
 .header-top__menu .header-top__login {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     p {
+        margin: 0 !important;
         padding: 5px;
         color: white;
         font-size: 14px;
