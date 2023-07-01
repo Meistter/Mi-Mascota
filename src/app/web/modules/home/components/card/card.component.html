@@ -6,16 +6,17 @@
       <article class="info__left">
         <h1>{{pet.name}}</h1>
         <h2>{{pet.description}}</h2>
-        <div>
-          <p>{{pet.health}}</p>
-          <p>{{pet.age}}</p>
-          <p>{{pet.vaccinated}}</p>
+        <div class="info__left-details">
+          <p>Salud: {{pet.health}} | </p>
+          <p> Edad: {{pet.age}} | </p>          
+          <p *ngIf="pet.vaccinated; else elseBlock"> Vacunado: Si </p>
+          <ng-template #elseBlock><p> Vacunado: No</p></ng-template>
         </div>
       </article>
       <article class="info__right">
-        <p>{{pet.location}}</p>
-        <button></button>
-        <button></button>
+        <p><mat-icon style="font-size: 12px; ">location_on</mat-icon>{{pet.location}}</p>
+        <button class="detail-button">Ver detalles</button>
+        <button class="adopt-button">¡Darle un Hogar!</button>
       </article>
     </mat-card-content>
     

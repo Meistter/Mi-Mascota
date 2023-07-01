@@ -10,8 +10,8 @@ export class CardsComponent {
 
   pets: Pet[] = [
     {name:'Sofia Victoria', 
-    description: 'Me gusta jugar con los calcetines de mis padres y morderme la cola',
-    age:3, health:'Buena', location:'Barquisimeto', vaccinated:true,
+    description: 'Me gusta jugar con los calcetines de mis padres y morderme la cola una y otra vez hasta que mis padres tienen que separarme porque me puedo hacer daño, solo como gatarina CatShow',
+    age:3, health:'Buena', location:'Barquisimeto', vaccinated:false,
     photos:[{url: 'https://i.postimg.cc/JzMH545K/sofia.jpg', alt: ''}]},
     {name:'Pirata Sparrow', 
     description: 'Amigable, le gustan los niños y es super cariñoso, buena compañía para personas mayores',
