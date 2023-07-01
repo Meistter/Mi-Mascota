@@ -22,7 +22,8 @@
     padding-right: 8px;
     a{
         font-family: 'IBM Plex Sans KR';
-        font-size: 14px;
+        font-size: 13px;
+        // font-size: 3.6vw;
         text-decoration: none;
         color: var(--black);
     }        
@@ -58,6 +59,7 @@
     margin-top: 10px;
     width: 100%;
     button {
+        color: black;
         width: 26px;
         height: 26px;
         border-radius: 5px;
