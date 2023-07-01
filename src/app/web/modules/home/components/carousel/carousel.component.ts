@@ -9,7 +9,7 @@ import { interval } from 'rxjs';
 })
 export class CarouselComponent {
 
-slides = [{image:'../../../../assets/banner_notext.jpg', url:''},
+slides = [{image:'https://i.postimg.cc/hGWrcgwK/banner-notext.jpg', url:''},
           // {image:'../../../../assets/logo.jpg', url:''}
          ]
 
