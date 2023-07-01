@@ -7,6 +7,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { SwitcherComponent } from './components/switcher/switcher.component';
 import { CardComponent } from './components/card/card.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { MaterialModule } from 'src/app/material/material.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CardsComponent } from './components/cards/cards.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SwiperModule
+    SwiperModule,
+    MaterialModule
   ]
 })
 export class HomeModule { }

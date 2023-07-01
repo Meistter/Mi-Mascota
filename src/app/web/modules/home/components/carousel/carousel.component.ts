@@ -10,7 +10,7 @@ import { interval } from 'rxjs';
 export class CarouselComponent {
 
 slides = [{image:'../../../../assets/banner_notext.jpg', url:''},
-          {image:'../../../../assets/logo.jpg', url:''}
+          // {image:'../../../../assets/logo.jpg', url:''}
          ]
 
   config: SwiperOptions = {
@@ -23,7 +23,7 @@ slides = [{image:'../../../../assets/banner_notext.jpg', url:''},
     };
 
     automatico(swiper: Swiper) {
-      const segundos = interval(10000);
+      const segundos = interval(60000);
       segundos.subscribe(() => {
       swiper.slideNext();
      });

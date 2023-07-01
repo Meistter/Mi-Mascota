@@ -1,0 +1,26 @@
+.card-container {
+    width: 90vw;   
+    background-color: var(--card-background-gray);
+    border-radius: 0px;
+    padding: 14px;
+    margin: 12px;
+}
+.card-container__articles {
+    display: flex;
+    justify-content: space-between;
+
+
+    .info__left{
+
+    }
+    .info__right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        button{
+            width:96px ;
+            height: 30px;
+            margin: 8px;
+        }
+    }
+}
