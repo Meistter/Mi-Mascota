@@ -1,4 +1,9 @@
-<app-header></app-header>
-   <router-outlet></router-outlet>
-<app-footer></app-footer>
-
+<mat-drawer-container class="sidenav-container" [hasBackdrop]="true">
+   <mat-drawer class="sidenav__menu" #drawer [mode]="'over'">
+   </mat-drawer>
+   <mat-drawer-content>
+      <app-header (sideNavOpen)="drawer.toggle()"></app-header>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+   </mat-drawer-content>
+</mat-drawer-container>

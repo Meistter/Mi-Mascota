@@ -1,5 +1,15 @@
 <section class="switcher-container">
-    <p>¡Tu amigo ideal espera por ti!</p>
+   <!-- <p> Ubicación: </p> -->
+     
+    <mat-form-field style="margin-top: 6px; margin-right: 6px;">
+        <mat-label>Ubicación</mat-label>
+        <mat-select disableRipple [(value)]="selected">
+          <mat-option *ngFor="let location of locations" [value]="location.value">
+            {{location.value}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    
     <div class="switcher__buttons">
         <button class="button-left">Adoptar</button>
         <button class="button-right">Rescatar</button>

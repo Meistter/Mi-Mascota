@@ -10,22 +10,22 @@ import { interval } from 'rxjs';
 export class CarouselComponent {
 
 slides = [{image:'https://i.postimg.cc/hGWrcgwK/banner-notext.jpg', url:''},
-          // {image:'../../../../assets/logo.jpg', url:''}
+           {image:'../../../../assets/logo.jpg', url:''}
          ]
 
   config: SwiperOptions = {
     loop: true,
     slidesPerView: 1,
-    spaceBetween: 50,
+    spaceBetween: 0,
     navigation: false,
-    pagination: { clickable: false },
-    scrollbar: { draggable: false },
+    pagination: { clickable: true },
+    scrollbar: { draggable: true },
     };
 
     automatico(swiper: Swiper) {
       const segundos = interval(60000);
       segundos.subscribe(() => {
-      swiper.slideNext();
+      swiper.slideNext();    
      });
  }
 }
