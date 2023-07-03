@@ -1,10 +1,36 @@
 <mat-drawer-container class="sidenav-container" [hasBackdrop]="true">
    <mat-drawer class="sidenav__menu" #drawer [mode]="'over'">
-      <h1>En construcción</h1>
+      <div class="menu__title"> <h1>Menú</h1> </div>
+      <mat-accordion>   
+              
+         <mat-expansion-panel class="mat-panel" (opened)="panelOpenState = true"(closed)="panelOpenState = false">
+           <mat-expansion-panel-header>
+             <mat-panel-title><h1>Animales y Razas</h1></mat-panel-title>                     
+           </mat-expansion-panel-header>
+                <mat-expansion-panel class="mat-panel" (opened)="panelOpenState = true"(closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title><h1>Perros</h1></mat-panel-title>                     
+                  </mat-expansion-panel-header>
+                  <div class="menu__element"> <a routerLink="#">Pequeños</a> </div>
+                  <div class="menu__element"> <a routerLink="#">Medianos</a> </div>
+                  <div class="menu__element"> <a routerLink="#">Grandes</a> </div>
+                </mat-expansion-panel>
+         </mat-expansion-panel>
+        
+         <div class="menu__element"> <a routerLink="home">Mascotas para Rescatar</a> </div>
+         <div class="menu__element"> <a routerLink="#">Mascotas Perdidas</a> </div>
+         <div class="menu__element"> <a routerLink="#">Denunciar Maltrato</a> </div>
+         <div class="menu__element"> <a routerLink="#">Contacto</a> </div>
+         <div class="menu__element"> <a routerLink="#">Iniciar/Cerrar Sesion</a> </div>
+
+
+       </mat-accordion>
+
    </mat-drawer>
-   <mat-drawer-content>
-      <app-header (sideNavOpen)="drawer.toggle()"></app-header>
-      <router-outlet></router-outlet>
-      <app-footer></app-footer>
-   </mat-drawer-content>
+  
+   <app-header (sideNavOpen)="drawer.toggle()"></app-header>
+   <router-outlet></router-outlet>
+   <app-footer></app-footer>
+  
 </mat-drawer-container>
+

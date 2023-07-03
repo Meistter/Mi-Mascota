@@ -1,5 +1,39 @@
-mat-drawer {
+.sidenav__menu {
     width: 60%;
-    height: 100%;
-    border: 1px solid #555;
+}
+.menu__title {
+    width: 100%;
+    height: 70px;
+    border: solid 1px;
+    border-color: var(--background-gray);
+  
+    h1{       
+        font-size: 26px;
+        font-weight: 600;
+        margin: 20px;
+    }
+}
+.mat-panel h1{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'IBM Plex Sans KR';
+    box-shadow: none;
+}
+.menu__element {
+    // margin-top: 10px;
+    width: 100%;
+    height: 45px;
+    border-bottom: solid 1px;
+    border-color: var(--background-gray);
+    padding: 12px;   
+    border-radius: 0 0 4px 4px;
+    a{      
+        font-size: 14px;
+        font-weight: 400;
+        font-family: 'IBM Plex Sans KR';
+        margin-left: 10px;
+       text-decoration: none;
+       cursor: pointer;
+       color: black;
+    }
 }

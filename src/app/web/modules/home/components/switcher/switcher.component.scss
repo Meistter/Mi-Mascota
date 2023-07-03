@@ -15,6 +15,7 @@
     
     button {
         font-size: 12px;
+        font-weight: 500;
         color: black;
         width: 70px;
         height: 32px;
@@ -22,7 +23,7 @@
         padding: 0;
         border: solid;
         border-color: black;
-        border-width: 1.5px;
+        border-width: 1px;
     }
     .button-left {
         border-radius: 4px 0 0 4px ;

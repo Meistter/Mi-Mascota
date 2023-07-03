@@ -2,7 +2,7 @@
     background-color: var(--header-background);
     height: 88px;
     width: 100%;
-    padding: 6px 20px 10px 20px;
+    padding: 5px 20px 10px 20px;
 
     img {
         width: 66px;
@@ -20,10 +20,11 @@
     align-items: center;
     padding-left: 8px;
     padding-right: 8px;
+    margin: 0;
+    
     a{
         font-family: 'IBM Plex Sans KR';
         font-size: 13px;
-        // font-size: 3.6vw;
         text-decoration: none;
         color: var(--black);
     }        
@@ -46,6 +47,7 @@
     align-items: center;
 
     p {
+        margin: 0;
         padding: 5px;
         color: white;
         font-size: 14px;
