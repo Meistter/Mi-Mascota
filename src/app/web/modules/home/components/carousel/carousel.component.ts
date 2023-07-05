@@ -10,7 +10,7 @@ import { interval } from 'rxjs';
 export class CarouselComponent {
 
 slides = [{image:'https://i.postimg.cc/hGWrcgwK/banner-notext.jpg', url:''},
-          {image:'https://i.postimg.cc/Hx34wMLL/logo.jpg', url:''}
+          // {image:'https://i.postimg.cc/Hx34wMLL/logo.jpg', url:''}
          ]
 
   config: SwiperOptions = {

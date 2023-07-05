@@ -39,12 +39,12 @@
             flex-direction: row;            
         }
     }
-    .info__right{
+    .info__right {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         
-        button{
+        button {
             margin-right: 0;
             color: black;
             font-size: 12px;
@@ -59,9 +59,14 @@
             border-radius: 4px;
             border-color: rgb(0, 0, 0);
         }        
-        .adopt-button{
+        .adopt-button {
             margin-top: 0;
             background-color: var(--card-button-background);            
+        }
+        .location {
+            display: flex; 
+            align-items: center; 
+            margin-right: 4px;
         }
     }
 }
