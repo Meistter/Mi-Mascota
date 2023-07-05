@@ -6,11 +6,14 @@
     height: 70px;
     border: solid 1px;
     border-color: var(--background-gray);
+    display: flex;
+    align-items: center;
+    justify-content: left;
   
     h1{       
         font-size: 26px;
         font-weight: 600;
-        margin: 20px;
+        margin-left: 20px;
     }
 }
 .mat-panel h1{
@@ -25,12 +28,11 @@
     height: 45px;
     border-bottom: solid 1px;
     border-color: var(--background-gray);
-    padding: 12px;   
-    border-radius: 0 0 4px 4px;
+    padding: 12px;       
     a{      
         font-size: 14px;
-        font-weight: 400;
-        font-family: 'IBM Plex Sans KR';
+        font-weight: 500;
+        // font-family: 'IBM Plex Sans KR';
         margin-left: 10px;
        text-decoration: none;
        cursor: pointer;

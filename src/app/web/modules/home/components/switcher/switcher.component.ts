@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class SwitcherComponent {
 
-  locations = [{value:'Barquisimeto'},{value: 'Texas'}]
+  locations = [{value:'Barquisimeto'},{value: 'Valencia'},{value: 'Maracaibo'},{value: 'Caracas'}]
   selected = 'Barquisimeto';
 }

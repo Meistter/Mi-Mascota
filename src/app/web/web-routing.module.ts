@@ -15,11 +15,22 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./modules/home/home.module').then((m) => m.HomeModule),
-       },
-      // {
-      //   path: 'products',
-      //   loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
-      // },      
+      },
+      {
+        path: 'location',
+       
+        loadChildren: () => import('./modules/location/location.module').then((m) => m.LocationModule),
+      },
+      {
+        path: 'terms',
+       
+        loadChildren: () => import('./modules/terms/terms.module').then((m) => m.TermsModule),
+      }, 
+       {
+        path: '**',
+       
+        loadChildren: () => import('../not-found/not-found.module').then((m) => m.NotFoundModule),
+      },    
     ]
   },
   // {
