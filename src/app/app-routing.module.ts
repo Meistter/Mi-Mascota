@@ -10,14 +10,18 @@ const routes: Routes = [
     path: 'admin',
    // canActivate: [ RedirectGuard ],
     loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule),
-  },
+  }, 
+  {
+   path: '**',  
+   loadChildren: () => import('./not-found/not-found.module').then((m) => m.NotFoundModule),
+ },  
   
 ];
 
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

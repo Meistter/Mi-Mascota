@@ -1,51 +1,61 @@
 <mat-drawer-container class="sidenav-container" [hasBackdrop]="true">
    <mat-drawer class="sidenav__menu" #drawer [mode]="'over'">
-      <div class="menu__title"> <h1>Menú</h1><mat-icon style="font-size: 28px;margin-bottom: 6px; margin-left: 4px;">pets</mat-icon></div>
-      <mat-accordion class="example-headers-align" multi="false">
-                      
+      <div class="menu__title" routerLink="home" (click)="drawer.toggle()"><mat-icon style="font-size: 28px;margin-bottom: 5px; margin-right: 4px;">pets</mat-icon><h1>Menú</h1><mat-icon style="font-size: 28px;margin-bottom: 6px; margin-left: 4px;">pets</mat-icon></div>
+      <mat-accordion class="example-headers-align" multi="false">                      
         <mat-expansion-panel >
           <mat-expansion-panel-header>
             <mat-panel-title>
               Animales y Razas
             </mat-panel-title>            
           </mat-expansion-panel-header>
-                <mat-expansion-panel class="mat-panel" (opened)="panelOpenState = true"(closed)="panelOpenState = false">
-                  <mat-expansion-panel-header>
-                    <mat-panel-title>Perros</mat-panel-title>                     
-                  </mat-expansion-panel-header>
-                  <div class="menu__element"> <a routerLink="#" (click)="drawer.toggle()">Pequeños</a> </div>
-                  <div class="menu__element"> <a routerLink="#" (click)="drawer.toggle()">Medianos</a> </div>
-                  <div class="menu__element"> <a routerLink="#" (click)="drawer.toggle()">Grandes</a> </div>
-                </mat-expansion-panel>  
-                <mat-expansion-panel hideToggle routerLink="admin"><mat-expansion-panel-header><mat-panel-title>
-                  Gatos
-                </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                <mat-expansion-panel hideToggle routerLink="admin" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                  Aves
-                </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                <mat-expansion-panel hideToggle routerLink="admin" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                  Tortugas
-                </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                <mat-expansion-panel hideToggle routerLink="admin" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                  Conejos
-                </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
+          <mat-accordion class="example-headers-align" multi="false">   
+                    <mat-expansion-panel class="mat-panel" (opened)="panelOpenState = true"(closed)="panelOpenState = false">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>Perros</mat-panel-title>                     
+                      </mat-expansion-panel-header>
+                      <div class="menu__element" routerLink="terms" (click)="drawer.toggle()"> <a>Pequeños</a></div>
+                      <div class="menu__element" routerLink="terms" (click)="drawer.toggle()"> <a>Medianos</a></div>
+                      <div class="menu__element" routerLink="terms" (click)="drawer.toggle()"> <a>Grandes</a></div>
+                    </mat-expansion-panel>  
+                    <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                      Gatos
+                    </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
+                    <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                      Aves
+                    </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
+                    <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                      Tortugas
+                    </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
+                    <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                      Conejos
+                    </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
+                  </mat-accordion>
         </mat-expansion-panel>   
-                  <mat-expansion-panel hideToggle routerLink="admin" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                    Mascotas para Rescatar
+                  <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                        Publicar Mascota en Adopcion
                   </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                  <mat-expansion-panel hideToggle routerLink="admin" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                  <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                        Solicitar Rescate
+                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
+                  <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
                         Mascotas Perdidas
                   </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                  <mat-expansion-panel hideToggle routerLink="admin" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                  <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                        Mascotas para Rescatar
+                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
+                  <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
                         Denunciar Maltrato
                   </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                  <mat-expansion-panel hideToggle routerLink="admin" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                  <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
                         Contacto
                   </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
                   <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
                         Ubicación
                   </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                  <mat-expansion-panel hideToggle routerLink="admin" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                  <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                        Términos y condiciones
+                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
+                  <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
                         Iniciar Sesión
                   </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>  
                   
