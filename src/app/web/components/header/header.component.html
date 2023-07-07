@@ -17,18 +17,31 @@
             <button> <mat-icon style="font-size: 22px; color: black;">search</mat-icon></button>
         </div>
     </div>
-
+   
     <div class="header-menu">
-        <div class="header-menu__left">
+        <div class="header-menu__left" (click)="clickFirstMenu()">
             <a>Animales y Razas</a>
             <mat-icon style="font-size: 20px;">expand_more</mat-icon>
-        </div>
+        </div>        
         <a href="">Solicitar Rescate</a>
         <div class="header-menu__right">
             <mat-icon style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
             <a href="">Publicar Mascota</a>
         </div>
-
+        <section class="animal-menu" [ngClass]="statusFirstMenu ? 'active':'inactive'" >
+            <div class="animal-menu__left">
+            <button (click)="clickSecondMenu()" [ngClass]="statusSecondMenu ? 'active':'none'"><p>Perros</p><mat-icon>chevron_right</mat-icon></button>
+            <button routerLink="terms" (click)="clickFirstMenu()">Gatos</button>
+            <button routerLink="terms" (click)="clickFirstMenu()">Aves</button>
+            <button routerLink="terms" (click)="clickFirstMenu()">Tortugas</button>
+            <button routerLink="terms" (click)="clickFirstMenu()">Conejos</button>
+            </div>            
+            <div class="animal-menu__dogs" [ngClass]="statusSecondMenu ? 'active':'inactive'">
+                <button routerLink="terms" (click)="clickSecondMenu()" (click)="clickFirstMenu()">Grandes</button>
+                <button routerLink="terms" (click)="clickSecondMenu()" (click)="clickFirstMenu()">Medianos</button>
+                <button routerLink="terms" (click)="clickSecondMenu()" (click)="clickFirstMenu()">Pequeños</button>
+            </div>
+        </section>
     </div>
 
 </header>

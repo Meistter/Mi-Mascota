@@ -12,4 +12,12 @@ export class HeaderComponent {
   openSideNav(){
     this.sideNavOpen.emit()
   }
+  statusFirstMenu: boolean = false;
+  clickFirstMenu(){
+    this.statusFirstMenu = !this.statusFirstMenu;       
+  }
+  statusSecondMenu: boolean = false;
+  clickSecondMenu(){
+    this.statusSecondMenu = !this.statusSecondMenu;       
+  }
 }
