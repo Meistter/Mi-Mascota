@@ -37,9 +37,11 @@
         top: 28px;
         width: 135px;
         height: 160px;
-        background-color: var(--background-gray);       
+        background-color: var(--background-gray);   
+        color: black;    
         .animal-menu__left {
             button {
+                cursor: pointer;
                 width: 135px;
                 height: 32px;
                 background-color: var(--background-gray);
@@ -50,6 +52,9 @@
                 align-items: center;
                 justify-content: center;
                 p{margin-left: 20px;}
+            }
+            button:hover{
+                background-color: var(--navbar-selected-first);
             }
         }
         
@@ -62,12 +67,16 @@
         height: 72px;
         background-color: var(--background-gray);        
         button {
+            cursor: pointer;
             width: 110px;
             height: 24px;
-            background-color: var(--navbar-selected-first);
+            background-color: var(--background-gray);
             border:solid;
             border-color: var(--menu-border-color);
             border-width: 1px; 
+        }
+        button:hover{
+            background-color: var(--navbar-selected-first);
         }
     }  
 }
@@ -82,10 +91,12 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    height: 100%;
 }
 .header-menu .header-menu__right {
     @extend .header-menu__left
 }
+
 .header-top__menu {
     display: flex;
     align-items: center;

@@ -13,11 +13,24 @@ export class HeaderComponent {
     this.sideNavOpen.emit()
   }
   statusFirstMenu: boolean = false;
-  clickFirstMenu(){
+  statusSecondMenu: boolean = false;
+
+  toggleFirstMenu(){
     this.statusFirstMenu = !this.statusFirstMenu;       
   }
-  statusSecondMenu: boolean = false;
-  clickSecondMenu(){
+  openFirstMenu(){
+    this.statusFirstMenu = true;       
+  } 
+  closeFirstMenu(){
+    this.statusFirstMenu = false;       
+  } 
+  toggleSecondMenu(){
     this.statusSecondMenu = !this.statusSecondMenu;       
+  }
+  openSecondMenu(){
+    this.statusSecondMenu = true;       
+  }
+  closeSecondMenu(){
+    this.statusSecondMenu = false;       
   }
 }
