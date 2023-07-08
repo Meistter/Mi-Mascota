@@ -51,6 +51,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                transition: all 0.2s ease-out;
                 p{margin-left: 20px;}
             }
             button:hover{
@@ -74,6 +75,7 @@
             border:solid;
             border-color: var(--menu-border-color);
             border-width: 1px; 
+            transition: all 0.2s ease-out;
         }
         button:hover{
             background-color: var(--navbar-selected-first);

@@ -29,10 +29,14 @@
     .button-left {
         border-radius: 4px 0 0 4px ;
         border-right: none;
-        background-color: var(--background-gray);
     }
     .button-right {
-        border-radius: 0 4px 4px 0;
-        background-color: white;
+        border-radius: 0 4px 4px 0;      
     }
+}
+.active {
+    background-color: var(--background-gray);
+}
+.inactive {
+    background-color: white
 }

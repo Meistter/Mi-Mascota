@@ -1,6 +1,4 @@
-<section class="switcher-container">
-   <!-- <p> Ubicación: </p> -->
-     
+<section class="switcher-container"> 
     <mat-form-field style="width: 180px;">
         <mat-label>Ubicación</mat-label>
         <mat-select disableRipple [(value)]="selected">
@@ -11,7 +9,7 @@
       </mat-form-field>
     
     <div class="switcher__buttons">
-        <button class="button-left">Adoptar</button>
-        <button class="button-right">Rescatar</button>
+        <button class="button-left" [ngClass]="btnIzquierda ? 'active':'inactive'" (click)="activarBtnIzquierda()">Adoptar</button>
+        <button class="button-right" [ngClass]="btnDerecha ? 'active':'inactive'" (click)="activarBtnDerecha()">Rescatar</button>
     </div>
 </section>
