@@ -1,20 +1,30 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+  
+  statusFirstMenu: boolean = false;
+  statusSecondMenu: boolean = false;
+  
+  //Listener para cerrar y abrir menu
+  @HostListener('document:click', ['$event'])
+  onClickEvent(event: MouseEvent) {
+    var target = event.target as HTMLElement
+    var id = target['id'] 
+    if(id != 'open-animal-right' && id!= 'open-animal-left'){
+      this.closeFirstMenu()
+      this.closeSecondMenu()      
+    }
+  }
+  //Emitimos para abrir menu sidenav lateral
   @Output() sideNavOpen = new EventEmitter<string>();
-
   openSideNav(){
     this.sideNavOpen.emit()
   }
-  statusFirstMenu: boolean = false;
-  statusSecondMenu: boolean = false;
-
+  
   toggleFirstMenu(){
     this.statusFirstMenu = !this.statusFirstMenu;       
   }
