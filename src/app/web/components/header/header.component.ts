@@ -16,7 +16,6 @@ export class HeaderComponent {
   onClickEvent(event: MouseEvent) {
     var target = event.target as HTMLElement
     var id = target['id'] 
-    console.log(id);
     
     if(id != 'open-animal-right' && id!= 'open-animal-left' ){
       this.closeFirstMenu()
