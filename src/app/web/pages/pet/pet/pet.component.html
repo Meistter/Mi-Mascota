@@ -1,1 +1,13 @@
-<h1>EL ID DE ESTA MASCOTA ES: {{pet.id}}</h1>
+<mat-card class="card-container">    
+    <!-- ! Cambiar la imagen por un slider de imagenes -->
+    <img mat-card-image src="{{pet.photos[0].url_mobile}}" alt={{pet.photos[0].alt}}>
+    <mat-card-content class="card-container__articles">
+      <section class="info__left">
+        
+      </section>
+      <section class="info__right">
+        <div class="location"><mat-icon style="font-size: 12px;">location_on</mat-icon><p>{{pet.location}}</p></div>
+        <button class="adopt-button">¡Darle un Hogar!</button>
+      </section>
+    </mat-card-content>    
+</mat-card>

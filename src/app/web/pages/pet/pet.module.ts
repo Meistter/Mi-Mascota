@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { PetRoutingModule } from './pet-routing.module';
 import { PetComponent } from './pet/pet.component';
+import { MaterialModule } from 'src/app/material/material.module';
 
 
 @NgModule({
@@ -11,7 +11,8 @@ import { PetComponent } from './pet/pet.component';
   ],
   imports: [
     CommonModule,
-    PetRoutingModule
+    PetRoutingModule,
+    MaterialModule
   ]
 })
 export class PetModule { }
