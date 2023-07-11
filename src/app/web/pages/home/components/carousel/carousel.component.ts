@@ -1,18 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import SwiperCore, {Navigation, Pagination, Scrollbar, A11y, SwiperOptions, Swiper} from 'swiper';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 import { interval } from 'rxjs';
+import { SlideService } from 'src/app/services/slide.service';
+import { Slide } from 'src/app/models/slide';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent {
+export class CarouselComponent implements OnInit{
 
-slides = [{image:'https://i.postimg.cc/50qksXZN/banner-notext-min.jpg', url:''},
-          // {image:'https://i.postimg.cc/Hx34wMLL/logo.jpg', url:''}
-         ]
+  constructor(private slideService: SlideService){}
 
+  slides: Slide[] = []
+  ngOnInit(): void {
+    this.slides = this.slideService.getSlides()
+  }
   config: SwiperOptions = {
     loop: false,
     slidesPerView: 1,
