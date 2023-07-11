@@ -8,7 +8,7 @@ import { Pet } from 'src/app/models/pet';
 export class CardComponent {
 
 @Input() pet : Pet = {
-    id: 0,
+    id: '0',
     name: 'string',
     description: 'string',
     age: 0,
