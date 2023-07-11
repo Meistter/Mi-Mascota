@@ -19,17 +19,17 @@
     </div>   
     
     <ul class="header-menu">
-        <ul  class="header-menu__left" (click)="toggleFirstMenu()">            
-            <a id="open-animal-right">Animales y Razas</a><mat-icon id="open-animal-right" style="font-size: 20px;">expand_more</mat-icon>
-            <ul class="animal-menu" [ngClass]="statusFirstMenu ? 'active':'inactive'" (mouseleave)="closeFirstMenu()" (mouseleave)="closeSecondMenu()">
-                <ul class="animal-menu__left">
-                    <button id="open-animal-right" (click)="openSecondMenu()" [ngClass]="statusSecondMenu ? 'activeButton':'none'" (mouseenter)="openSecondMenu()"><p id="open-animal-right">Perros</p><mat-icon id="open-animal-right">chevron_right</mat-icon></button>
+        <ul  class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()">            
+            <a id="open-animal-left">Animales y Razas</a><mat-icon id="open-animal-left" style="font-size: 20px;">expand_more</mat-icon>
+            <ul class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()" >
+                <ul class="animal-menu__left"  [ngClass]="statusFirstMenu ? 'active':'inactive'">
+                    <button id="open-animal-right" (click)="openSecondMenu()" (mouseenter)="openSecondMenu()" [ngClass]="statusSecondMenu ? 'activeButton':'none'"><p id="open-animal-right">Perros</p><mat-icon id="open-animal-right">chevron_right</mat-icon></button>
                     <button routerLink="terms" (mouseenter)="closeSecondMenu()">Gatos</button>                
                     <button routerLink="terms">Aves</button>
                     <button routerLink="terms">Tortugas</button>
                     <button routerLink="terms">Conejos</button>
                 </ul>            
-                <ul class="animal-menu__right" [ngClass]="statusSecondMenu ? 'active':'inactive'" (mouseleave)="closeSecondMenu()">
+                <ul class="animal-menu__right" [ngClass]="statusSecondMenu ? 'active':'inactive'">
                     <button routerLink="terms">Grandes</button>
                     <button routerLink="terms">Medianos</button>
                     <button routerLink="terms">Pequeños</button>

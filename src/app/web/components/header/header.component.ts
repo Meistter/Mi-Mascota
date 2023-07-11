@@ -14,9 +14,14 @@ export class HeaderComponent {
   onClickEvent(event: MouseEvent) {
     var target = event.target as HTMLElement
     var id = target['id'] 
-    if(id != 'open-animal-right' && id!= 'open-animal-left'){
+    console.log(id);
+    
+    if(id != 'open-animal-right' && id!= 'open-animal-left' ){
       this.closeFirstMenu()
-      this.closeSecondMenu()      
+      this.closeSecondMenu()   
+    }
+    if(id == 'open-animal-left'){
+      this.toggleFirstMenu()
     }
   }
   //Emitimos para abrir menu sidenav lateral
@@ -25,11 +30,11 @@ export class HeaderComponent {
     this.sideNavOpen.emit()
   }
   
-  toggleFirstMenu(){
-    this.statusFirstMenu = !this.statusFirstMenu;       
+  toggleFirstMenu(){    
+    this.statusFirstMenu = !this.statusFirstMenu;
   }
   openFirstMenu(){
-    this.statusFirstMenu = true;       
+    this.statusFirstMenu = true;     
   } 
   closeFirstMenu(){
     this.statusFirstMenu = false;       
