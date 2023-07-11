@@ -23,7 +23,11 @@ const routes: Routes = [
       {
         path: 'terms',       
         loadChildren: () => import('./pages/terms/terms.module').then((m) => m.TermsModule),
-      }  
+      },
+      {
+        path: 'pet/:id',       
+        loadChildren: () => import('./pages/pet/pet.module').then((m) => m.PetModule),
+      },  
     ]
   },  
 ];
