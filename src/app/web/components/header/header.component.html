@@ -3,7 +3,7 @@
         <div class="header-top__menu">
             <div class="header-top__login">
                     <mat-icon style="font-size: 30px; color: white; cursor: pointer; "(click)="openSideNav()" >menu</mat-icon>        
-                <img routerLink="home" src="https://i.postimg.cc/Hx34wMLL/logo.jpg" alt="">
+                <img routerLink="home" src="{{app_logo.url}}" alt="{{app_logo.alt}}">
             </div>
             <div class="header-top__login">
                 <p>Inicia Sesion/Registrate</p>
@@ -23,7 +23,7 @@
             <a id="open-animal-left">Animales y Razas</a><mat-icon id="open-animal-left" style="font-size: 20px;">expand_more</mat-icon>
             <ul class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()" >
                 <ul class="animal-menu__left"  [ngClass]="statusFirstMenu ? 'active':'inactive'">
-                    <button id="open-animal-right" (click)="openSecondMenu()" (mouseenter)="openSecondMenu()" [ngClass]="statusSecondMenu ? 'activeButton':'none'"><p id="open-animal-right">Perros</p><mat-icon id="open-animal-right">chevron_right</mat-icon></button>
+                    <button id="open-animal-right" (click)="toggleSecondMenu()" (mouseenter)="openSecondMenu()" [ngClass]="statusSecondMenu ? 'activeButton':'none'"><p id="open-animal-right">Perros</p><mat-icon id="open-animal-right">chevron_right</mat-icon></button>
                     <button routerLink="terms" (mouseenter)="closeSecondMenu()">Gatos</button>                
                     <button routerLink="terms">Aves</button>
                     <button routerLink="terms">Tortugas</button>

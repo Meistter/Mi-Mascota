@@ -8,6 +8,7 @@ export interface Pet{
     photos: image[]
 }
 export interface image{
-    url: string,
+    url_mobile: string,
+    url_full: string,
     alt: string
 }

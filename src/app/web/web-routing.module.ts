@@ -17,21 +17,15 @@ const routes: Routes = [
         loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule),
       },
       {
-        path: 'location',
-       
+        path: 'location',       
         loadChildren: () => import('./pages/location/location.module').then((m) => m.LocationModule),
       },
       {
-        path: 'terms',
-       
+        path: 'terms',       
         loadChildren: () => import('./pages/terms/terms.module').then((m) => m.TermsModule),
       }  
     ]
-  },
-  // {
-  //   path: '',
-  //   loadChildren: () => import('./modules/home/home.module').then((m) => m.HomeModule),
-  // },
+  },  
 ];
 
 @NgModule({

@@ -1,13 +1,9 @@
 import { Component, Input } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
 import { Pet } from 'src/app/models/pet';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss'],
-  // standalone: true,
-  // imports: [MatCardModule, MatButtonModule]
+  styleUrls: ['./card.component.scss'], 
 })
 export class CardComponent {
 
@@ -18,6 +14,6 @@ export class CardComponent {
     health: 'string',
     vaccinated: false,
     location: 'string',
-    photos: [{url:'',alt:''}]
+    photos: [{url_mobile:'', url_full:'',alt:''}]
 }
 }

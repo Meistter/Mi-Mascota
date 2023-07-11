@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: LocationComponent,
-    title: 'Ubicación'
+    title: 'Ubicacion'
   }
 ];
 
