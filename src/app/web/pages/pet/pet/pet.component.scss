@@ -18,11 +18,49 @@
         object-fit: cover;   
     }
 }
-.card-container__sections {
+.info-container-top {
     display: flex;
     justify-content: space-between;
-    padding: 0;
+    padding: 14px 0 14px 0;
 }
 .location {
     display: flex;
 }
+.info-container__left {
+    // margin: 16px 0 16px 0;
+    h1 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    p {
+        display: flex;
+        align-items: center;
+        font-size: 12px; 
+        white-space: pre;
+    }
+}
+.info-container__right {
+    .adopt-button {
+            color: black;
+            font-size: 13px;
+            font-family: 'Inter';
+            font-weight: 550;
+            width:130px ;
+            height: 35px;
+            margin: 16px 0 0 0;           
+            border: solid;
+            border-width: 1.5px;
+            border-radius: 4px;
+            border-color: rgb(0, 0, 0);
+            cursor: pointer;
+    }
+}
+.info-container-bottom {
+    // padding: 5px;
+    font-family: 'Inter';       
+        p {
+            font-weight: 500; 
+            font-size: 14px;            
+        }
+}
+

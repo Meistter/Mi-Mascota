@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { interval } from 'rxjs';
 import { Pet } from 'src/app/models/pet';
 import { PetsService } from 'src/app/services/pets.service';
-import Swiper, { SwiperOptions } from 'swiper';
+import SwiperCore, {Navigation, Pagination, Scrollbar, A11y, SwiperOptions, Swiper} from 'swiper';
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+import { interval } from 'rxjs';
+
 
 @Component({
   selector: 'app-pet',
@@ -39,14 +41,21 @@ export class PetComponent implements OnInit{
     if(this.petId){
     this.pet = this.petService.getAdoptionPet(this.petId)
     }    
+    
   }
   config: SwiperOptions = {
-    loop: false,
+    loop: true,
     slidesPerView: 1,
     spaceBetween: 0,
     navigation: true,
     pagination: { clickable: true },
     scrollbar: { draggable: true },
     };  
+  automatico(swiper: Swiper) {
+    const segundos = interval(60000);
+    segundos.subscribe(() => {
+    swiper.slideNext();    
+    })
+  }
  
 }

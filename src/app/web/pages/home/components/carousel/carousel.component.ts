@@ -18,10 +18,10 @@ export class CarouselComponent implements OnInit{
     this.slides = this.slideService.getSlides()
   }
   config: SwiperOptions = {
-    loop: false,
+    loop: true,
     slidesPerView: 1,
     spaceBetween: 0,
-    navigation: false,
+    navigation: true,
     pagination: { clickable: true },
     scrollbar: { draggable: true },
     };

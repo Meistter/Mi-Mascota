@@ -23,4 +23,7 @@ html{
     width: auto !important;
     height: auto !important;
 }
-
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 22px !important;
+    color: black !important;
+}
