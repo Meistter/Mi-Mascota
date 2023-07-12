@@ -1,7 +1,7 @@
 export interface Pet{
     id: string,
     name: string,
-    owner_name: string,    
+    owner_id: string,    
     age: number,
     castrated: boolean,
     disease: boolean,    
@@ -11,7 +11,8 @@ export interface Pet{
     description: string,
     adoptionReason: string,
     remarks: string,
-    photos: image[]
+    photos: image[],
+    likes: number
 }
 export interface image{
     url_mobile: string,

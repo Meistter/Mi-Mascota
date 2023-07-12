@@ -10,7 +10,7 @@ export class CardComponent {
 @Input() pet : Pet = {
   id: 'string',
   name: 'string',
-  owner_name: 'string',    
+  owner_id: 'string',    
   age: 0,
   castrated: true,
   disease: true,    
@@ -20,6 +20,7 @@ export class CardComponent {
   description: 'string',
   adoptionReason: 'string',
   remarks: 'string',
-  photos: [{url_mobile:'', url_full:'',alt:''}]
+  photos: [{url_mobile:'', url_full:'',alt:''}],
+  likes:0
 }
 }
