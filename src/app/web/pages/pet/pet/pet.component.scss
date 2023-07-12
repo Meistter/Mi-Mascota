@@ -1,4 +1,4 @@
-.card-container {
+.card-container {    
     padding: 14px;
     display: flex;
     align-items: center;
@@ -40,14 +40,14 @@
     }
 }
 .info-container__right {
-    .adopt-button {
+    .adopt-button {            
             color: black;
             font-size: 13px;
             font-family: 'Inter';
             font-weight: 550;
-            width:130px ;
+            width:122px ;
             height: 35px;
-            margin: 16px 0 0 0;           
+            margin: 16px 0 0 10px;           
             border: solid;
             border-width: 1.5px;
             border-radius: 4px;
