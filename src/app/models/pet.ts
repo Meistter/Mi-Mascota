@@ -1,11 +1,16 @@
 export interface Pet{
     id: string,
     name: string,
-    description: string,
+    owner_name: string,    
     age: number,
+    castrated: boolean,
+    disease: boolean,    
     health: string,
     vaccinated: boolean,
     location: string,
+    description: string,
+    adoptionReason: string,
+    remarks: string,
     photos: image[]
 }
 export interface image{

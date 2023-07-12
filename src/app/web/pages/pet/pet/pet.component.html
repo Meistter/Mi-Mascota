@@ -1,13 +1,40 @@
 <mat-card class="card-container">    
-    <!-- ! Cambiar la imagen por un slider de imagenes -->
-    <img mat-card-image src="{{pet.photos[0].url_mobile}}" alt={{pet.photos[0].alt}}>
-    <mat-card-content class="card-container__articles">
-      <section class="info__left">
-        
-      </section>
-      <section class="info__right">
-        <div class="location"><mat-icon style="font-size: 12px;">location_on</mat-icon><p>{{pet.location}}</p></div>
-        <button class="adopt-button">¡Darle un Hogar!</button>
+  <div class="card__content">  
+    <div class="card__image">
+      <swiper [config]="config">
+        <ng-template swiperSlide *ngFor="let slide of pet?.photos">
+            <a [href]="" target="_blank">
+                 <img class="swiper-image" [src]="slide.url_mobile" alt="foto" />
+            </a>
+       </ng-template>
+    </swiper>
+      <div class="location">
+        <mat-icon style="font-size: 12px;">location_on</mat-icon><p>{{pet?.location}}</p>
+      </div>
+    </div>    
+    <mat-card-content>
+      <div class="card-container__sections">
+        <section class="info__left">
+          <h1>{{pet?.name}}</h1>
+          <h2>Dueño: {{pet?.owner_name}}</h2>        
+        </section>
+        <section class="info__right">          
+          <button class="adopt-button">¡Darle un Hogar!</button>
+        </section>
+      </div>
+      <section class="info__bottom">
+        <p>Salud: {{pet?.health}}</p>
+        <p>Edad: {{pet?.age}}</p>
+        <p *ngIf="pet?.vaccinated; else elseVaccinated"> Vacunado: Si </p>
+        <ng-template #elseVaccinated><p> Vacunado: No</p></ng-template>
+        <p *ngIf="pet?.castrated; else elseCastrated"> Castrado: Si </p>
+        <ng-template #elseCastrated><p> Castrado: No</p></ng-template>
+        <p *ngIf="pet?.disease; else elseDisease"> Enfermo: Si </p>
+        <ng-template #elseDisease><p> Enfermo: No</p></ng-template>
+        <h1>Descripcion: {{pet?.description}}</h1>
+        <h1>Motivo de Adopcion: {{pet?.adoptionReason}}</h1>
+        <h1>Observaciones: {{pet?.remarks}}</h1>
       </section>
     </mat-card-content>    
+  </div>
 </mat-card>

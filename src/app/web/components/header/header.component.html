@@ -23,7 +23,7 @@
             <a id="open-animal-left">Animales y Razas</a><mat-icon id="open-animal-left" style="font-size: 20px;">expand_more</mat-icon>
             <ul class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()" >
                 <ul class="animal-menu__left"  [ngClass]="statusFirstMenu ? 'active':'inactive'">
-                    <button id="open-animal-right" (click)="toggleSecondMenu()" (mouseenter)="openSecondMenu()" [ngClass]="statusSecondMenu ? 'activeButton':'none'"><p id="open-animal-right">Perros</p><mat-icon id="open-animal-right">chevron_right</mat-icon></button>
+                    <button id="open-animal-right" (click)="openSecondMenu()" (mouseenter)="openSecondMenu()" [ngClass]="statusSecondMenu ? 'activeButton':'none'"><p id="open-animal-right">Perros</p><mat-icon id="open-animal-right">chevron_right</mat-icon></button>
                     <button routerLink="terms" (mouseenter)="closeSecondMenu()">Gatos</button>                
                     <button routerLink="terms">Aves</button>
                     <button routerLink="terms">Tortugas</button>
