@@ -53,7 +53,7 @@ export class PetComponent implements OnInit{
     scrollbar: { draggable: true },
     };  
   automatico(swiper: Swiper) {
-    const segundos = interval(60000);
+    const segundos = interval(10000);
     segundos.subscribe(() => {
     swiper.slideNext();    
     })

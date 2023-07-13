@@ -32,7 +32,7 @@
         </div>
         <section class="info-container-bottom">        
           <p><b>Salud: </b>{{pet?.health}}</p>
-          <p><b>Edad: </b>{{pet?.age}}</p>
+          <p><b>Edad: </b>{{pet?.age}}<a *ngIf="pet?.age == 1; else elseAge"> año</a><ng-template #elseAge> años</ng-template></p>
           <p *ngIf="pet?.vaccinated; else elseVaccinated"><b> Vacunado: </b>Si </p>
           <ng-template #elseVaccinated><p><b> Vacunado: </b>No</p></ng-template>
           <p *ngIf="pet?.castrated; else elseCastrated"><b> Castrado: </b>Si </p>
@@ -40,11 +40,11 @@
           <p *ngIf="pet?.disease; else elseDisease"><b> Enfermo: </b>Si </p>
           <ng-template #elseDisease><p><b> Enfermo: </b>No</p></ng-template>
           <br>
-          <p><b>Descripcion de la Mascota: </b> {{pet?.description}}</p>
+          <p><b>Descripcion de la Mascota: </b> {{pet?.description}}.</p>
           <br>
-          <p><b>Motivo de Adopcion: </b>{{pet?.adoptionReason}}</p>
+          <p><b>Motivo de Adopcion: </b>{{pet?.adoptionReason}}.</p>
           <br>
-          <p><b>Observaciones: </b>{{pet?.remarks}}</p>
+          <p><b>Observaciones: </b>{{pet?.remarks}}.</p>
         </section>
       </mat-card-content>    
     </div>

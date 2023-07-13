@@ -21,13 +21,13 @@ export class CarouselComponent implements OnInit{
     loop: true,
     slidesPerView: 1,
     spaceBetween: 0,
-    navigation: true,
+    navigation: false,
     pagination: { clickable: true },
     scrollbar: { draggable: true },
     };
 
     automatico(swiper: Swiper) {
-      const segundos = interval(60000);
+      const segundos = interval(30000);
       segundos.subscribe(() => {
       swiper.slideNext();    
      });
