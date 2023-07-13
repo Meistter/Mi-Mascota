@@ -18,7 +18,9 @@
 html{
     font-size: 62.5%; //Usaremos rems para que desde el explorador se pueda cambiar el tamaño de la fuente    
     font-family: 'IBM Plex Sans KR', sans-serif;
-}      
+}  
+
+//Modificacion de estilos globales de Material y Swiper
 .mat-icon {
     width: auto !important;
     height: auto !important;
@@ -32,4 +34,7 @@ html{
 }
 .mat-mdc-text-field-wrapper {
     height: 35px !important;
+}
+.mdc-text-field .mdc-floating-label {  
+    transform: translateY(-110%) !important;   
 }

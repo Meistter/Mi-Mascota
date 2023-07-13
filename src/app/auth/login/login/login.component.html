@@ -1,1 +1,30 @@
-<p>login works!</p>
+<section class="login-container">
+    <form class="login" [formGroup]="loginForm" (ngSubmit)="login($event)">
+        
+        <h1>Iniciar Sesión</h1>
+        
+        <mat-error class="login__label--error" *ngIf="loginError">{{getLoginError()}}</mat-error>
+
+          <mat-form-field appearance="outline" class="email">
+            <mat-label>Ingresa tu correo</mat-label>
+            <input matInput placeholder="mimascota@mail.com" formControlName="email">
+            <mat-error *ngIf="this.loginForm.controls['email'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+            <mat-error *ngIf="this.loginForm.controls['email'].hasError('email')">{{getEmailMsg()}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Ingresa tu contraseña</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+            <mat-error *ngIf="this.loginForm.controls['password'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>          
+
+          <button class="login__button--login" type="submit">Ingresar</button>
+
+            <p class="login__label--register">¿Aún no tienes una cuenta?</p>
+            
+          <button class="login__button--register" routerLink="/register">Registrate</button>
+    </form>
+</section>
