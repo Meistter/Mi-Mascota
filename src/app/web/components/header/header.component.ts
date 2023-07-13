@@ -6,7 +6,7 @@ import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 })
 export class HeaderComponent {
 
-  app_logo = {url:'https://i.postimg.cc/SsdKy57k/logo-min.jpg', alt:'logo-mi-mascota'}
+  app_logo = {url:'https://i.postimg.cc/c4MgZPjb/logo-min.jpg', alt:'logo-mi-mascota'}
   
   statusFirstMenu: boolean = false;
   statusSecondMenu: boolean = false;

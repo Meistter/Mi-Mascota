@@ -27,7 +27,11 @@ const routes: Routes = [
       {
         path: 'pet/:id',       
         loadChildren: () => import('./pages/pet/pet.module').then((m) => m.PetModule),
-      },  
+      },
+      {
+        path: 'auth',  
+        loadChildren: () => import('../auth/auth.module').then((m) => m.AuthModule),
+      }  
     ]
   },  
 ];
