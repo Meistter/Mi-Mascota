@@ -4,34 +4,40 @@
     padding: 18px;
     margin-top: 6px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-.switcher__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    
-    button {
-        font-size: 12px;
-        font-weight: 500;
-        color: black;
-        width: 70px;
-        height: 32px;
-        margin: 0;
-        padding: 0;
-        border: solid;
-        border-color: black;
-        border-width: 1px;
-        cursor: pointer;
+    justify-content: space-between;    
+
+    mat-form-field{
+        width: 50%;       
+        min-width: 130px;
+        max-width: 220px;
+        margin-right: 10px;
     }
-    .button-left {
-        border-radius: 4px 0 0 4px ;
-        border-right: none;
-    }
-    .button-right {
-        border-radius: 0 4px 4px 0;      
+    .switcher__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        margin-top: 10px;
+        
+        button {
+            font-size: 12px;
+            font-weight: 500;
+            color: black;
+            width: 70px;
+            height: 32px;
+            margin: 0;
+            padding: 0;
+            border: solid;
+            border-color: black;
+            border-width: 1px;
+            cursor: pointer;
+        }
+        .button-left {
+            border-radius: 4px 0 0 4px ;
+            border-right: none;
+        }
+        .button-right {
+            border-radius: 0 4px 4px 0;      
+        }
     }
 }
 .active {

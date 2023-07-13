@@ -5,8 +5,8 @@
                     <mat-icon style="font-size: 30px; color: white; cursor: pointer; "(click)="openSideNav()" >menu</mat-icon>        
                 <img routerLink="home" src="{{app_logo.url}}" alt="{{app_logo.alt}}">
             </div>
-            <div class="header-top__login">
-                <p>Inicia Sesion/Registrate</p>
+            <div class="header-top__login" >
+                <p routerLink="/auth/login">Inicia Sesion/Registrate</p>
                 <mat-icon style="font-size: 24px; color: white;">account_box</mat-icon>
             </div>
         </div>
