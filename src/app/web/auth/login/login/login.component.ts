@@ -33,7 +33,7 @@ export class LoginComponent {
       event.preventDefault();
       if(this.loginForm.valid){
         console.log('logueado');
-        this.router.navigate(['/admin'])
+        this.router.navigate(['/home'])
       }else{}      
       
     }
