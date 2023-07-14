@@ -6,7 +6,7 @@
         <h2>{{pet.description}}</h2>
         <div class="info__left-details">
           <p><b>Salud: </b>{{pet.health}} | </p>
-          <p><b>Edad: </b>{{pet.age}} años | </p>          
+          <p><b>Edad: </b>{{pet.age}}<a *ngIf="pet.age == 1; else elseAge"> año | </a><ng-template #elseAge> años | </ng-template></p>       
           <p *ngIf="pet.vaccinated; else elseBlock"><b>Vacunado: </b> Si </p>
           <ng-template #elseBlock><p><b>Vacunado: </b>No</p></ng-template>
         </div>

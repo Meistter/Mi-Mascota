@@ -1,6 +1,7 @@
 .login-container {
     width: 100%;
-    min-height: 700px;
+    height: 100%;
+    min-height: 660px;
     display: flex;
     justify-content: center;
 
@@ -8,21 +9,26 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        width: 70%;
+        padding: 22px;
+        width: 80%;
+        height: 470px;
+        border-radius: 8px;        
+        box-shadow: 1px 1px 6px black;
         min-width: 260px;        
         max-width: 300px;
-        margin-top: 40px;
+        margin-top: 60px;
+        background-color: var(--login-card-background);
         h1 {
             font-size: 28px;
             font-weight: 600;
-            margin-bottom: 30px;
+            margin-bottom: 36px;
         }
         mat-form-field{
             margin-bottom: 20px;
             width: 100%;            
         }
         .login__button--login {
-            margin-bottom: 12px;
+            margin-bottom: 20px;
             color: black;
             font-size: 14px;
             font-family: 'Inter';
@@ -33,13 +39,14 @@
             border-width: 1.5px;
             border-radius: 4px;
             border-color: rgb(0, 0, 0);
+            background-color: var(--card-button-background);
             cursor: pointer;
         }
         .login__label--register {
-            margin-bottom: 12px;
+            margin-bottom: 20px;
             font-family: 'Inter';
-            font-size: 13px;
-            font-weight: 500;
+            font-size: 14px;
+            font-weight: 550;
         }
         .login__button--register {
             @extend .login__button--login
