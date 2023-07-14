@@ -1,30 +1,56 @@
-<section class="login-container">
-    <form class="login" [formGroup]="loginForm" (ngSubmit)="login($event)">
+<section class="register-container">
+    <form class="register" [formGroup]="registerForm" (ngSubmit)="register($event)">
         
-        <h1>Iniciar Sesión</h1>
+        <h1>Registrate</h1>
         
-        <mat-error class="login__label--error" *ngIf="loginError">{{getLoginError()}}</mat-error>
+        <mat-error class="register__label--error" *ngIf="registerError">{{getRegisterError()}}</mat-error>
 
-          <mat-form-field appearance="outline" class="email">
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="name">
+            <mat-error *ngIf="this.registerForm.controls['name'].hasError('required')">{{getRequiredMsg()}}</mat-error>            
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Apellido</mat-label>
+            <input matInput formControlName="lastname">
+            <mat-error *ngIf="this.registerForm.controls['lastname'].hasError('required')">{{getRequiredMsg()}}</mat-error>           
+        </mat-form-field>
+
+        <mat-form-field color="accent">
+            <mat-label>Fecha de Nacimiento</mat-label>
+            <input matInput formControlName="date" [matDatepicker]="picker">
+            <mat-hint>DD/MM/AAAA</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker startView="multi-year" ></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
             <mat-label>Ingresa tu correo</mat-label>
             <input matInput placeholder="mimascota@mail.com" formControlName="email">
-            <mat-error *ngIf="this.loginForm.controls['email'].hasError('required')">{{getRequiredMsg()}}</mat-error>
-            <mat-error *ngIf="this.loginForm.controls['email'].hasError('email')">{{getEmailMsg()}}</mat-error>
-          </mat-form-field>
+            <mat-error *ngIf="this.registerForm.controls['email'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+            <mat-error *ngIf="this.registerForm.controls['email'].hasError('email')">{{getEmailMsg()}}</mat-error>
+        </mat-form-field>
 
-          <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline">
             <mat-label>Ingresa tu contraseña</mat-label>
             <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
-            <mat-error *ngIf="this.loginForm.controls['password'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+            <mat-error *ngIf="this.registerForm.controls['password'].hasError('required')">{{getRequiredMsg()}}</mat-error>
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
-          </mat-form-field>          
+        </mat-form-field>     
+        <section class="register__checkbox">
+            <mat-checkbox class="terms" formControlName="terms" class="register__checkbox-element">Acepto los términos y condiciones</mat-checkbox>       
+            <!-- <mat-error *ngIf="this.registerForm.controls['terms'].hasError('required')">{{getRequiredMsg()}}</mat-error> -->
+            <mat-checkbox class="responsability" formControlName="responsability" class="register__checkbox-element">Acepto que soy mayor de edad y responsable del uso de esta APP</mat-checkbox>            
+            <!-- <mat-error *ngIf="this.registerForm.controls['responsability'].hasError('required')">{{getRequiredMsg()}}</mat-error> -->
+        </section>
 
-          <button class="login__button--login" type="submit">Ingresar</button>
-
-            <p class="login__label--register">¿Aún no tienes una cuenta?</p>
-            
-          <button class="login__button--register" routerLink="/auth/register">Registrate</button>
+          <div class="register__buttons">
+            <button class="register__button--register" type="submit">Registrate</button>
+            <button class="register__button--register" routerLink="/home">Cancelar</button>
+          </div>
+          
     </form>
 </section>

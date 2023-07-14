@@ -1,21 +1,28 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.scss'],
+ 
 })
 export class RegisterComponent {
 
   hide : boolean = true
-  loginError : boolean = false //lo usaremos cuando las credenciales no sean correctas
+  registerError : boolean = false //lo usaremos cuando las credenciales no sean correctas
   constructor(private router: Router){}
 
-  loginForm = new FormGroup({
+  registerForm = new FormGroup({
+    name: new FormControl('',[Validators.required]),
+    lastname: new FormControl('',[Validators.required]),
     email : new FormControl('',[Validators.required, Validators.email]), 
     password : new FormControl('',[Validators.required, Validators.minLength(5)]),
+    date: new FormControl('',[Validators.required]),
+    terms: new FormControl('',[Validators.required]),
+    responsability: new FormControl('',[Validators.required]),
     })
 
     getRequiredMsg(){
@@ -25,16 +32,21 @@ export class RegisterComponent {
       return 'Por favor, Ingrese un email válido'
     }
 
-    getLoginError(){
-      return 'Usuario o clave incorrectos'
+    getRegisterError(){
+      return 'Error al realizar el registro, por favor intenta más tarde'
     }
 
-    login(event: Event){
+    register(event: Event){
       event.preventDefault();
-      if(this.loginForm.valid){
-        console.log('logueado');
+      if(this.registerForm.valid){
+        console.log('Registrado y logueado');
+        console.log(this.registerForm.get('date')?.value);
         this.router.navigate(['/home'])
-      }else{}      
+      }else{}   
+      
+         
       
     }
+
+    
 }
