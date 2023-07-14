@@ -56,7 +56,14 @@
             font-weight: 600;
         }
         .register__checkbox {
-            margin-bottom: 26px;           
+            margin-bottom: 26px;   
+            
+            .terms__error {
+                font-size: 13px;
+            }
+            .responsability__error {
+                @extend .terms__error
+            }
         }
     
     }   

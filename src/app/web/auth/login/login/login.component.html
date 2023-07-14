@@ -1,7 +1,7 @@
 <section class="login-container">
     <form class="login" [formGroup]="loginForm" (ngSubmit)="login($event)">
         
-        <h1>Iniciar Sesión</h1>
+        <h1><mat-icon style="font-size: 28px;margin-right: 7px;">pets</mat-icon>Iniciar Sesión <mat-icon style="font-size: 28px;">pets</mat-icon></h1>
         
         <mat-error class="login__label--error" *ngIf="loginError">{{getLoginError()}}</mat-error>
 

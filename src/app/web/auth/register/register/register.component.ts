@@ -13,6 +13,12 @@ export class RegisterComponent {
 
   hide : boolean = true
   registerError : boolean = false //lo usaremos cuando las credenciales no sean correctas
+  termsRequired: boolean = true
+  responsabilityRequired: boolean = true
+  toggleTerms(event: any){if(!event.checked){this.termsRequired = true}else{this.termsRequired = false}}
+  toggleResponsability(event: any){if(!event.checked){this.responsabilityRequired = true}else{this.responsabilityRequired = false}}
+  
+
   constructor(private router: Router){}
 
   registerForm = new FormGroup({
@@ -21,8 +27,8 @@ export class RegisterComponent {
     email : new FormControl('',[Validators.required, Validators.email]), 
     password : new FormControl('',[Validators.required, Validators.minLength(5)]),
     date: new FormControl('',[Validators.required]),
-    terms: new FormControl('',[Validators.required]),
-    responsability: new FormControl('',[Validators.required]),
+    terms: new FormControl(false,[Validators.required]),
+    responsability: new FormControl(false,[Validators.required]),
     })
 
     getRequiredMsg(){
@@ -37,8 +43,12 @@ export class RegisterComponent {
     }
 
     register(event: Event){
-      event.preventDefault();
-      if(this.registerForm.valid){
+      event.preventDefault();      
+      if(this.registerForm.valid && !this.responsabilityRequired && !this.termsRequired){
+        console.log(this.responsabilityRequired);
+        console.log(this.termsRequired);
+        
+        
         console.log('Registrado y logueado');
         console.log(this.registerForm.get('date')?.value);
         this.router.navigate(['/home'])
