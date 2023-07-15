@@ -31,7 +31,36 @@ const routes: Routes = [
       {
         path: 'auth',  
         loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
-      }  
+      },
+      {
+        path: 'report',  
+        loadChildren: () => import('./pages/abuse-report/abuse-report.module').then((m) => m.AbuseReportModule),
+      },
+      {
+        path: 'contact',  
+        loadChildren: () => import('./pages/contact/contact.module').then((m) => m.ContactModule),
+      },
+      {
+        path: 'give-adoption',  
+        loadChildren: () => import('./pages/give-adoption/give-adoption.module').then((m) => m.GiveAdoptionModule),
+      },
+      {
+        path: 'lost',  
+        loadChildren: () => import('./pages/lost-pets/lost-pets.module').then((m) => m.LostPetsModule),
+      },
+      {
+        path: 'rescue',  
+        loadChildren: () => import('./pages/rescue-pets/rescue-pets.module').then((m) => m.RescuePetsModule),
+      },
+      {
+        path: 'rescue-request',  
+        loadChildren: () => import('./pages/rescue-request/rescue-request.module').then((m) => m.RescueRequestModule),
+      },
+      {
+        path: 'search',  
+        loadChildren: () => import('./pages/search/search.module').then((m) => m.SearchModule),
+      }
+
     ]
   },  
 ];

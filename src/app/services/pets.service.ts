@@ -20,7 +20,7 @@ remarks:'Es jugueton y muerde todo',
 photos:[{url_mobile: 'https://i.postimg.cc/g25MpVHt/loro-min.jpg', url_full:'', alt:''}],
 likes:6},
 
-{id:'4',name:'Max patitas cortas', 
+{id:'4',name:'Max patitas', 
 description: 'Es muy caprichoso y piqui para comer no come cualquier tipo de croqueta y le teme a la oscuridad, pero es bilingüe y es bonito',
 age:1, health:'Buena', location:'Texas', vaccinated:true,
 owner_id:'Josue Perez',
@@ -92,6 +92,10 @@ likes:2}
   }
   getRescuePets(){
     return this.rescuePets
+  }
+  //devolemos el objeto completo como ejemplo
+  getRelatedPet(){
+    return this.adoptionPets
   }
 
 }

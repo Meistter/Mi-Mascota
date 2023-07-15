@@ -1,0 +1,9 @@
+<section class="related-container">
+    <div class="related__top-header">
+        <h1>Mascotas Relacionadas</h1>
+        <mat-icon style="font-size: 32px;">chevron_right</mat-icon>
+    </div>  
+    <div class="related__pet-cards">
+        <app-related-card [pet]="pet" *ngFor="let pet of relatedPets.reverse()"></app-related-card>
+    </div>
+</section>

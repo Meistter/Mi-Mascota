@@ -4,6 +4,7 @@ import { PetRoutingModule } from './pet-routing.module';
 import { PetComponent } from './pet/pet.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { SwiperModule } from 'swiper/angular';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SwiperModule } from 'swiper/angular';
     CommonModule,
     PetRoutingModule,
     MaterialModule,
-    SwiperModule
+    SwiperModule,
+    SharedModule
   ]
 })
 export class PetModule { }

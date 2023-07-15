@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SwitcherComponent {
 
-  locations = [{value:'Barquisimeto'},{value: 'Valencia'},{value: 'Maracaibo'},{value: 'Caracas'}]
+  locations = [{value:'Barquisimeto'},{value: 'Valencia'},{value: 'Maracaibo'},{value: 'Caracas'},{value: 'Texas'}]
   selected = 'Barquisimeto';
 
   btnIzquierda : boolean = false

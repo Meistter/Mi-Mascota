@@ -38,9 +38,11 @@ export class PetComponent implements OnInit{
   ngOnInit(): void {
     this.route.paramMap.subscribe(params=>{
       this.petId = params.get('id')
+      
     })
     if(this.petId){
     this.pet = this.petService.getAdoptionPet(this.petId)
+    
     }    
     
   }
@@ -55,7 +57,7 @@ export class PetComponent implements OnInit{
   automatico(swiper: Swiper) {
     const segundos = interval(10000);
     segundos.subscribe(() => {
-    swiper.slideNext();    
+    swiper.slideNext(850);    
     })
   }
  

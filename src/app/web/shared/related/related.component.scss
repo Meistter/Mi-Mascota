@@ -1,0 +1,28 @@
+.related-container {
+    width: 100%;
+    min-height: 210px;
+    max-height: 320px;
+    margin: 0;
+    padding: 10px 0 12px 10px;    
+    background-color: var(--background-gray);
+
+    .related__top-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+            font-family: Inter;
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+    .related__pet-cards {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        overflow-x: scroll;              /* * Scroll horizontal */
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity;
+    }
+}
