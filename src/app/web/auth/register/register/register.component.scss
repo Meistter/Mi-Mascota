@@ -12,7 +12,6 @@
         padding: 22px;
         width: 80%;
         height: 100%;
-        // min-height: 440px;
         min-width: 260px;        
         max-width: 340px;
         border-radius: 8px;        
@@ -27,30 +26,34 @@
         mat-form-field{
             width: 100%;            
         }
-        .register__button--register {
-            margin: 6px 12px 20px 12px;
-            color: black;
-            font-size: 14px;
-            font-family: 'Inter';
-            font-weight: 550;
-            width: 110px ;
-            height: 35px;        
-            border: solid;
-            border-width: 1.5px;
-            border-radius: 4px;
-            border-color: rgb(0, 0, 0);
-            background-color: var(--card-button-background);
-            cursor: pointer;
+        .register__buttons {
+            display: flex;
+            align-items: center;
+
+            .register__button--register {
+                margin: 6px 10px 20px 10px;
+                color: black;
+                font-size: 14px;
+                font-family: 'Inter';
+                font-weight: 550;
+                width: 110px ;
+                height: 35px;        
+                border: solid;
+                border-width: 1.5px;
+                border-radius: 4px;
+                border-color: rgb(0, 0, 0);
+                background-color: var(--card-button-background);
+                cursor: pointer;
+            }
         }
+        
         .register__label--register {
             margin-bottom: 20px;
             font-family: 'Inter';
             font-size: 14px;
             font-weight: 550;
         }
-        .register__button--register {
-            @extend .register__button--register
-        }
+        
         .register__label--error {
             font-size: 14px;
             font-weight: 600;
