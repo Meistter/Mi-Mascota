@@ -33,6 +33,7 @@
     margin-top: 10px;
     width: 100%;
     button {
+        cursor: pointer;
         color: black;
         width: 26px;
         height: 26px;
@@ -43,7 +44,11 @@
 }
 .header-top__form {
    width: 100%;
-   padding-right: 8px
+   padding-right: 8px;
+   input{
+        padding: 6px 6px 6px 8px;
+   }
+   
 }
 .header-top__search .header-top__searchForm {   
     width: 100%;
