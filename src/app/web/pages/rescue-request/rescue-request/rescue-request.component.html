@@ -1,1 +1,51 @@
-<p>rescue-request works!</p>
+<section class="rescue-request-container">
+    <form class="rescue-form" [formGroup]="requestForm" (ngSubmit)="login($event)">
+        <h1>Solicitar Rescate</h1>
+        <h2>Por favor, rellene todos los campos</h2>
+
+        <div class="rescue-form__content" >
+            <p>Usuario:</p>
+            <mat-form-field>
+                <mat-label>mimascota@mail.com</mat-label>
+                <input matInput placeholder="mimascota@mail.com" formControlName="user">
+                <mat-error *ngIf="this.requestForm.controls['user'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+                <mat-error *ngIf="this.requestForm.controls['user'].hasError('email')">{{getEmailMsg()}}</mat-error>
+              </mat-form-field> 
+        </div>
+        <div class="rescue-form__content" >
+            <p>Tipo de animal:</p>            
+              <mat-form-field>
+                <mat-label>Seleccione</mat-label>
+                <mat-select>
+                  <mat-option value="one">Si</mat-option>
+                  <mat-option value="two">No</mat-option>
+                </mat-select>
+              </mat-form-field>              
+        </div> 
+        <div class="rescue-form__content" >
+            <p>Herido:</p>            
+              <mat-form-field>
+                <mat-label>Seleccione</mat-label>
+                <mat-select>
+                  <mat-option value="one">Si</mat-option>
+                  <mat-option value="two">No</mat-option>
+                </mat-select>
+              </mat-form-field>              
+        </div> 
+        <div class="rescue-form__content" >
+            <p>Tamaño:</p>            
+              <mat-form-field>
+                <mat-label>Seleccione</mat-label>
+                <mat-select>
+                  <mat-option value="one">Pequeño</mat-option>
+                  <mat-option value="two">Mediano</mat-option>
+                  <mat-option value="tree">Grande</mat-option>
+                </mat-select>
+              </mat-form-field>              
+        </div>          
+        <div class="rescue-form__buttons">        
+        <button class="rescue-form-button" type="submit">Enviar</button>                 
+        <button class="rescue-form-button" routerLink="/home">Cancelar</button>
+        </div>
+    </form>
+</section>

@@ -24,7 +24,9 @@ import { CardsComponent } from './cards/cards.component';
     MatCardModule 
   ],
   exports: [
-    RelatedComponent
+    RelatedComponent,
+    CardComponent,
+    CardsComponent
   ]
 })
 export class SharedModule { }
