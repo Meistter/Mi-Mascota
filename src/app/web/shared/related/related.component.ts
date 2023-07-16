@@ -11,9 +11,11 @@ export class RelatedComponent implements OnInit{
 
   constructor(private petService: PetsService){}
   relatedPets : Pet[] = []
-  // related : Pet[] = []
+  related : Pet[] = []
   ngOnInit(): void {
     this.relatedPets = this.petService.getRelatedPet() //no estoy usando asincronismo
-    // this.relatedPets = this.related.reverse()
+    this.related = [...this.relatedPets].reverse()
+    
+    
   }
 }

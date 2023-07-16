@@ -7,7 +7,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { SwitcherComponent } from './components/switcher/switcher.component';
 import { CardComponent } from './components/card/card.component';
 import { CardsComponent } from './components/cards/cards.component';
-import { MaterialModule } from 'src/app/material/material.module';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -21,8 +23,11 @@ import { MaterialModule } from 'src/app/material/material.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SwiperModule,
-    MaterialModule
+    SwiperModule,    
+    MatIconModule,    
+    MatCardModule,  
+    MatSelectModule,
+    
   ]
 })
 export class HomeModule { }

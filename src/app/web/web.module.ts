@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { WebRoutingModule } from './web-routing.module';
 import { LayoutComponent } from './components/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { MaterialModule } from '../material/material.module';
+import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatExpansionModule } from '@angular/material/expansion';
 @NgModule({
     declarations: [
         LayoutComponent,
@@ -14,7 +16,10 @@ import { MaterialModule } from '../material/material.module';
     imports: [
         CommonModule,
         WebRoutingModule,
-        MaterialModule
+        MatIconModule,
+        MatExpansionModule,        
+        MatSidenavModule,
+       
     ]
 })
 export class WebModule { }

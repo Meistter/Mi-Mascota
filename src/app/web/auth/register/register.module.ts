@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RegisterRoutingModule } from './register-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from 'src/app/material/material.module';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -14,8 +15,10 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
   imports: [
     CommonModule,
     RegisterRoutingModule,
-    ReactiveFormsModule,
-    MaterialModule
+    ReactiveFormsModule,   
+    MatIconModule,    
+    MatFormFieldModule,    
+    MatDatepickerModule,    
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'es-VE'},

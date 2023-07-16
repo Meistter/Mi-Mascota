@@ -18,11 +18,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatStepperModule } from '@angular/material/stepper';
-import { MatDatepickerModule } from '@angular/material/datepicker';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatExpansionModule } from '@angular/material/expansion';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTooltipModule} from '@angular/material/tooltip';
 @NgModule({
   declarations: [],
   imports: [
@@ -47,9 +45,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatStepperModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatTooltipModule,
-    MatExpansionModule,
-    MatCheckboxModule
+    MatTooltipModule
   ],
   exports: [
     MatButtonModule,
@@ -72,9 +68,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatStepperModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatTooltipModule,
-    MatExpansionModule,
-    MatCheckboxModule
+    MatTooltipModule
   ]
 })
 export class MaterialModule { }
