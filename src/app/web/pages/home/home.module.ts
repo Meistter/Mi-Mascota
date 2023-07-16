@@ -5,11 +5,10 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { SwitcherComponent } from './components/switcher/switcher.component';
-import { CardComponent } from './components/card/card.component';
-import { CardsComponent } from './components/cards/cards.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -17,8 +16,6 @@ import { MatSelectModule } from '@angular/material/select';
     HomeComponent,
     CarouselComponent,
     SwitcherComponent,
-    CardComponent,
-    CardsComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +24,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatIconModule,    
     MatCardModule,  
     MatSelectModule,
+    SharedModule
     
   ]
 })
