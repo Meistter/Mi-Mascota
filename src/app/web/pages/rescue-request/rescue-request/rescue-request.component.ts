@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-rescue-request',
@@ -7,30 +8,41 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./rescue-request.component.scss']
 })
 export class RescueRequestComponent {
+  constructor(private router: Router){}
 
   requestForm = new FormGroup({
     user : new FormControl({ value: '', disabled: true }), 
-    password : new FormControl('',[Validators.required, Validators.minLength(5)]),
-    })
-  router: any;
+    photos : new FormControl('',[Validators.required]),
+    animalType : new FormControl('',[Validators.required]),
+    hurt : new FormControl('',[Validators.required]),
+    size : new FormControl('',[Validators.required]),
+    description : new FormControl('',[Validators.required]),
+    phone : new FormControl('',[Validators.required]),
+    state : new FormControl('',[Validators.required]),
+    city : new FormControl('',[Validators.required]),
+    address : new FormControl('',[Validators.required]),
+    location : new FormControl('',),
+    }) 
 
     getRequiredMsg(){
       return 'Este campo es Requerido'
-    }
-    getEmailMsg(){
-      return 'Por favor, Ingrese un email válido'
-    }
+    }    
 
-    getLoginError(){
-      return 'Usuario o clave incorrectos'
-    }
+    animalType = ['Perro','Gato','Ave']
+    hurt = ['Si','No']
+    tipoAnimal = ['Perro','Gato','Ave']
+    size = ['Pequeño','Mediano','Grande']
+    state = ['Lara','Distrito Capital','Carabobo','Zulia','Aragua']
+    city = ['Barquisimeto','Valencia','Caracas']
 
     login(event: Event){
       event.preventDefault();
-      // if(this.loginForm.valid){
-      //   console.log('logueado');
-      //   this.router.navigate(['/home'])
-      // }else{}      
+      if(this.requestForm.valid){
+        console.log('formulario enviado');        
+        window.alert('formulario enviado')
+        this.router.navigate(['/home'])
+        
+      }else{}      
       
     }
     
