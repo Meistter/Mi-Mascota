@@ -38,12 +38,11 @@ export class PetComponent implements OnInit{
   ngOnInit(): void {
     this.route.paramMap.subscribe(params=>{
       this.petId = params.get('id')
-      
+      if(this.petId){
+        this.pet = this.petService.getAdoptionPet(this.petId)        
+        } 
     })
-    if(this.petId){
-    this.pet = this.petService.getAdoptionPet(this.petId)
-    
-    }    
+       
     
   }
   config: SwiperOptions = {

@@ -18,6 +18,7 @@
     position: relative;
     .info__left{
         font-family: 'Inter';
+        margin-bottom: 10px;
         h1 {
             font-size: 18px;   
             margin: 12px 0 12px 0;         
@@ -26,7 +27,6 @@
             font-size: 13px;   
             font-weight: 400;  
             padding-right: 4px;  
-            margin-bottom: 16px;   
         }
         p {
             font-weight: 500; 
@@ -36,7 +36,7 @@
             position: absolute;
             bottom: 0;
             display: flex;
-            flex-direction: row;            
+            flex-direction: row;         
         }
     }
     .info__right {

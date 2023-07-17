@@ -20,9 +20,8 @@
     .related__pet-cards {
         display: flex;
         align-items: center;
-        // justify-content: center;
         overflow-x: scroll;              /* * Scroll horizontal */
         overscroll-behavior-x: contain;
-        scroll-snap-type: x proximity;
+        scroll-snap-type: x mandatory;
     }
 }
