@@ -13,7 +13,7 @@ export class RescueRequestComponent {
   requestForm = new FormGroup({
     user : new FormControl({ value: '', disabled: true }), 
     photos : new FormControl('',[Validators.required]),
-    animalType : new FormControl('',[Validators.required]),
+    breed : new FormControl('',[Validators.required]),
     hurt : new FormControl('',[Validators.required]),
     size : new FormControl('',[Validators.required]),
     description : new FormControl('',[Validators.required]),
@@ -28,7 +28,7 @@ export class RescueRequestComponent {
       return 'Este campo es Requerido'
     }    
 
-    animalType = ['Perro','Gato','Ave']
+    breed = ['Perro','Gato','Ave']
     hurt = ['Si','No']
     tipoAnimal = ['Perro','Gato','Ave']
     size = ['Pequeño','Mediano','Grande']
