@@ -10,8 +10,7 @@ import { Router } from '@angular/router';
 export class GiveAdoptionComponent {
   constructor(private router: Router){}
 
-  requestForm = new FormGroup({
-    user : new FormControl({ value: '', disabled: true }), 
+  requestForm = new FormGroup({  
     breed : new FormControl('',[Validators.required]),
     size : new FormControl('',[Validators.required]),
     photos : new FormControl('',[Validators.required]),

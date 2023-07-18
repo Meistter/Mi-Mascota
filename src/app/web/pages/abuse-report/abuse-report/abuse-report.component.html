@@ -1,1 +1,92 @@
-<p>abuse-report works!</p>
+<section class="abuse-report-container">
+    <form class="abuse-report-form" [formGroup]="requestForm" (ngSubmit)="send($event)">
+      <h1>Denunciar Maltrato</h1>
+      <h2>Toda la información suministrada es <b>Anómina</b></h2>
+      <div class="abuse-report-form__content">
+        <p>Especie:</p>
+        <mat-form-field>
+          <mat-label>Seleccione</mat-label>
+          <mat-select formControlName="breed">
+            <mat-option *ngFor="let opcion of breed" [value]="opcion">{{opcion}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="this.requestForm.controls['breed'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="abuse-report-form__content">
+        <p>Herido:</p>
+        <mat-form-field>
+          <mat-label>Seleccione</mat-label>
+          <mat-select formControlName="hurt">
+            <mat-option *ngFor="let opcion of hurt" [value]="opcion">{{opcion}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="this.requestForm.controls['hurt'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="abuse-report-form__content">
+        <p>Tamaño:</p>
+        <mat-form-field>
+          <mat-label>Seleccione</mat-label>
+          <mat-select formControlName="size">
+            <mat-option *ngFor="let opcion of size" [value]="opcion">{{opcion}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="this.requestForm.controls['size'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+        </mat-form-field>
+      </div>      
+      <div class="abuse-report-form__content">
+        <p>Fotografias:</p>
+        <mat-form-field>
+          <input matInput formControlName="photos">
+          <mat-error *ngIf="this.requestForm.controls['photos'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="abuse-report-form__content">
+        <p>Descripción:</p>
+        <mat-form-field>
+          <mat-label>Cuéntanos más</mat-label>
+          <textarea matInput formControlName="description"></textarea>
+          <mat-error
+            *ngIf="this.requestForm.controls['description'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+        </mat-form-field>
+      </div>  
+      <div class="abuse-report-form__content">
+        <p>Estado:</p>
+        <mat-form-field>
+          <mat-label>Seleccione</mat-label>
+          <mat-select formControlName="state">
+            <mat-option *ngFor="let opcion of state" [value]="opcion">{{opcion}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="this.requestForm.controls['state'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="abuse-report-form__content">
+        <p>Ciudad:</p>
+        <mat-form-field>
+          <mat-label>Seleccione</mat-label>
+          <mat-select formControlName="city">
+            <mat-option *ngFor="let opcion of city" [value]="opcion">{{opcion}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="this.requestForm.controls['city'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="abuse-report-form__content">
+        <p>Dirección:</p>
+        <mat-form-field>
+          <mat-label>Dirección</mat-label>
+          <textarea matInput formControlName="address" placeholder="Ej: Carrera 12 con calle 13"></textarea>
+          <mat-error *ngIf="this.requestForm.controls['address'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="abuse-report-form__content">
+        <p>Ubicacion GPS:</p>
+        <mat-form-field>
+          <input matInput formControlName="location">
+          <mat-error *ngIf="this.requestForm.controls['location'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+        </mat-form-field>
+      </div>
+  
+      <div class="abuse-report-form__buttons">
+        <button class="abuse-report-form-button" type="submit">Enviar</button>
+        <button class="abuse-report-form-button" routerLink="/home">Cancelar</button>
+      </div>
+    </form>
+  </section>

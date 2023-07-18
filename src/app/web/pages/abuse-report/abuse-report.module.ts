@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { AbuseReportRoutingModule } from './abuse-report-routing.module';
 import { AbuseReportComponent } from './abuse-report/abuse-report.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -11,7 +15,11 @@ import { AbuseReportComponent } from './abuse-report/abuse-report.component';
   ],
   imports: [
     CommonModule,
-    AbuseReportRoutingModule
+    AbuseReportRoutingModule,
+    MatInputModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    MatSelectModule
   ]
 })
 export class AbuseReportModule { }
