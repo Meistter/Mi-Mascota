@@ -7,14 +7,14 @@
     .abuse-report-form {
         display: flex;
         align-items: center;
-        flex-direction: column;      
+        flex-direction: column;   
+        text-align: center;   
         width: 100%; 
         max-width: 410px;     
         h1 {
             font-size: 28px;
             font-family: 'Inter';
             font-weight: 600;
-            
         }
         h2 {
             font-size: 14px;            

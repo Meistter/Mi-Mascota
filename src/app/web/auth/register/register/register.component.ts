@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -44,13 +43,7 @@ export class RegisterComponent {
 
     register(event: Event){
       event.preventDefault();      
-      if(this.registerForm.valid && !this.responsabilityRequired && !this.termsRequired){
-        console.log(this.responsabilityRequired);
-        console.log(this.termsRequired);
-        
-        
-        console.log('Registrado y logueado');
-        console.log(this.registerForm.get('date')?.value);
+      if(this.registerForm.valid && !this.responsabilityRequired && !this.termsRequired){        
         this.router.navigate(['/home'])
       }else{}   
       

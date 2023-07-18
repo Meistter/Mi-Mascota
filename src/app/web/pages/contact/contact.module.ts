@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -11,7 +16,13 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     CommonModule,
-    ContactRoutingModule
+    ContactRoutingModule,
+    MatInputModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatCheckboxModule
+    
   ]
 })
 export class ContactModule { }

@@ -1,1 +1,42 @@
-<p>contact works!</p>
+<section class="contact-container">
+    <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="send($event)">
+        <h1>Contáctanos</h1>
+
+        <div class="contact-form__content">
+            <p>Correo:</p>
+            <mat-form-field class="email">
+                <mat-label>Ingresa tu correo</mat-label>
+                <input matInput placeholder="mimascota@mail.com" formControlName="email">
+                <mat-error
+                    *ngIf="this.contactForm.controls['email'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+                <mat-error *ngIf="this.contactForm.controls['email'].hasError('email')">{{getEmailMsg()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="contact-form__content">
+            <p>Teléfono:</p>
+            <mat-form-field>
+                <mat-label>Opcional</mat-label>
+                <span matPrefix>&nbsp; +58 &nbsp;</span>
+                <input formControlName="phone" type="tel" matInput placeholder="412-555-1234">
+                <mat-error *ngIf="this.contactForm.controls['phone'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="contact-form__content">
+            <p>Mensaje:</p>
+            <mat-form-field>
+                <mat-label>Cuéntanos</mat-label>
+                <textarea matInput formControlName="description"></textarea>
+                <mat-error
+                    *ngIf="this.contactForm.controls['description'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <section class="contact-form__checkbox">          
+            <mat-checkbox  class="contact-form__checkbox-element">Enviarme una copia a mi correo</mat-checkbox>
+        </section>
+
+        <div class="contact-form__buttons">
+            <button class="contact-form-button" type="submit">Enviar</button>
+            <button class="contact-form-button" routerLink="/home">Cancelar</button>
+        </div>
+    </form>
+</section>
