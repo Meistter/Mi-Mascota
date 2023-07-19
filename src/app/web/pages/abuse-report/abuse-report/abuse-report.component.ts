@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class AbuseReportComponent {
   constructor(private router: Router){}
 
-  requestForm = new FormGroup({  
+  reportForm = new FormGroup({  
     breed : new FormControl('',[Validators.required]),
     size : new FormControl('',[Validators.required]),
     photos : new FormControl('',[Validators.required]),
@@ -39,7 +39,7 @@ export class AbuseReportComponent {
 
     send(event: Event){
       event.preventDefault();
-      if(this.requestForm.valid){
+      if(this.reportForm.valid){
         console.log('formulario enviado');        
         window.alert('formulario enviado')
         this.router.navigate(['/home'])

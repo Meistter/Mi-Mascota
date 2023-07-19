@@ -136,6 +136,35 @@
     .header-menu__right {
         @extend .header-menu__left
     }
+    .animal-menu-right {        
+        .animal-menu-right-buttons {
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            top: 28px;
+            transition: opacity 0.2s ease-in-out;
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: left;                
+                width: 204px;
+                height: 32px;
+                background-color: var(--background-gray);
+                border:solid;
+                border-color: var(--menu-border-color);
+                border-width: 1px;                 
+                transition: all 0.15s ease-out;
+                cursor: pointer;
+                color: var(--black);
+                p{
+                    margin-left: 20px;
+                }
+            }
+            button:hover{
+                background-color: var(--navbar-selected-first);
+            }
+        }
+    } 
 }
 .active {    
     opacity: 1 !important;

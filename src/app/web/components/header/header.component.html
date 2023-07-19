@@ -38,10 +38,17 @@
         </ul>      
 
         <a routerLink="rescue-request" class="header-menu__center">Solicitar Rescate</a>
-
-        <ul class="header-menu__right">
-            <mat-icon style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
-            <a routerLink="give-adoption">Publicar Mascota</a>
-        </ul>        
+       
+            <ul  class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()">            
+                <mat-icon id="open-menu-right" style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
+                <a id="open-menu-right">Publicar Mascota</a>
+                <ul class="animal-menu-right" (mouseleave)="closeRightMenu()" >
+                    <ul class="animal-menu-right-buttons"  [ngClass]="statusRightMenu ? 'active':'inactive'">   
+                        <button routerLink="give-adoption"><mat-icon style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>Dar mi mascota en Adopción</button>
+                        <button routerLink="give-rescue"><mat-icon style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>Publicar mascota Callejera</button>
+                    </ul>  
+                </ul>
+            </ul>
+           
     </ul>
 </header>

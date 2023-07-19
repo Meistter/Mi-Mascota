@@ -1,5 +1,5 @@
 <section class="abuse-report-container">
-    <form class="abuse-report-form" [formGroup]="requestForm" (ngSubmit)="send($event)">
+    <form class="abuse-report-form" [formGroup]="reportForm" (ngSubmit)="send($event)">
       <h1>Denunciar Maltrato</h1>
       <h2>Toda la información suministrada es <b>Anómina</b></h2>
       <div class="abuse-report-form__content">
@@ -9,7 +9,7 @@
           <mat-select formControlName="breed">
             <mat-option *ngFor="let opcion of breed" [value]="opcion">{{opcion}}</mat-option>
           </mat-select>
-          <mat-error *ngIf="this.requestForm.controls['breed'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+          <mat-error *ngIf="this.reportForm.controls['breed'].hasError('required')">{{getRequiredMsg()}}</mat-error>
         </mat-form-field>
       </div>
       <div class="abuse-report-form__content">
@@ -19,7 +19,7 @@
           <mat-select formControlName="hurt">
             <mat-option *ngFor="let opcion of hurt" [value]="opcion">{{opcion}}</mat-option>
           </mat-select>
-          <mat-error *ngIf="this.requestForm.controls['hurt'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+          <mat-error *ngIf="this.reportForm.controls['hurt'].hasError('required')">{{getRequiredMsg()}}</mat-error>
         </mat-form-field>
       </div>
       <div class="abuse-report-form__content">
@@ -29,14 +29,14 @@
           <mat-select formControlName="size">
             <mat-option *ngFor="let opcion of size" [value]="opcion">{{opcion}}</mat-option>
           </mat-select>
-          <mat-error *ngIf="this.requestForm.controls['size'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+          <mat-error *ngIf="this.reportForm.controls['size'].hasError('required')">{{getRequiredMsg()}}</mat-error>
         </mat-form-field>
       </div>      
       <div class="abuse-report-form__content">
         <p>Fotografias:</p>
         <mat-form-field>
           <input matInput formControlName="photos">
-          <mat-error *ngIf="this.requestForm.controls['photos'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+          <mat-error *ngIf="this.reportForm.controls['photos'].hasError('required')">{{getRequiredMsg()}}</mat-error>
         </mat-form-field>
       </div>
       <div class="abuse-report-form__content">
@@ -45,7 +45,7 @@
           <mat-label>Cuéntanos más</mat-label>
           <textarea matInput formControlName="description"></textarea>
           <mat-error
-            *ngIf="this.requestForm.controls['description'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+            *ngIf="this.reportForm.controls['description'].hasError('required')">{{getRequiredMsg()}}</mat-error>
         </mat-form-field>
       </div>  
       <div class="abuse-report-form__content">
@@ -55,7 +55,7 @@
           <mat-select formControlName="state">
             <mat-option *ngFor="let opcion of state" [value]="opcion">{{opcion}}</mat-option>
           </mat-select>
-          <mat-error *ngIf="this.requestForm.controls['state'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+          <mat-error *ngIf="this.reportForm.controls['state'].hasError('required')">{{getRequiredMsg()}}</mat-error>
         </mat-form-field>
       </div>
       <div class="abuse-report-form__content">
@@ -65,7 +65,7 @@
           <mat-select formControlName="city">
             <mat-option *ngFor="let opcion of city" [value]="opcion">{{opcion}}</mat-option>
           </mat-select>
-          <mat-error *ngIf="this.requestForm.controls['city'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+          <mat-error *ngIf="this.reportForm.controls['city'].hasError('required')">{{getRequiredMsg()}}</mat-error>
         </mat-form-field>
       </div>
       <div class="abuse-report-form__content">
@@ -73,14 +73,14 @@
         <mat-form-field>
           <mat-label>Dirección</mat-label>
           <textarea matInput formControlName="address" placeholder="Ej: Carrera 12 con calle 13"></textarea>
-          <mat-error *ngIf="this.requestForm.controls['address'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+          <mat-error *ngIf="this.reportForm.controls['address'].hasError('required')">{{getRequiredMsg()}}</mat-error>
         </mat-form-field>
       </div>
       <div class="abuse-report-form__content">
         <p>Ubicacion GPS:</p>
         <mat-form-field>
           <input matInput formControlName="location">
-          <mat-error *ngIf="this.requestForm.controls['location'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+          <mat-error *ngIf="this.reportForm.controls['location'].hasError('required')">{{getRequiredMsg()}}</mat-error>
         </mat-form-field>
       </div>
   

@@ -45,6 +45,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/give-adoption/give-adoption.module').then((m) => m.GiveAdoptionModule),
       },
       {
+        path: 'give-rescue',  
+        loadChildren: () => import('./pages/give-rescue/give-rescue.module').then((m) => m.GiveRescueModule),
+      },
+      {
         path: 'lost',  
         loadChildren: () => import('./pages/lost-pets/lost-pets.module').then((m) => m.LostPetsModule),
       },
