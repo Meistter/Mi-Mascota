@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Pet } from 'src/app/models/pet';
 import { PetsService } from 'src/app/services/pets.service';
 
 @Component({
@@ -8,7 +9,8 @@ import { PetsService } from 'src/app/services/pets.service';
 })
 export class CardsComponent {
 
-  constructor(private petService: PetsService){}
+  constructor(){}
+  @Input() pets : Pet[] = []
+  
 
-  pets = this.petService.getAdoptionPets()
 }

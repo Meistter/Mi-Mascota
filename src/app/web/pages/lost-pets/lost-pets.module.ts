@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LostPetsRoutingModule } from './lost-pets-routing.module';
 import { LostPetsComponent } from './lost-pets/lost-pets.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { LostPetsComponent } from './lost-pets/lost-pets.component';
   ],
   imports: [
     CommonModule,
-    LostPetsRoutingModule
+    LostPetsRoutingModule,
+    SharedModule
   ]
 })
 export class LostPetsModule { }

@@ -20,7 +20,7 @@
     
     <ul class="header-menu">
         <ul  class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()">            
-            <a id="open-animal-left">Animales y Razas</a><mat-icon id="open-animal-left" style="font-size: 20px;">expand_more</mat-icon>
+            <a id="open-animal-left">Mascotas y Razas</a><mat-icon id="open-animal-left" style="font-size: 20px;">expand_more</mat-icon>
             <ul class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()" >
                 <ul class="animal-menu__left"  [ngClass]="statusFirstMenu ? 'active':'inactive'">
                     <button id="open-animal-right" (click)="openSecondMenu()" (mouseenter)="openSecondMenu()" [ngClass]="statusSecondMenu ? 'activeButton':'none'"><p id="open-animal-right">Perros</p><mat-icon id="open-animal-right">chevron_right</mat-icon></button>
@@ -37,8 +37,9 @@
             </ul>
         </ul>      
 
-        <a routerLink="rescue-request" class="header-menu__center">Solicitar Rescate</a>
-       
+        <!-- <a routerLink="rescue-request" class="header-menu__center">Solicitar Rescate</a> -->
+            <a routerLink="lost" class="header-menu__center">Mascotas Extraviadas</a>
+
             <ul  class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()">            
                 <mat-icon id="open-menu-right" style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
                 <a id="open-menu-right">Publicar Mascota</a>
