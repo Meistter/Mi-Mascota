@@ -13,8 +13,7 @@
   
     h1{       
         font-size: 26px;
-        font-weight: 600;
-        // margin-left: 20px;
+        font-weight: 600;       
     }
 }
 .mat-panel h1{
@@ -23,8 +22,7 @@
     font-family: 'IBM Plex Sans KR';
     box-shadow: none;
 }
-.menu__element {
-    // margin-top: 10px;
+.menu__element {   
     width: 100%;
     height: 45px;
     border-bottom: solid 1px;
@@ -32,8 +30,7 @@
     padding: 12px;       
     a{      
         font-size: 14px;
-        font-weight: 500;
-        // font-family: 'IBM Plex Sans KR';
+        font-weight: 500;      
         margin-left: 10px;
        text-decoration: none;
        cursor: pointer;
