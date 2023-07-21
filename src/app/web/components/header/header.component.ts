@@ -1,11 +1,13 @@
 import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+  constructor(private router: Router){}
   app_logo = {url:'https://i.postimg.cc/c4MgZPjb/logo-min.jpg', alt:'logo-mi-mascota'}
   
   statusFirstMenu: boolean = false;
@@ -13,6 +15,10 @@ export class HeaderComponent {
 
   statusRightMenu: boolean = false;
   
+ 
+  query = new FormControl('',[])  
+       
+
   //Listener para cerrar y abrir menu
   @HostListener('document:click', ['$event'])
   onClickEvent(event: MouseEvent) {
@@ -37,6 +43,15 @@ export class HeaderComponent {
   openSideNav(){
     this.sideNavOpen.emit()
   }  
+
+  send(event: { preventDefault: () => void; }){
+    event.preventDefault()
+    console.log(this.query.value);
+    
+    if (this.query.valid){
+      this.router.navigate(['/search'], { queryParams: { query: this.query.value } })
+    }
+  }
   toggleFirstMenu(){    
     this.statusFirstMenu = !this.statusFirstMenu;
   }

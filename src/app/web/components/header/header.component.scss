@@ -27,11 +27,17 @@
         cursor: pointer;
     }
 }
-.header-top__search {
+.header-top__search {    
+    margin-top: 10px;
+    width: 100%;    
+}
+.header-top__form {
+    width: 100%;
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    width: 100%;
+    input{
+        padding: 6px 6px 6px 8px;
+    }
     button {
         cursor: pointer;
         color: black;
@@ -40,14 +46,8 @@
         border-radius: 5px;
         border-width: 0px;
         background-color: var(--background-gray);
-    }
+        margin-left: 4px;
 }
-.header-top__form {
-   width: 100%;
-   padding-right: 8px;
-   input{
-        padding: 6px 6px 6px 8px;
-   }
    
 }
 .header-top__search .header-top__searchForm {   
