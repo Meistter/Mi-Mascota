@@ -16,7 +16,7 @@ export class HeaderComponent {
   statusRightMenu: boolean = false;
   
  
-  query = new FormControl('',[])  
+  query = new FormControl('',[Validators.required])  
        
 
   //Listener para cerrar y abrir menu
