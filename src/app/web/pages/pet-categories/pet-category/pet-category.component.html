@@ -1,0 +1,10 @@
+<section class="pet-search-container">
+    <h1>{{this.petSearchQuery}}</h1>
+    <div class=" pet-search-content">
+        <h2><b>Especie: </b><p>{{this.breed}}</p></h2>
+        <h2><b>Ubicación: </b><p>{{this.location}}</p></h2>
+        <h2><b>Tamaño: </b><p>{{this.size}}</p></h2>
+    </div>
+</section>
+<app-cards [pets]="pets"></app-cards>
+<app-related></app-related>

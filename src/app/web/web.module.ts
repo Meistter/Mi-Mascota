@@ -8,11 +8,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PetSearchComponent } from './pet-search/pet-search/pet-search.component';
 @NgModule({
     declarations: [
         LayoutComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        PetSearchComponent
     ],
     imports: [
         CommonModule,

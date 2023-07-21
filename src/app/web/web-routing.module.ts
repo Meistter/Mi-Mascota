@@ -63,6 +63,10 @@ const routes: Routes = [
       {
         path: 'search',  
         loadChildren: () => import('./pages/search/search.module').then((m) => m.SearchModule),
+      },
+      {
+        path: 'pet-category/:id',  
+        loadChildren: () => import('./pages/pet-categories/pet-categories.module').then((m) => m.PetCategoriesModule),
       }
 
     ]
