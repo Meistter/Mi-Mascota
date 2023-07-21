@@ -45,9 +45,7 @@ export class HeaderComponent {
   }  
 
   send(event: { preventDefault: () => void; }){
-    event.preventDefault()
-    console.log(this.query.value);
-    
+    event.preventDefault()    
     if (this.query.valid){
       this.router.navigate(['/search'], { queryParams: { query: this.query.value } })
     }
