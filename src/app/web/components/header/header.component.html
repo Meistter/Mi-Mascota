@@ -24,15 +24,16 @@
             <ul class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()" >
                 <ul class="animal-menu__left"  [ngClass]="statusFirstMenu ? 'active':'inactive'">
                     <button id="open-animal-right" (click)="openSecondMenu()" (mouseenter)="openSecondMenu()" [ngClass]="statusSecondMenu ? 'activeButton':'none'"><p id="open-animal-right">Perros</p><mat-icon id="open-animal-right">chevron_right</mat-icon></button>
-                    <button routerLink="terms" (mouseenter)="closeSecondMenu()">Gatos</button>                
-                    <button routerLink="terms">Aves</button>
-                    <button routerLink="terms">Tortugas</button>
-                    <button routerLink="terms">Conejos</button>
+                    <button routerLink="pet-category/1" (mouseenter)="closeSecondMenu()">Gatos</button>                
+                    <button routerLink="pet-category/2">Aves</button>
+                    <button routerLink="pet-category/3">Tortugas</button>
+                    <button routerLink="pet-category/4">Conejos</button>
                 </ul>            
                 <ul class="animal-menu__right" [ngClass]="statusSecondMenu ? 'active':'inactive'">
-                    <button routerLink="terms">Grandes</button>
-                    <button routerLink="terms">Medianos</button>
-                    <button routerLink="terms">Pequeños</button>
+                    <button routerLink="pet-category/0" queryParams="{filter: 'big'}">Grandes</button>
+                    <button routerLink="pet-category/0" queryParams="{filter: 'medium'}">Medianos</button>
+                    <button routerLink="pet-category/0" queryParams="{filter: 'small'}">Pequeños</button>
+                    <!-- aqui deberia llamar a la categoria 0(perros) pero enviarle un query param para filtrar por tamaño -->
                 </ul>
             </ul>
         </ul>      
