@@ -30,9 +30,9 @@
                     <button routerLink="pet-category/4">Conejos</button>
                 </ul>            
                 <ul class="animal-menu__right" [ngClass]="statusSecondMenu ? 'active':'inactive'">
-                    <button routerLink="pet-category/0" queryParams="{filter: 'big'}">Grandes</button>
-                    <button routerLink="pet-category/0" queryParams="{filter: 'medium'}">Medianos</button>
-                    <button routerLink="pet-category/0" queryParams="{filter: 'small'}">Pequeños</button>
+                    <button routerLink="pet-category/0" [queryParams]="{filter: 'big'}">Grandes</button>
+                    <button routerLink="pet-category/0" [queryParams]="{filter: 'regular'}">Medianos</button>
+                    <button routerLink="pet-category/0" [queryParams]="{filter: 'small'}">Pequeños</button>
                     <!-- aqui deberia llamar a la categoria 0(perros) pero enviarle un query param para filtrar por tamaño -->
                 </ul>
             </ul>

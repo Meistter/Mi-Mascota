@@ -8,19 +8,22 @@ export class CategoryService{
   constructor(private http:HttpClient) { }
   
   getCategoryName(id: string){
-    if(id == '1'){
+    if(id == '0'){
       return 'Perro'
     }else{
-      if(id == '2'){
+      if(id == '1'){
         return 'Gato'
       }else{
-        if(id == '3'){
+        if(id == '2'){
           return 'Ave'
         }else{
-          if(id == '4'){
+          if(id == '3'){
             return 'Tortuga'
+            
+          } if(id == '4'){
+            return 'Conejo'            
           }else{
-            return 'Conejo'
+            return undefined
           }
         }
       }
