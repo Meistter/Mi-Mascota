@@ -13,7 +13,8 @@ export interface Pet{
     remarks: string,
     photos: image[],
     likes?: number,
-    category: number    
+    category: number,
+    lastSeenAddress?: string
 }
 export interface image{
     url_mobile: string,
