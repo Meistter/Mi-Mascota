@@ -27,7 +27,7 @@ export class CarouselComponent implements OnInit{
     };
 
     automatico(swiper: Swiper) {
-      const segundos = interval(12000);
+      const segundos = interval(25000);
       segundos.subscribe(() => {
       swiper.slideNext(850);    
      });
