@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pet } from 'src/app/models/pet';
+import { Pet, PetRescue } from 'src/app/models/pet';
 import { PetsService } from 'src/app/services/pets.service';
 
 @Component({
@@ -10,7 +10,13 @@ import { PetsService } from 'src/app/services/pets.service';
 export class HomeComponent implements OnInit{
   constructor(private petService: PetsService){}
   pets : Pet[] = []
+  petsRescue : PetRescue[] = []
+  switcher = false
   ngOnInit(): void {
     this.pets = this.petService.getAdoptionPets()
+    this.petsRescue = this.petService.getRescuePets()
+  }
+  switchComponents(){
+    this.switcher = !this.switcher
   }
 }

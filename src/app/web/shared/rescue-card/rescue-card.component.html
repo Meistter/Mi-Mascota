@@ -2,12 +2,13 @@
     <img mat-card-image src="{{pet.photos[0].url_mobile}}" alt={{pet.photos[0].alt}}>
     <mat-card-content class="card-container__articles">
       <article class="info__left">
-        <h1>{{pet.name}}</h1>
+        <h1>Espcie: {{this.getCategory()}}</h1>
         <h2>{{pet.description}}</h2>
-        <div class="info__left-details">
-          <p><b>Especie: </b>{{this.getCategory()}} | </p>
+        <br>
+        <h2><b>Ubicación: </b>{{pet.address}}</h2>
+        <div class="info__left-details">        
           <p><b>Salud: </b>{{pet.health}} | </p>
-          <p><b>Edad: </b>{{pet.age}}<a *ngIf="pet.age == 1; else elseAge"> año | </a><ng-template #elseAge> años | </ng-template></p>                 
+          <p><b>Edad: </b>{{pet.age}}<a *ngIf="pet.age == 1; else elseAge"> año aproximadamente | </a><ng-template #elseAge> años aproximadamente | </ng-template></p>                 
         </div>
       </article>
       <article class="info__right">

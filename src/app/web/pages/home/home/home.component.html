@@ -1,3 +1,4 @@
 <app-carousel></app-carousel>
-<app-switcher></app-switcher>
-<app-cards [pets]="pets"></app-cards>
+<app-switcher (switcherEvent)="switchComponents()"></app-switcher>
+<app-cards [ngClass]="switcher ? 'active' : 'inactive'" [pets]="pets"></app-cards>
+<app-rescue-cards [ngClass]="switcher ? 'inactive' : 'active'" [pets]="petsRescue"></app-rescue-cards>

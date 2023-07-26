@@ -7,6 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { CardComponent } from './card/card.component';
 import { CardsComponent } from './cards/cards.component';
+import { RescueCardsComponent } from './rescue-cards/rescue-cards.component';
+import { RescueCardComponent } from './rescue-card/rescue-card.component';
 
 
 
@@ -15,7 +17,9 @@ import { CardsComponent } from './cards/cards.component';
     RelatedComponent,
     RelatedCardComponent,
     CardComponent,
-    CardsComponent
+    CardsComponent,
+    RescueCardsComponent,
+    RescueCardComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +30,9 @@ import { CardsComponent } from './cards/cards.component';
   exports: [
     RelatedComponent,
     CardComponent,
-    CardsComponent
+    CardsComponent,
+    RescueCardsComponent,
+    RescueCardComponent
   ]
 })
 export class SharedModule { }

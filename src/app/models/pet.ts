@@ -3,19 +3,30 @@ export interface Pet{
     name: string,
     owner_id: string,    
     age: number,
-    castrated: boolean,
+    castrated?: boolean,
     disease: boolean,    
     health: string,
-    vaccinated: boolean,
+    vaccinated?: boolean,
     location: string,
     description: string,
-    adoptionReason: string,
+    adoptionReason?: string,
     remarks: string,
     photos: image[],
-    likes: number
+    likes?: number,
+    category: number    
 }
 export interface image{
     url_mobile: string,
     url_full: string,
     alt: string
+}
+export interface PetRescue{
+    id: string,      
+    age: number,       
+    health: string,    
+    location: string,
+    description: string,
+    photos: image[],
+    category: number,
+    address: string
 }

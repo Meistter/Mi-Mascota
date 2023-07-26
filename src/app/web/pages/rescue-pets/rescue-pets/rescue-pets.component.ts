@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pet } from 'src/app/models/pet';
+import { Pet, PetRescue } from 'src/app/models/pet';
 import { PetsService } from 'src/app/services/pets.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { PetsService } from 'src/app/services/pets.service';
 })
 export class RescuePetsComponent implements OnInit{
   constructor(private petService: PetsService){}
-  pets : Pet[] = []
+  pets : PetRescue[] = []
   ngOnInit(): void {
     this.pets = this.petService.getRescuePets()
   }

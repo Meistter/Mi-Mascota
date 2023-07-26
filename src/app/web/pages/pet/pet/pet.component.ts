@@ -32,7 +32,8 @@ export class PetComponent implements OnInit{
     adoptionReason: 'string',
     remarks: 'string',
     photos: [{url_mobile:'', url_full:'',alt:''}],
-    likes: 0
+    likes: 0,
+    category: 0
   }   
 
   ngOnInit(): void {
