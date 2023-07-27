@@ -14,44 +14,34 @@
         <mat-card-content>
           <div class="info-container-top">
             <section class="info-container__left">
-              <h1>{{pet?.name}}</h1>
-              <p><b>Dueño: </b>{{pet?.owner_id}} <mat-icon style="font-size: 14px;">verified</mat-icon></p>      
+              <h1>Especie: {{this.categoryName}}</h1>               
             </section>
             <section class="info-container__right">  
               <div class="info-container-icons">
                 <mat-icon>share</mat-icon><mat-icon>bookmark</mat-icon><mat-icon>report</mat-icon>
               </div>   
-              <div class="info-container-like-button">
-                <div class="info-container-like-icon">
-                  <mat-icon style="font-size: 32px;margin-top: 4px; color: rgb(177, 8, 8);">favorite_outline</mat-icon>
-                  <p><b>{{pet?.likes}}</b></p>
-                </div>
-                <button class="adopt-button">¡Darle un Hogar!</button>
+              <div class="info-container-like-button">                
+                <button class="adopt-button">Declarar como recuperado</button>
               </div>
             </section>
           </div>
           <section class="info-container-bottom">        
-            <p><b>Salud: </b>{{pet?.health}}</p>
-            <p><b>Edad: </b>{{pet?.age}}<a *ngIf="pet?.age == 1; else elseAge"> año</a><ng-template #elseAge> años</ng-template></p>
-            <p *ngIf="pet?.vaccinated; else elseVaccinated"><b> Vacunado: </b>Si </p>
-            <ng-template #elseVaccinated><p><b> Vacunado: </b>No</p></ng-template>
-            <p *ngIf="pet?.castrated; else elseCastrated"><b> Castrado: </b>Si </p>
-            <ng-template #elseCastrated><p><b> Castrado: </b>No</p></ng-template>
+            <p><b>Salud: </b>{{pet?.health}}</p> 
             <p *ngIf="pet?.disease; else elseDisease"><b> Enfermo: </b>Si </p>
             <ng-template #elseDisease><p><b> Enfermo: </b>No</p></ng-template>
             <br>
-            <p><b>Descripcion de la Mascota: </b> {{pet?.description}}.</p>
+            <p><b>Descripcion del animal: </b> {{pet?.description}}.</p>
             <br>
-            <p><b>Motivo de Adopcion: </b>{{pet?.adoptionReason}}.</p>
+            <p><b>Dirección: </b>{{pet?.address}}.</p>
             <br>
-            <p><b>Observaciones: </b>{{pet?.remarks}}.</p>
+            <p><b>LINK Ubicación GPS: </b>{{pet?.gps}}.</p>
           </section>
         </mat-card-content>    
       </div>
     </mat-card> 
   
     <section>
-      <!-- <app-related></app-related> -->
+      <app-related [related]="relatedPets"></app-related>
     </section>
   </div>
   

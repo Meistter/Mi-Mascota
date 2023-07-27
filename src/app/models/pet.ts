@@ -29,5 +29,7 @@ export interface PetRescue{
     description: string,
     photos: image[],
     category: string,
+    disease: boolean,
+    gps: string,
     address: string
 }

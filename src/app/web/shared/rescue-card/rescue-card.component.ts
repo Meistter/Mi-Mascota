@@ -15,6 +15,8 @@ export class RescueCardComponent {
     description: 'string',
     photos: [{url_mobile:'', url_full:'',alt:''}],
     category: '0',
+    disease: false,
+    gps: '',
     address: ''
   }
   
