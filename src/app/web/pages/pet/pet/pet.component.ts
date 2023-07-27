@@ -16,6 +16,7 @@ export class PetComponent implements OnInit{
 
   constructor(private route: ActivatedRoute, private petService:PetsService){}
 
+  relatedPets : Pet[]= []
   petId: string | null = null
   //quitar el undefined al usar API
   pet :Pet | undefined = {
@@ -33,7 +34,7 @@ export class PetComponent implements OnInit{
     remarks: 'string',
     photos: [{url_mobile:'', url_full:'',alt:''}],
     likes: 0,
-    category: 0
+    category: '0'
   }   
 
   ngOnInit(): void {
@@ -43,7 +44,10 @@ export class PetComponent implements OnInit{
         this.pet = this.petService.getAdoptionPet(this.petId)        
         } 
     })
-       
+    if(this.pet?.category){
+      this.relatedPets = this.petService.getRelatedPet(this.pet.category)
+    }
+    
     
   }
   config: SwiperOptions = {

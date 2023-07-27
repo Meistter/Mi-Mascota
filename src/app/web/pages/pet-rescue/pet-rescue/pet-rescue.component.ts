@@ -33,7 +33,7 @@ export class PetRescueComponent {
     remarks: 'string',
     photos: [{url_mobile:'', url_full:'',alt:''}],
     likes: 0,
-    category: 0
+    category: '0'
   }   
 
   ngOnInit(): void {

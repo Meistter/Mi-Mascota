@@ -22,23 +22,23 @@ export class CardComponent {
   remarks: 'string',
   photos: [{url_mobile:'', url_full:'',alt:''}],
   likes:0,
-  category: 0
+  category: '0'
 }
 
 getCategory(){
-  if(this.pet.category == 0){
+  if(this.pet.category == '0'){
     return 'Perro'
   }else{
-    if(this.pet.category == 1){
+    if(this.pet.category == '1'){
       return 'Gato'
     }else{
-      if(this.pet.category == 2){
+      if(this.pet.category == '2'){
         return 'Ave'
       }else{
-        if(this.pet.category == 3){
+        if(this.pet.category == '3'){
           return 'Tortuga'
           
-        } if(this.pet.category == 4){
+        } if(this.pet.category == '4'){
           return 'Conejo'            
         }else{
           return undefined

@@ -13,7 +13,7 @@ export interface Pet{
     remarks: string,
     photos: image[],
     likes?: number,
-    category: number,
+    category: string,
     lastSeenAddress?: string
 }
 export interface image{
@@ -28,6 +28,6 @@ export interface PetRescue{
     location: string,
     description: string,
     photos: image[],
-    category: number,
+    category: string,
     address: string
 }

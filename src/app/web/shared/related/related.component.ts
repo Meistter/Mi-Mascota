@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Pet } from 'src/app/models/pet';
 import { PetsService } from 'src/app/services/pets.service';
 
@@ -7,15 +7,9 @@ import { PetsService } from 'src/app/services/pets.service';
   templateUrl: './related.component.html',
   styleUrls: ['./related.component.scss']
 })
-export class RelatedComponent implements OnInit{
+export class RelatedComponent{
 
-  constructor(private petService: PetsService){}
-  relatedPets : Pet[] = []
-  related : Pet[] = []
-  ngOnInit(): void {
-    this.relatedPets = this.petService.getRelatedPet() //no estoy usando asincronismo
-    this.related = [...this.relatedPets].reverse()
-    
-    
-  }
+  @Input() related : Pet[] = []
+  
+  
 }

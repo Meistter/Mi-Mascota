@@ -33,7 +33,7 @@ export class PetsService{
     return this.rescuePets
   }
   //devolemos el objeto completo como ejemplo
-  getRelatedPet(){ //debemos filtrar por categoria antes de retornar
+  getRelatedPet(categoryId: string){ //debemos filtrar por categoria antes de retornar
     return this.adoptionPets
   }
   getLostPets(){

@@ -1,25 +1,25 @@
 [
-    {"id":"12","category":1, 
+    {"id":"12","category":"1", 
 "description": "Este perrito se encuentra repleto de garrapatas y muy delgado",
 "age":1, "health":"Buena", "location":"Valencia", "address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
 "photos":[{"url_mobile": "https://i.postimg.cc/mZ75DFS2/1795b46b-e1ca-4134-af5b-0dbabcfdb95d-16-9-discover-aspect-ratio-default-0.jpg", "url_full":"", "alt":""}]
 },
-{"id":"13","category":0, 
+{"id":"13","category":"0", 
 "description": "Este perrito se encuentra repleto de garrapatas y muy delgado",
 "age":1, "health":"Buena", "location":"Valencia","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
 "photos":[{"url_mobile": "https://i.postimg.cc/pXx1nX0Q/20210308121030-perro-callejero-copia.jpg", "url_full":"", "alt":""}]
 },
-{"id":"14","category":1, 
+{"id":"14","category":"1", 
 "description": "Este perrito se encuentra repleto de garrapatas y muy delgado",
 "age":1, "health":"Buena", "location":"Valencia","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
 "photos":[{"url_mobile": "https://i.postimg.cc/5227nKW6/cat-odyssey-lamu-02.jpg", "url_full":"", "alt":""}]
 },
-{"id":"15","category":0, 
+{"id":"15","category":"0", 
 "description": "Este perrito se encuentra repleto de garrapatas y muy delgado",
 "age":1, "health":"Buena", "location":"Valencia","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
 "photos":[{"url_mobile": "https://i.postimg.cc/tC5vdQfK/enfermedades-perritos-callejeros-principal.jpg", "url_full":"", "alt":""}]
 },
-{"id":"16","category":0, 
+{"id":"16","category":"0", 
 "description": "Este perrito se encuentra repleto de garrapatas y muy delgado",
 "age":1, "health":"Buena", "location":"Valencia","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
 "photos":[{"url_mobile": "https://i.postimg.cc/kgYjZN7w/perros-callejeros-4-1024x683.jpg", "url_full":"", "alt":""}]

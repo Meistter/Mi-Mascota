@@ -7,7 +7,7 @@
   "adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio",
   "remarks":"En el pasado Max ha tenido episodios ansiedad por el calor donde es necesario llevarlo a un lugar fresco y tener cuidado con el calor en sus patitas",
   "photos":[{"url_mobile": "https://i.postimg.cc/TwjQnZMB/max-min.jpg", "url_full":"", "alt":""},{"url_mobile": "https://i.postimg.cc/3RFqhQD1/max2-min.jpg", "url_full":"", "alt":"max-photo2"},{"url_mobile": "https://i.postimg.cc/T124YNV6/max3-min.jpg", "url_full":"", "alt":"max-photo3"},{"url_mobile": "https://i.postimg.cc/jqZPLHBv/max4.jpg", "url_full":"", "alt":"max-photo4"},{"url_mobile": "https://i.postimg.cc/cL8n9VC5/max5.jpg", "url_full":"", "alt":"max-photo5"}],
-  "likes":23,"category": 0},
+  "likes":23,"category": "0"},
   
   
   {"id":"5","name":"Kira", 
@@ -18,7 +18,7 @@
   "adoptionReason":"No tengo dinero para mantenerlo",
   "remarks":"Es jugueton y muerde todo",
   "photos":[{"url_mobile": "https://i.postimg.cc/ZRzVBJgr/sofia-min.jpg", "url_full":"", "alt":""}],
-  "likes":4, "category": 1},
+  "likes":4, "category": "1"},
 
     
 {"id":"2","name":"Kiara Renata", 
@@ -29,7 +29,7 @@
 "adoptionReason":"No tengo dinero para mantenerlo",
 "remarks":"Es jugueton y muerde todo",
 "photos":[{"url_mobile": "https://i.postimg.cc/sfwppfSZ/kiara2-min.jpg", "url_full":"", "alt":""}],
-"likes":0, "category": 0},
+"likes":0, "category": "0"},
 
 {"id":"3","name":"Sofia Victoria", 
 "description": "Es una gata consentida y cariñosa, come como por 3 gatos y le encanta hacer popo por toda la casa",
@@ -39,7 +39,7 @@
 "adoptionReason":"No tengo dinero para mantenerlo",
 "remarks":"Es jugueton y muerde todo",
 "photos":[{"url_mobile": "https://i.postimg.cc/3wvtxkL8/sofiareal-min.jpg", "url_full":"", "alt":""}],
-"likes":7, "category": 0},
+"likes":7, "category": "0"},
     
 {"id":"1","name":"Ramon el Loro", 
 "description": "Un ave muy noble sabe cantar opera y a veces se destaca con un rap",
@@ -49,7 +49,7 @@
 "adoptionReason":"No tengo dinero para mantenerlo",
 "remarks":"Es jugueton y muerde todo",
 "photos":[{"url_mobile": "https://i.postimg.cc/g25MpVHt/loro-min.jpg", "url_full":"", "alt":""}],
-"likes":6, "category": 2},
+"likes":6, "category": "2"},
 
 {"id":"0","name":"Arturo el Canguro", 
 "description": "Es un conejito muy bien portado, le encanta jugar comer zanahoria y dormir por las tardes",
@@ -59,7 +59,7 @@
 "adoptionReason":"No tengo dinero para mantenerlo",
 "remarks":"Es jugueton y muerde todo",
 "photos":[{"url_mobile": "https://i.postimg.cc/nhzfJByN/conejo.jpg", "url_full":"", "alt":"conejo-photo1"}],
-"likes":2, "category": 4}, 
+"likes":2, "category": "4"}, 
 
 {"id":"6","name":"Pirata Sparrow", 
 "description": "Amigable, le gustan los niños y es super cariñoso, buena compañía para personas mayores",
@@ -67,5 +67,5 @@
 "owner_id":"Abigail Paredes",
 "castrated":false,"disease":false,"adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio","remarks":"En el pasado Max ha tenido episodios ansiedad por el calor donde es necesario llevarlo a un lugar fresco y tener cuidado con el calor en sus patitas",
 "photos":[{"url_mobile": "https://i.postimg.cc/sxVmmw3x/pirata-min.jpg", "url_full":"", "alt":""}],
-"likes":9, "category": 0}
+"likes":9, "category": "0"}
   ]
