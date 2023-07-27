@@ -67,7 +67,11 @@ const routes: Routes = [
       {
         path: 'pet-category/:id',  
         loadChildren: () => import('./pages/pet-categories/pet-categories.module').then((m) => m.PetCategoriesModule),
-      }
+      },
+      {
+        path: 'pet-rescue/:id',  
+        loadChildren: () => import('./pages/pet-rescue/pet-rescue.module').then((m) => m.PetRescueModule),
+      },
 
     ]
   },  

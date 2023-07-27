@@ -1,0 +1,57 @@
+<div class="pet-container">
+    <mat-card class="card-container">    
+      <div class="card__content">  
+        <div class="card__image">
+          <swiper [config]="config" (swiper)="automatico($event)">
+            <ng-template swiperSlide *ngFor="let slide of pet?.photos">            
+                     <img class="swiper-image" [src]="slide.url_mobile" alt="{{slide.alt}}" />            
+           </ng-template>
+        </swiper>
+          <div class="location">
+            <mat-icon style="font-size: 16px;">location_on</mat-icon><p>{{pet?.location}}</p>
+          </div>
+        </div>    
+        <mat-card-content>
+          <div class="info-container-top">
+            <section class="info-container__left">
+              <h1>{{pet?.name}}</h1>
+              <p><b>Dueño: </b>{{pet?.owner_id}} <mat-icon style="font-size: 14px;">verified</mat-icon></p>      
+            </section>
+            <section class="info-container__right">  
+              <div class="info-container-icons">
+                <mat-icon>share</mat-icon><mat-icon>bookmark</mat-icon><mat-icon>report</mat-icon>
+              </div>   
+              <div class="info-container-like-button">
+                <div class="info-container-like-icon">
+                  <mat-icon style="font-size: 32px;margin-top: 4px; color: rgb(177, 8, 8);">favorite_outline</mat-icon>
+                  <p><b>{{pet?.likes}}</b></p>
+                </div>
+                <button class="adopt-button">¡Darle un Hogar!</button>
+              </div>
+            </section>
+          </div>
+          <section class="info-container-bottom">        
+            <p><b>Salud: </b>{{pet?.health}}</p>
+            <p><b>Edad: </b>{{pet?.age}}<a *ngIf="pet?.age == 1; else elseAge"> año</a><ng-template #elseAge> años</ng-template></p>
+            <p *ngIf="pet?.vaccinated; else elseVaccinated"><b> Vacunado: </b>Si </p>
+            <ng-template #elseVaccinated><p><b> Vacunado: </b>No</p></ng-template>
+            <p *ngIf="pet?.castrated; else elseCastrated"><b> Castrado: </b>Si </p>
+            <ng-template #elseCastrated><p><b> Castrado: </b>No</p></ng-template>
+            <p *ngIf="pet?.disease; else elseDisease"><b> Enfermo: </b>Si </p>
+            <ng-template #elseDisease><p><b> Enfermo: </b>No</p></ng-template>
+            <br>
+            <p><b>Descripcion de la Mascota: </b> {{pet?.description}}.</p>
+            <br>
+            <p><b>Motivo de Adopcion: </b>{{pet?.adoptionReason}}.</p>
+            <br>
+            <p><b>Observaciones: </b>{{pet?.remarks}}.</p>
+          </section>
+        </mat-card-content>    
+      </div>
+    </mat-card> 
+  
+    <section>
+      <!-- <app-related></app-related> -->
+    </section>
+  </div>
+  
