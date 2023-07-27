@@ -16,14 +16,19 @@ export class SwitcherComponent {
   @Output() switcherEvent = new EventEmitter<string>();
 
   activarBtnIzquierda(){
+    if(!this.btnIzquierda && this.btnDerecha){
+      this.sendSwitchMessage()
+    }
     this.btnIzquierda = true
     this.btnDerecha = false
-    this.sendSwitchMessage()
+    
   }
   activarBtnDerecha(){
+    if(!this.btnDerecha && this.btnIzquierda){
+      this.sendSwitchMessage()
+    }
     this.btnIzquierda = false
     this.btnDerecha = true
-    this.sendSwitchMessage()
   }
 
   sendSwitchMessage() {
