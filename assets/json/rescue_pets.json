@@ -6,24 +6,22 @@
 },
 {"id":"13","category":"0", "disease":true, "gps": "xxxyyyzzzz",
 "description": "Este perrito se encuentra repleto de garrapatas y muy delgado",
-"age":1, "health":"Buena", "location":"Valencia","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
+"age":1, "health":"Buena", "location":"Texas","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
 "photos":[{"url_mobile": "https://i.postimg.cc/pXx1nX0Q/20210308121030-perro-callejero-copia.jpg", "url_full":"", "alt":""}]
 },
 {"id":"14","category":"1", "disease":true, "gps": "xxxyyyzzzz",
 "description": "Este perrito se encuentra repleto de garrapatas y muy delgado",
-"age":1, "health":"Buena", "location":"Valencia","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
+"age":1, "health":"Buena", "location":"Caracas","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
 "photos":[{"url_mobile": "https://i.postimg.cc/5227nKW6/cat-odyssey-lamu-02.jpg", "url_full":"", "alt":""}]
 },
 {"id":"15","category":"0", "disease":true, "gps": "xxxyyyzzzz",
 "description": "Este perrito se encuentra repleto de garrapatas y muy delgado",
-"age":1, "health":"Buena", "location":"Valencia","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
+"age":1, "health":"Buena", "location":"Barquisimeto","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
 "photos":[{"url_mobile": "https://i.postimg.cc/tC5vdQfK/enfermedades-perritos-callejeros-principal.jpg", "url_full":"", "alt":""}]
 },
 {"id":"16","category":"0", "disease":true, "gps": "xxxyyyzzzz",
 "description": "Este perrito se encuentra repleto de garrapatas y muy delgado",
-"age":1, "health":"Buena", "location":"Valencia","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
+"age":1, "health":"Buena", "location":"Barquisimeto","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
 "photos":[{"url_mobile": "https://i.postimg.cc/kgYjZN7w/perros-callejeros-4-1024x683.jpg", "url_full":"", "alt":""}]
 }
-
-
-  ]
+]
