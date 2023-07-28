@@ -18,6 +18,8 @@ export class PetComponent implements OnInit{
 
   relatedPets : Pet[]= []
   petId: string | null = null
+  liked: boolean = false
+  likeCount: number = 1
   //quitar el undefined al usar API
   pet :Pet | undefined = {
     id: 'string',
@@ -63,6 +65,10 @@ export class PetComponent implements OnInit{
     segundos.subscribe(() => {
     swiper.slideNext(850);    
     })
+  }
+  changeLiked(){
+    this.liked = !this.liked
+    if(this.likeCount == 2){this.likeCount--}else{this.likeCount++}
   }
  
 }

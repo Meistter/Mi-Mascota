@@ -22,9 +22,14 @@
               <mat-icon>share</mat-icon><mat-icon>bookmark</mat-icon><mat-icon>report</mat-icon>
             </div>   
             <div class="info-container-like-button">
-              <div class="info-container-like-icon">
-                <mat-icon style="font-size: 32px;margin-top: 4px; color: rgb(177, 8, 8);">favorite_outline</mat-icon>
-                <p><b>{{pet?.likes}}</b></p>
+              <div class="info-container-like-icon" (click)="changeLiked()">
+                <div *ngIf="this.liked; else elseLiked" >
+                  <mat-icon style="font-size: 32px;margin-top: 4px; color: rgb(177, 8, 8);">favorite</mat-icon>
+                </div>
+                <ng-template #elseLiked>
+                  <mat-icon style="font-size: 32px;margin-top: 4px; color: rgb(177, 8, 8);">favorite_outline</mat-icon>
+                </ng-template>                
+                <p><b>{{this.likeCount}}</b></p>
               </div>
               <button class="adopt-button">¡Darle un Hogar!</button>
             </div>

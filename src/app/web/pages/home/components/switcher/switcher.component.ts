@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-switcher',
@@ -7,13 +8,15 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class SwitcherComponent {
 
-  locations = [{value:'Barquisimeto'},{value: 'Valencia'},{value: 'Maracaibo'},{value: 'Caracas'},{value: 'Texas'}]
+  locations = [{value:'Barquisimeto'},{value: 'Valencia'},{value: 'Caracas'},{value: 'Texas'}]
   selected = 'Barquisimeto';
-
   btnIzquierda : boolean = false
   btnDerecha : boolean = true
 
+  locationList = new FormControl('')  
+  
   @Output() switcherEvent = new EventEmitter<string>();
+  @Output() switcherLocationEvent = new EventEmitter<string>();
 
   activarBtnIzquierda(){
     if(!this.btnIzquierda && this.btnDerecha){
@@ -33,6 +36,10 @@ export class SwitcherComponent {
 
   sendSwitchMessage() {
     this.switcherEvent.emit();
+  }
+  sendSwitchLocationMessage() {
+    if(this.locationList.value)    
+    this.switcherLocationEvent.emit(this.locationList.value);
   }
 
 }

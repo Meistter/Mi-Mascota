@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { SharedModule } from '../../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,8 +25,8 @@ import { SharedModule } from '../../shared/shared.module';
     MatIconModule,    
     MatCardModule,  
     MatSelectModule,
-    SharedModule
-    
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }
