@@ -19,6 +19,7 @@
     position: relative;
     .info__left{
         font-family: 'Inter';
+        text-align: center;
         h1 {
             font-size: 18px;   
             margin: 12px 0 12px 0;         
@@ -27,7 +28,11 @@
     .info__right {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;        
+        align-items: flex-end;   
+        p {
+            font-size: 13px;
+            font-weight: 500;
+        }     
         button {           
             color: black;
             font-size: 12px;
@@ -35,7 +40,7 @@
             font-weight: 550;
             width:86px ;
             height: 30px;
-            margin: 4px 8px 12px 8px;
+            margin: 6px 8px 12px 8px;
             margin-right: 0;
             border: solid;
             border-width: 1.5px;

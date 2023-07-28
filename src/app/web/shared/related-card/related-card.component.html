@@ -2,10 +2,11 @@
     <img mat-card-image src="{{pet.photos[0].url_mobile}}" alt={{pet.photos[0].alt}}>
     <mat-card-content class="card-container__articles">
       <article class="info__left">
-        <h1>{{pet.name}}</h1>        
+        <h1 *ngIf="pet.name; else category">{{pet.name}}</h1>
+        <ng-template #category><h1>Rescatar</h1></ng-template>        
       </article>
       <article class="info__right">
-        <div class="location"><mat-icon style="font-size: 12px;">location_on</mat-icon><p>{{pet.location}}</p></div>
+        <div class="location"><mat-icon style="font-size: 13px;">location_on</mat-icon><p>{{pet.location}}</p></div>
         <button class="detail-button">Ver detalles</button>       
       </article>
     </mat-card-content>    

@@ -16,7 +16,7 @@ export class PetRescueComponent {
 
   
   constructor(private route: ActivatedRoute, private petService:PetsService, private categoryService: CategoryService){}
-  relatedPets : Pet[]= []
+  relatedPets : PetRescue[]= []
   petId: string | null = null
   categoryName : string | undefined = ''
   //quitar el undefined al usar API
@@ -41,7 +41,7 @@ export class PetRescueComponent {
         if(this.pet?.category)
         this.categoryName = this.categoryService.getCategoryName(this.pet?.category)         
       if(this.pet?.category){
-        this.relatedPets = this.petService.getRelatedPet(this.pet.category)
+        this.relatedPets = this.petService.getRelatedRescuePets(this.pet.category)
       }
       } 
     })

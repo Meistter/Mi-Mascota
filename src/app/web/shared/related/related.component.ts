@@ -9,7 +9,7 @@ import { PetsService } from 'src/app/services/pets.service';
 })
 export class RelatedComponent{
 
-  @Input() related : Pet[] = []
+  @Input() related : any = []
   
   
 }
