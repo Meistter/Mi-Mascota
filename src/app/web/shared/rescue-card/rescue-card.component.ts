@@ -7,6 +7,7 @@ import { PetRescue } from 'src/app/models/pet';
   styleUrls: ['./rescue-card.component.scss']
 })
 export class RescueCardComponent {
+  url = '/pet-rescue'
   @Input() pet : PetRescue = {
     id: 'string',    
     age: 0,

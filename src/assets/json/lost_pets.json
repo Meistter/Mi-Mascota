@@ -6,7 +6,7 @@
   "disease":false,  
   "remarks":"Lo vimos por ultima vez el sabado en la noche estamos muy desesperados ofrecemos recompensa en $$$$",
   "photos":[{"url_mobile": "https://i.postimg.cc/Fz0w3c63/am-79226-6438397-865347.jpg", "url_full":"", "alt":""}],
-  "category": "2", "lastSeenAddress": "Carrera 12 con calle 15"}
+  "category": "0", "lastSeenAddress": "Carrera 12 con calle 15"}
   ,
   {"id":"41","name":"Raul", "gps": "xxxyyyzzzz", "address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
   "description": "Es un Perro noble y amable",
@@ -15,7 +15,7 @@
   "disease":false,  
   "remarks":"Lo vimos por ultima vez el sabado en la noche estamos muy desesperados ofrecemos recompensa en $$$$",
   "photos":[{"url_mobile": "https://i.postimg.cc/1zTddJhD/perro-comida-natural.jpg", "url_full":"", "alt":""}],
-  "category": "2", "lastSeenAddress": "Carrera 12 con calle 15"}
+  "category": "0", "lastSeenAddress": "Carrera 12 con calle 15"}
   ,
   {"id":"42","name":"Ralf", "gps": "xxxyyyzzzz", "address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
   "description": "Es un Perro noble y amable",
@@ -24,7 +24,7 @@
   "disease":false,  
   "remarks":"Lo vimos por ultima vez el sabado en la noche estamos muy desesperados ofrecemos recompensa en $$$$",
   "photos":[{"url_mobile": "https://i.postimg.cc/XvXhxthV/Receta-casera-para-perros-galletas-de-cereales-blog-de-pampermut.jpg  ", "url_full":"", "alt":""}],
-  "category": "2", "lastSeenAddress": "Carrera 12 con calle 15"}
+  "category": "0", "lastSeenAddress": "Carrera 12 con calle 15"}
   ,
   {"id":"43","name":"Michuni", "gps": "xxxyyyzzzz", "address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
   "description": "Es un gato noble y amable",
@@ -33,7 +33,7 @@
   "disease":false,  
   "remarks":"Lo vimos por ultima vez el sabado en la noche estamos muy desesperados ofrecemos recompensa en $$$$",
   "photos":[{"url_mobile": "https://i.postimg.cc/Mp9N7z9P/remedios-caseros-para-gatos-deshidratados-23180-orig.jpg", "url_full":"", "alt":""}],
-  "category": "2", "lastSeenAddress": "Carrera 12 con calle 15"}
+  "category": "1", "lastSeenAddress": "Carrera 12 con calle 15"}
   ,
   {"id":"44","name":"San Pedrini", "gps": "xxxyyyzzzz", "address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
   "description": "Es un gato noble y amable",
@@ -42,6 +42,6 @@
   "disease":false,  
   "remarks":"Lo vimos por ultima vez el sabado en la noche estamos muy desesperados ofrecemos recompensa en $$$$",
   "photos":[{"url_mobile": "https://i.postimg.cc/htDNQX1Q/zion-pudo-mantenerse-sobre-sus-0-1-1200-747.webp  ", "url_full":"", "alt":""}],
-  "category": "2", "lastSeenAddress": "Carrera 12 con calle 15"}
+  "category": "1", "lastSeenAddress": "Carrera 12 con calle 15"}
   
   ]
