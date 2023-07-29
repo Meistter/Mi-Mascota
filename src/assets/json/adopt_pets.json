@@ -8,18 +8,24 @@
   "remarks":"En el pasado Max ha tenido episodios ansiedad por el calor donde es necesario llevarlo a un lugar fresco y tener cuidado con el calor en sus patitas",
   "photos":[{"url_mobile": "https://i.postimg.cc/TwjQnZMB/max-min.jpg", "url_full":"", "alt":""},{"url_mobile": "https://i.postimg.cc/3RFqhQD1/max2-min.jpg", "url_full":"", "alt":"max-photo2"},{"url_mobile": "https://i.postimg.cc/T124YNV6/max3-min.jpg", "url_full":"", "alt":"max-photo3"},{"url_mobile": "https://i.postimg.cc/jqZPLHBv/max4.jpg", "url_full":"", "alt":"max-photo4"},{"url_mobile": "https://i.postimg.cc/cL8n9VC5/max5.jpg", "url_full":"", "alt":"max-photo5"}],
   "likes":23,"category": "0"},
+ 
+{"id":"7","name":"Flash", 
+"description": "Le encanta correr y hacer deporte",
+"age":0.5, "health":"Buena", "location":"Valencia", "vaccinated":true,
+"owner_id":"Flor Paredes",
+"castrated":false,"disease":false,"adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio","remarks":"En el pasado Max ha tenido episodios ansiedad por el calor donde es necesario llevarlo a un lugar fresco y tener cuidado con el calor en sus patitas",
+"photos":[{"url_mobile": "https://i.postimg.cc/3rGss5wN/descarga.jpg", "url_full":"", "alt":""}],
+"likes":9, "category": "3"},
   
-  
-  {"id":"5","name":"Kira", 
-  "description": "Me gusta jugar con los calcetines de mis padres y morderme la cola una y otra vez hasta que mis padres tienen que separarme porque me puedo hacer daño, solo como gatarina CatShow",
-  "age":3, "health":"Buena", "location":"Maracaibo", "vaccinated":false,
-  "owner_id":"Yolanda Torres",
-  "castrated":false,"disease":false,
-  "adoptionReason":"No tengo dinero para mantenerlo",
-  "remarks":"Es jugueton y muerde todo",
-  "photos":[{"url_mobile": "https://i.postimg.cc/ZRzVBJgr/sofia-min.jpg", "url_full":"", "alt":""}],
-  "likes":4, "category": "1"},
-
+{"id":"5","name":"Kira", 
+"description": "Me gusta jugar con los calcetines de mis padres y morderme la cola una y otra vez hasta que mis padres tienen que separarme porque me puedo hacer daño, solo como gatarina CatShow",
+"age":3, "health":"Buena", "location":"Maracaibo", "vaccinated":false,
+"owner_id":"Yolanda Torres",
+"castrated":false,"disease":false,
+"adoptionReason":"No tengo dinero para mantenerlo",
+"remarks":"Es jugueton y muerde todo",
+"photos":[{"url_mobile": "https://i.postimg.cc/ZRzVBJgr/sofia-min.jpg", "url_full":"", "alt":""}],
+"likes":4, "category": "1"},
     
 {"id":"2","name":"Kiara Renata", 
 "description": "Es una perrita muy consentida, solo come perrarina en la boca y una por una, no le gusta el pollo ni los gatos",
@@ -39,8 +45,16 @@
 "adoptionReason":"No tengo dinero para mantenerlo",
 "remarks":"Es jugueton y muerde todo",
 "photos":[{"url_mobile": "https://i.postimg.cc/3wvtxkL8/sofiareal-min.jpg", "url_full":"", "alt":""}],
-"likes":7, "category": "1"},
-    
+"likes":7, "category": "2"},
+
+{"id":"8","name":"Saltarin", 
+"description": "Le encanta saltar y hacer deporte",
+"age":0.5, "health":"Buena", "location":"Barquisimeto", "vaccinated":true,
+"owner_id":"Flor Paredes",
+"castrated":false,"disease":false,"adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio","remarks":"En el pasado Max ha tenido episodios ansiedad por el calor donde es necesario llevarlo a un lugar fresco y tener cuidado con el calor en sus patitas",
+"photos":[{"url_mobile": "https://i.postimg.cc/65Nkwj70/como-hacer-una-jaula-para-conejos-casera-24564-600-square.jpg", "url_full":"", "alt":""}],
+"likes":9, "category": "4"},
+
 {"id":"1","name":"Ramon el Loro", 
 "description": "Un ave muy noble sabe cantar opera y a veces se destaca con un rap",
 "age":1, "health":"Buena", "location":"Valencia", "vaccinated":false, 
@@ -68,4 +82,7 @@
 "castrated":false,"disease":false,"adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio","remarks":"En el pasado Max ha tenido episodios ansiedad por el calor donde es necesario llevarlo a un lugar fresco y tener cuidado con el calor en sus patitas",
 "photos":[{"url_mobile": "https://i.postimg.cc/sxVmmw3x/pirata-min.jpg", "url_full":"", "alt":""}],
 "likes":9, "category": "0"}
+
+
+
   ]

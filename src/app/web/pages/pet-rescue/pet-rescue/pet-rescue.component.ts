@@ -30,7 +30,8 @@ export class PetRescueComponent {
     address: '',
     disease: true,
     gps: '',
-    category: '0'
+    category: '0',
+    remarks: 'string',
   }   
 
   ngOnInit(): void {

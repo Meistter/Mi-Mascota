@@ -16,7 +16,7 @@ export class PetsService{
   //Base de datos de las mascotas
   adoptionPets: Pet[] = adopt_pets
   rescuePets: PetRescue[] = rescue_pets
-  lostPets: Pet[] = lost_pets
+  lostPets: PetRescue[] = lost_pets
   searchPets: Pet[] = search_pets
   category_dog_pets: Pet[] = category_dog_pets
   //Funciones a usar mientras no exista backend

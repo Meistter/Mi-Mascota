@@ -17,6 +17,7 @@ export class RescueCardComponent {
     category: '0',
     disease: false,
     gps: '',
+    remarks: 'string',
     address: ''
   }
   

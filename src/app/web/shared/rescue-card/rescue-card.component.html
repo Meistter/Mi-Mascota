@@ -5,7 +5,7 @@
         <h1>Especie: {{this.getCategory()}}</h1>
         <h2>{{pet.description}}</h2>
         <br>
-        <h2><b>Ubicación: </b>{{pet.address}}</h2>
+        <h2><b>Última vez visto: </b>{{pet.address}}</h2>
         <div class="info__left-details">        
           <p><b>Salud: </b>{{pet.health}} | </p>
           <p><b>Edad: </b>{{pet.age}}<a *ngIf="pet.age == 1; else elseAge"> año aproximadamente | </a><ng-template #elseAge> años aproximadamente | </ng-template></p>                 
