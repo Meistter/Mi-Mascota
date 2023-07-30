@@ -1,7 +1,7 @@
 [
   {"id":"4","name":"Max patitas", "size": "big",
   "description": "Es muy caprichoso y piqui para comer no come cualquier tipo de croqueta y le teme a la oscuridad, pero es bilingüe y es bonito",
-  "age":1, "health":"Buena", "location":"Texas", "vaccinated":true,
+  "age":1, "health":"Buena", "location":"Fort Worth", "vaccinated":true,
   "owner_id":"Josue Perez",
   "castrated":true,"disease":false,
   "adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio",
@@ -45,7 +45,7 @@
 "adoptionReason":"No tengo dinero para mantenerlo",
 "remarks":"Es jugueton y muerde todo",
 "photos":[{"url_mobile": "https://i.postimg.cc/3wvtxkL8/sofiareal-min.jpg", "url_full":"", "alt":""}],
-"likes":7, "category": "2"},
+"likes":7, "category": "1"},
 
 {"id":"8","name":"Saltarin", 
 "description": "Le encanta saltar y hacer deporte",
@@ -77,7 +77,7 @@
 
 {"id":"6","name":"Pirata Sparrow", "size": "small", 
 "description": "Amigable, le gustan los niños y es super cariñoso, buena compañía para personas mayores",
-"age":0.5, "health":"Buena", "location":"Texas", "vaccinated":true,
+"age":0.5, "health":"Buena", "location":"Fort Worth", "vaccinated":true,
 "owner_id":"Abigail Paredes",
 "castrated":false,"disease":false,"adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio","remarks":"En el pasado Max ha tenido episodios ansiedad por el calor donde es necesario llevarlo a un lugar fresco y tener cuidado con el calor en sus patitas",
 "photos":[{"url_mobile": "https://i.postimg.cc/sxVmmw3x/pirata-min.jpg", "url_full":"", "alt":""}],
