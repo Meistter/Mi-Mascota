@@ -1,9 +1,9 @@
 <section class="pet-search-container">
     <h1>{{this.categoryName}}s</h1>
     <div class=" pet-search-content">
-        <h2><b>Especie: </b><p>{{this.categoryName}}</p></h2>
-        <h2><b>Ubicación: </b><p>{{this.location}}</p></h2>
-        <h2 *ngIf="this.sizeFilter"><b>Tamaño: </b><p>{{this.getFilterName()}}</p></h2>       
+        <h2><b>Especie: </b><p>{{this.categoryName}}</p><mat-icon  style="font-size: 20px;">expand_more</mat-icon></h2>
+        <h2><b>Ubicación: </b><p>{{this.location}}</p><mat-icon  style="font-size: 20px;">expand_more</mat-icon></h2>
+        <h2 *ngIf="this.sizeFilter"><b>Tamaño: </b><p>{{this.getFilterName()}}</p><mat-icon  style="font-size: 20px;">expand_more</mat-icon></h2>       
        
     </div>
 </section>

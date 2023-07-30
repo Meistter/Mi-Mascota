@@ -10,8 +10,8 @@ export class SwitcherComponent {
 
   locations = [{value:'Barquisimeto'},{value: 'Valencia'},{value: 'Caracas'},{value: 'Texas'}]
   selected = 'Barquisimeto';
-  btnIzquierda : boolean = false
-  btnDerecha : boolean = true
+  btnIzquierda : boolean = true
+  btnDerecha : boolean = false
 
   locationList = new FormControl('')  
   

@@ -38,7 +38,9 @@ export class PetCategoryComponent {
 
       this.route.queryParamMap.subscribe(params => {
         this.sizeFilter = params.get('filter')    
+        if(this.sizeFilter !== 'all')
         this.pets = this.MainPets.filter(rsp=> rsp.size == this.sizeFilter)  
+        else{this.pets = this.MainPets}
       }) 
     }) 
       
@@ -52,7 +54,7 @@ export class PetCategoryComponent {
       }else{
         if(this.sizeFilter == 'small'){
           return 'Pequeño'
-        }else{return false}
+        }else{return 'Todos'}
       }
     }
   }

@@ -30,6 +30,7 @@
                     <button routerLink="pet-category/4">Conejos</button>
                 </ul>            
                 <ul class="animal-menu__right" [ngClass]="statusSecondMenu ? 'active':'inactive'">
+                    <button routerLink="pet-category/0" [queryParams]="{filter: 'all'}">Todos</button>
                     <button routerLink="pet-category/0" [queryParams]="{filter: 'big'}">Grandes</button>
                     <button routerLink="pet-category/0" [queryParams]="{filter: 'regular'}">Medianos</button>
                     <button routerLink="pet-category/0" [queryParams]="{filter: 'small'}">Pequeños</button>
