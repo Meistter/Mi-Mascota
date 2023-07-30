@@ -1,33 +1,37 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { FormControl} from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { LocationService } from 'src/app/services/location.service';
 
 @Component({
   selector: 'app-switcher',
   templateUrl: './switcher.component.html',
   styleUrls: ['./switcher.component.scss']
 })
-export class SwitcherComponent {
+export class SwitcherComponent implements OnInit {
 
-  locations = [{value:'Barquisimeto'},{value: 'Valencia'},{value: 'Caracas'},{value: 'Texas'}]
-  selected = 'Barquisimeto';
-  btnIzquierda : boolean = true
-  btnDerecha : boolean = false
+  constructor(private locationService: LocationService) { }
+  locations = []
+  ngOnInit(): void {
+    this.locations = this.locationService.getLocations()
+  }
+  btnIzquierda: boolean = true
+  btnDerecha: boolean = false
 
-  locationList = new FormControl('')  
-  
+  locationList = new FormControl('')
+
   @Output() switcherEvent = new EventEmitter<string>();
   @Output() switcherLocationEvent = new EventEmitter<string>();
 
-  activarBtnIzquierda(){
-    if(!this.btnIzquierda && this.btnDerecha){
+  activarBtnIzquierda() {
+    if (!this.btnIzquierda && this.btnDerecha) {
       this.sendSwitchMessage()
     }
     this.btnIzquierda = true
     this.btnDerecha = false
-    
+
   }
-  activarBtnDerecha(){
-    if(!this.btnDerecha && this.btnIzquierda){
+  activarBtnDerecha() {
+    if (!this.btnDerecha && this.btnIzquierda) {
       this.sendSwitchMessage()
     }
     this.btnIzquierda = false
@@ -38,8 +42,8 @@ export class SwitcherComponent {
     this.switcherEvent.emit();
   }
   sendSwitchLocationMessage() {
-    if(this.locationList.value)    
-    this.switcherLocationEvent.emit(this.locationList.value);
+    if (this.locationList.value)
+      this.switcherLocationEvent.emit(this.locationList.value);
   }
 
 }

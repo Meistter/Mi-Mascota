@@ -28,7 +28,7 @@
   ,
   {"id":"43","name":"Michuni", "gps": "xxxyyyzzzz", "address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
   "description": "Es un gato noble y amable",
-  "age":1, "health":"Buena", "location":"Texas", 
+  "age":1, "health":"Buena", "location":"Fort Worth", 
   "owner_id":"Rebeca Rodriguez",
   "disease":false,  
   "remarks":"Lo vimos por ultima vez el sabado en la noche estamos muy desesperados ofrecemos recompensa en $$$$",

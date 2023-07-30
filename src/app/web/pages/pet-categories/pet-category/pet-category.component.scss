@@ -3,48 +3,148 @@
     align-items: left;
     flex-direction: column;
     margin: 12px 0 10px 20px;
-   h1 {
-    font-family: "IBM Plex Sans KR";
-    font-size: 30px;
-    font-weight: 600;  
-    margin-left: 2px;
-   } 
-   
-   .pet-search-content {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;    
-    h2 {
+
+    h1 {
+        font-family: "IBM Plex Sans KR";
+        font-size: 30px;
+        font-weight: 600;
+        margin-left: 2px;
+    }
+
+    .pet-search-content {
         display: flex;
         flex-direction: row;
-        font-family: "Inter";
-        font-size: 14px;
-        font-weight: 400;
-        margin-right: 10px;  
-        margin-bottom: 4px;
-        cursor: pointer;
+        flex-wrap: wrap;
+
+        article {
+            display: flex;
+            flex-direction: row;
+            font-family: "Inter";
+            font-size: 14px;
+            font-weight: 400;
+            margin-right: 10px;
+            margin-bottom: 4px;          
+
             p {
                 text-decoration: underline;
+                cursor: pointer;
             }
-       } 
-    .location-menu{
-        position: absolute;
-        z-index: 4;
-        width: 102px;
-        height: auto;
-        top: 18px;
-        left: 192px;
-        li{
-            background-color: var(--background-gray);
-            width: 100%;
-            height: 30px;
-            padding: 4px;
-            text-align: center;
-            font-size: 14px;
-            text-decoration: none;
-            list-style: none;
         }
-    }  
-   }
+
+        .locationMenu {
+            position: relative;
+
+            .location-menu {
+                position: absolute;
+                z-index: 5;
+                width: 120px;
+                height: auto;
+                top: 18px;
+                right: 0;
+                transition: opacity 0.2s ease-in-out;
+
+                li {
+                    background-color: white;
+                    width: 100%;
+                    height: 30px;
+                    padding: 4px;
+                    text-align: center;
+                    font-size: 14px;
+                    text-decoration: none;
+                    list-style: none;
+                    border-width: 1px;
+                    border: solid;
+                    border-color: var(--menu-border-color);
+                    border-width: 1px;
+                    transition: all 0.15s ease-out;
+                    cursor: pointer;
+                }
+
+                li:hover {
+                    background-color: var(--navbar-selected-first);
+                }
+            }
+        }
+
+        .categoryMenu {
+            position: relative;
+
+            .category-menu {
+                position: absolute;
+                z-index: 5;
+                width: 102px;
+                height: auto;
+                top: 18px;
+                right: 0px;
+                transition: opacity 0.2s ease-in-out;
+
+                li {
+                    background-color: white;
+                    width: 100%;
+                    height: 30px;
+                    padding: 4px;
+                    text-align: center;
+                    font-size: 14px;
+                    text-decoration: none;
+                    list-style: none;
+                    border-width: 1px;
+                    border: solid;
+                    border-color: var(--menu-border-color);
+                    border-width: 1px;
+                    transition: all 0.15s ease-out;
+                    cursor: pointer;
+                }
+
+                li:hover {
+                    background-color: var(--navbar-selected-first);
+                }
+            }
+        }
+
+        .sizeMenu {
+            position: relative;
+
+            .size-menu {
+                position: absolute;
+                z-index: 5;
+                width: 102px;
+                height: auto;
+                top: 18px;
+                right: 0px;
+                transition: opacity 0.2s ease-in-out;
+
+                li {
+                    background-color: white;
+                    width: 100%;
+                    height: 30px;
+                    padding: 4px;
+                    text-align: center;
+                    font-size: 14px;
+                    text-decoration: none;
+                    list-style: none;
+                    border-width: 1px;
+                    border: solid;
+                    border-color: var(--menu-border-color);
+                    border-width: 1px;
+                    transition: all 0.15s ease-out;
+                    cursor: pointer;
+                }
+
+                li:hover {
+                    background-color: var(--navbar-selected-first);
+                }
+            }
+        }
+    }
+}
+
+.active {
+    opacity: 1 !important;
+    visibility: visible;
+
+}
+
+.inactive {
+    opacity: 0 !important;
+    visibility: hidden;
 }

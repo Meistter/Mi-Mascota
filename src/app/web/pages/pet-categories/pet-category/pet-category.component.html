@@ -1,12 +1,42 @@
 <section class="pet-search-container">
     <h1>{{this.categoryName}}s</h1>
     <div class="pet-search-content">
-        <h2><b>Especie: </b><p>{{this.categoryName}}</p><mat-icon  style="font-size: 20px;">expand_more</mat-icon></h2>
-        <h2><b>Ubicación: </b><p>{{this.location}}</p><mat-icon  style="font-size: 20px;">expand_more</mat-icon></h2>
-        <h2 *ngIf="this.sizeFilter"><b>Tamaño: </b><p>{{this.getFilterName()}}</p><mat-icon  style="font-size: 20px;">expand_more</mat-icon></h2>              
-        <ul class="location-menu">
-            <li>Barquisimeto</li>
-        </ul>
+        <article class="categoryMenu" >
+            <b>Especie: </b>
+            <p (click)="changeStatusCategoryMenu()">{{this.categoryName}}</p>
+            <mat-icon (click)="changeStatusCategoryMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
+
+            <ul class="category-menu" [ngClass]="statusCategoryMenu ? 'active':'inactive'">
+                <li (click)="changeStatusCategoryMenu()">Perros</li>
+                <li (click)="changeStatusCategoryMenu()">Gatos</li>
+                <li (click)="changeStatusCategoryMenu()">Aves</li>
+                <li (click)="changeStatusCategoryMenu()">Tortugas</li>
+                <li (click)="changeStatusCategoryMenu()">Conejos</li>
+            </ul>
+        </article>
+
+        <article class="locationMenu">
+            <b>Ubicación: </b>
+            <p  (click)="changeStatusMenu()">{{this.location}}</p>
+            <mat-icon  (click)="changeStatusMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
+
+            <ul class="location-menu" [ngClass]="statusMenu ? 'active':'inactive'">
+                <li (click)="changeStatusMenu(); updateLocation()" *ngFor="let location of locations">{{location}}</li>
+            </ul>
+
+        </article>
+        <article class="sizeMenu" *ngIf="this.sizeFilter">
+            <b>Tamaño: </b>
+            <p (click)="changeStatusSizeMenu()">{{this.getFilterName()}}</p>
+            <mat-icon  (click)="changeStatusSizeMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
+
+            <ul class="size-menu" [ngClass]="statusSizeMenu ? 'active':'inactive'">
+                <li (click)="changeStatusSizeMenu(); ">Grande</li>
+                <li (click)="changeStatusSizeMenu(); ">Mediano</li>
+                <li (click)="changeStatusSizeMenu(); ">Pequeño</li>
+            </ul>
+
+        </article>
     </div>
 </section>
 <app-cards [pets]="pets"></app-cards>

@@ -6,7 +6,7 @@
 },
 {"id":"13","category":"0", "disease":true, "gps": "xxxyyyzzzz", "remarks": "",
 "description": "Este perrito se encuentra repleto de garrapatas y muy delgado",
-"age":1, "health":"Buena", "location":"Texas","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
+"age":1, "health":"Buena", "location":"Fort Worth","address": "Carrera 15 con calle 22 debajo del puente macuto en una caja de cartón",
 "photos":[{"url_mobile": "https://i.postimg.cc/pXx1nX0Q/20210308121030-perro-callejero-copia.jpg", "url_full":"", "alt":""}]
 },
 {"id":"14","category":"1", "disease":true, "gps": "xxxyyyzzzz","remarks": "",
