@@ -48,8 +48,8 @@ export class PetsService{
   getSearch(query : string){
     return this.searchPets //ejemplo aqui deberia usar el query, enviarlo al back
   }
-  getPetsByCategory(id : string){
-    return this.category_dog_pets //ejemplo aqui deberia usar el id, enviarlo al back y obtener la categoria
+  getPetsByCategory(id : string){//ejemplo aqui deberia usar el id, enviarlo al back y obtener la categoria
+    return this.category_dog_pets.filter(rsp=> rsp.category == id)
   }
 
 }

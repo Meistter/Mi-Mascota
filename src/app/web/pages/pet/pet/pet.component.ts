@@ -45,12 +45,22 @@ export class PetComponent implements OnInit{
       if(this.petId){
         this.pet = this.petService.getAdoptionPet(this.petId)        
         } 
+
+        if(this.pet?.category){
+          this.relatedPets = this.petService.getRelatedPets(this.pet.category)
+        }
+        
     })
-    if(this.pet?.category){
-      this.relatedPets = this.petService.getRelatedPets(this.pet.category)
+  }
+  getSize(){
+    if(this.pet?.size == 'Big'){
+      return 'Grande'
+    }else{
+      if(this.pet?.size == 'Regular'){
+        return 'Mediano'
+      }else{
+        return 'Pequeño'}
     }
-    
-    
   }
   config: SwiperOptions = {
     loop: true,

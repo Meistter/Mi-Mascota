@@ -14,6 +14,7 @@ export class PetCategoryComponent {
   constructor(private petService: PetsService, private route: ActivatedRoute,private router: Router, private categoryService: CategoryService){}
   
   pets : Pet[] = []
+  MainPets : Pet[] = []
   categoryName : string | undefined= undefined
   categoryId : string | null = null
   sizeFilter: string |null = null
@@ -25,19 +26,22 @@ export class PetCategoryComponent {
     this.route.paramMap.subscribe(params=>{
       this.categoryId = params.get('id')           
       if(this.categoryId){
-        this.pets = this.petService.getPetsByCategory(this.categoryId) 
-        this.categoryName = this.categoryService.getCategoryName(this.categoryId)              
+        this.MainPets = this.petService.getPetsByCategory(this.categoryId) 
+        this.pets = this.MainPets
+        this.categoryName = this.categoryService.getCategoryName(this.categoryId)    
+                      
       }
       
       if(this.categoryName == undefined){
         this.router.navigate(['/none'])
       }
+
+      this.route.queryParamMap.subscribe(params => {
+        this.sizeFilter = params.get('filter')    
+        this.pets = this.MainPets.filter(rsp=> rsp.size == this.sizeFilter)  
+      }) 
     }) 
-    this.route.queryParamMap.subscribe(params => {
-      this.sizeFilter = params.get('filter')
-      if(this.categoryId)
-      this.pets = this.petService.getPetsByCategory(this.categoryId) 
-    })   
+      
   }
   getFilterName(){
     if(this.sizeFilter == 'big'){

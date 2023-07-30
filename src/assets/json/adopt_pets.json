@@ -1,5 +1,5 @@
 [
-  {"id":"4","name":"Max patitas", 
+  {"id":"4","name":"Max patitas", "size": "big",
   "description": "Es muy caprichoso y piqui para comer no come cualquier tipo de croqueta y le teme a la oscuridad, pero es bilingüe y es bonito",
   "age":1, "health":"Buena", "location":"Texas", "vaccinated":true,
   "owner_id":"Josue Perez",
@@ -27,7 +27,7 @@
 "photos":[{"url_mobile": "https://i.postimg.cc/ZRzVBJgr/sofia-min.jpg", "url_full":"", "alt":""}],
 "likes":4, "category": "1"},
     
-{"id":"2","name":"Kiara Renata", 
+{"id":"2","name":"Kiara Renata", "size": "regular", 
 "description": "Es una perrita muy consentida, solo come perrarina en la boca y una por una, no le gusta el pollo ni los gatos",
 "age":3, "health":"Buena", "location":"Barquisimeto", "vaccinated":true,
 "owner_id":"Cristal Quintero",
@@ -75,7 +75,7 @@
 "photos":[{"url_mobile": "https://i.postimg.cc/nhzfJByN/conejo.jpg", "url_full":"", "alt":"conejo-photo1"}],
 "likes":2, "category": "4"}, 
 
-{"id":"6","name":"Pirata Sparrow", 
+{"id":"6","name":"Pirata Sparrow", "size": "small", 
 "description": "Amigable, le gustan los niños y es super cariñoso, buena compañía para personas mayores",
 "age":0.5, "health":"Buena", "location":"Texas", "vaccinated":true,
 "owner_id":"Abigail Paredes",

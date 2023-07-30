@@ -10,6 +10,7 @@ export interface Pet{
     location: string,
     description: string,
     adoptionReason?: string,
+    size?: string,
     remarks: string,
     photos: image[],
     likes?: number,

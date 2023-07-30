@@ -44,6 +44,7 @@
           <ng-template #elseCastrated><p><b> Castrado: </b>No</p></ng-template>
           <p *ngIf="pet?.disease; else elseDisease"><b> Enfermo: </b>Si </p>
           <ng-template #elseDisease><p><b> Enfermo: </b>No</p></ng-template>
+          <p *ngIf="pet?.size"><b> Tamaño: </b>{{this.getSize()}} </p>
           <br>
           <p><b>Descripcion de la Mascota: </b> {{pet?.description}}.</p>
           <br>
