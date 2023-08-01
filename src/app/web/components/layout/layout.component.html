@@ -13,20 +13,21 @@
                       <mat-expansion-panel-header>
                         <mat-panel-title>Perros</mat-panel-title>                     
                       </mat-expansion-panel-header>
-                      <div class="menu__element" routerLink="terms" (click)="drawer.toggle()"> <a>Pequeños</a></div>
-                      <div class="menu__element" routerLink="terms" (click)="drawer.toggle()"> <a>Medianos</a></div>
-                      <div class="menu__element" routerLink="terms" (click)="drawer.toggle()"> <a>Grandes</a></div>
+                      <div class="menu__element" routerLink="pet-category/0" [queryParams]="{filter: 'all'}" (click)="drawer.toggle()"> <a>Todos</a></div>
+                      <div class="menu__element" routerLink="pet-category/0" [queryParams]="{filter: 'small'}" (click)="drawer.toggle()"> <a>Pequeños</a></div>
+                      <div class="menu__element" routerLink="pet-category/0" [queryParams]="{filter: 'regular'}" (click)="drawer.toggle()"> <a>Medianos</a></div>
+                      <div class="menu__element" routerLink="pet-category/0" [queryParams]="{filter: 'big'}" (click)="drawer.toggle()"> <a>Grandes</a></div>
                     </mat-expansion-panel>  
-                    <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                    <mat-expansion-panel hideToggle routerLink="pet-category/1" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
                       Gatos
                     </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                    <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                    <mat-expansion-panel hideToggle routerLink="pet-category/2" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
                       Aves
                     </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                    <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                    <mat-expansion-panel hideToggle routerLink="pet-category/3" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
                       Tortugas
                     </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                    <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
+                    <mat-expansion-panel hideToggle routerLink="pet-category/4" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
                       Conejos
                     </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
                   </mat-accordion>
