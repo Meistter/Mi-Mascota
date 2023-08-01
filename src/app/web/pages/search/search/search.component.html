@@ -1,10 +1,17 @@
-<section class="search-container">
-    <h1>Filtrar Busqueda: {{this.searchQuery}}</h1>
-    <div class=" search-content">
-        <h2><b>Especie: </b><p>{{this.breed}}</p></h2>
-        <h2><b>Ubicación: </b><p>{{this.location}}</p></h2>
-        <h2><b>Tamaño: </b><p>{{this.size}}</p></h2>
+<section class="pet-search-container">
+    <h1>Busqueda para: {{this.searchQuery}}s</h1>
+    <div class="pet-search-content">     
+
+        <article class="locationMenu">
+            <b>Ubicación: </b>
+            <p  (click)="changeStatusMenu()">{{this.location}}</p>
+            <mat-icon  (click)="changeStatusMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
+            <ul class="location-menu" [ngClass]="statusMenu ? 'active':'inactive'">
+                <li (click)="changeStatusMenu(); updateLocation()" *ngFor="let location of locations">{{location}}</li>
+            </ul>
+        </article>
+        
     </div>
 </section>
 <app-cards [pets]="pets"></app-cards>
-<app-related></app-related>
+<app-related [related]="pets"></app-related>
