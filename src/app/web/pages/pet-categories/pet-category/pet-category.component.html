@@ -7,11 +7,11 @@
             <mat-icon (click)="changeStatusCategoryMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
 
             <ul class="category-menu" [ngClass]="statusCategoryMenu ? 'active':'inactive'">
-                <li (click)="changeStatusCategoryMenu()">Perros</li>
-                <li (click)="changeStatusCategoryMenu()">Gatos</li>
-                <li (click)="changeStatusCategoryMenu()">Aves</li>
-                <li (click)="changeStatusCategoryMenu()">Tortugas</li>
-                <li (click)="changeStatusCategoryMenu()">Conejos</li>
+                <li (click)="changeStatusCategoryMenu()" routerLink="/pet-category/0" [queryParams]="{filter: 'all'}">Perros</li>
+                <li (click)="changeStatusCategoryMenu()" routerLink="/pet-category/1">Gatos</li>
+                <li (click)="changeStatusCategoryMenu()" routerLink="/pet-category/2">Aves</li>
+                <li (click)="changeStatusCategoryMenu()" routerLink="/pet-category/3">Tortugas</li>
+                <li (click)="changeStatusCategoryMenu()" routerLink="/pet-category/4">Conejos</li>
             </ul>
         </article>
 
@@ -31,9 +31,9 @@
             <mat-icon  (click)="changeStatusSizeMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
 
             <ul class="size-menu" [ngClass]="statusSizeMenu ? 'active':'inactive'">
-                <li (click)="changeStatusSizeMenu(); ">Grande</li>
-                <li (click)="changeStatusSizeMenu(); ">Mediano</li>
-                <li (click)="changeStatusSizeMenu(); ">Pequeño</li>
+                <li (click)="changeStatusSizeMenu(); " routerLink="/pet-category/0" [queryParams]="{filter: 'big'}">Grande</li>
+                <li (click)="changeStatusSizeMenu(); " routerLink="/pet-category/0" [queryParams]="{filter: 'regular'}">Mediano</li>
+                <li (click)="changeStatusSizeMenu(); " routerLink="/pet-category/0" [queryParams]="{filter: 'small'}">Pequeño</li>
             </ul>
 
         </article>
