@@ -1,4 +1,4 @@
-<mat-card class="card-container" routerLink="/pet/{{pet.id}}">     
+<mat-card class="card-container" [routerLink]="[this.getUrl(),pet.id]">     
     <img mat-card-image src="{{pet.photos[0].url_mobile}}" alt={{pet.photos[0].alt}}>
     <mat-card-content class="card-container__articles">
       <article class="info__left">

@@ -2,7 +2,8 @@
     <img mat-card-image src="{{pet.photos[0].url_mobile}}" alt={{pet.photos[0].alt}}>
     <mat-card-content class="card-container__articles">
       <article class="info__left">
-        <h1>Especie: {{this.getCategory()}}</h1>
+        <h1 *ngIf="!this.lostDetail; else lost">Especie: {{this.getCategory()}}</h1>
+        <ng-template #lost ><h1>{{pet.name}}</h1></ng-template>
         <h2>{{pet.description}}</h2>
         <br>
         <h2><b>Última vez visto: </b>{{pet.address}}</h2>

@@ -10,6 +10,6 @@ import { PetsService } from 'src/app/services/pets.service';
 export class RelatedComponent{
 
   @Input() related : any = []
-  
+  @Input() lostDetail : boolean = false
   
 }

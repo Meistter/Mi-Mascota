@@ -24,4 +24,11 @@ export class RelatedCardComponent {
     likes:0,
     category: '0'
   }
+  @Input() lostDetail : boolean = false
+
+  getUrl(){
+    if (this.lostDetail){
+      return '/pet-lost'
+    }else{return '/pet-rescue'}
+  }
 }

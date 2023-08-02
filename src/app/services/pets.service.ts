@@ -41,8 +41,15 @@ export class PetsService{
     // return this.adoptionPets
     return this.rescuePets.filter(rsp=> rsp.category == categoryId)
   }
+  getRelatedLostPets(categoryId: string){ //debemos filtrar por categoria antes de retornar
+    // return this.adoptionPets
+    return this.lostPets.filter(rsp=> rsp.category == categoryId)
+  }
   getLostPets(){
     return this.lostPets
+  }
+  getLostPet(id:string){
+    return this.lostPets.find(rsp=> rsp.id == id)
   }
 
   getSearch(query : string){

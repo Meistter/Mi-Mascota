@@ -1,1 +1,49 @@
-<p>lost-pet works!</p>
+<div class="pet-container">
+    <mat-card class="card-container">    
+      <div class="card__content">  
+        <div class="card__image">
+          <swiper [config]="config" (swiper)="automatico($event)">
+            <ng-template swiperSlide *ngFor="let slide of pet?.photos">            
+                     <img class="swiper-image" [src]="slide.url_mobile" alt="{{slide.alt}}" />            
+           </ng-template>
+        </swiper>
+          <div class="location">
+            <mat-icon style="font-size: 16px;">location_on</mat-icon><p>{{pet?.location}}</p>
+          </div>
+        </div>    
+        <mat-card-content>
+          <div class="info-container-top">
+            <section class="info-container__left">
+              <h1>{{pet?.name}}</h1>               
+            </section>
+            <section class="info-container__right">  
+              <div class="info-container-icons">
+                <mat-icon>share</mat-icon><mat-icon>bookmark</mat-icon><mat-icon>report</mat-icon>
+              </div>   
+              <div class="info-container-like-button">                
+                <button class="adopt-button">Ponerse en contácto</button>
+              </div>
+            </section>
+          </div>
+          <section class="info-container-bottom">        
+            <p><b>Salud: </b>{{pet?.health}}</p> 
+            <p><b>Edad: </b>{{pet?.age}}</p> 
+            <p *ngIf="pet?.disease; else elseDisease"><b> Enfermo: </b>Si </p>
+            <ng-template #elseDisease><p><b> Enfermo: </b>No</p></ng-template>
+            <br>
+            <p><b>Descripcion del animal: </b> {{pet?.description}}.</p>
+            <br>
+            <p><b>Detalles: </b>{{pet?.remarks}}.</p>
+            <br>
+            <p><b>Última vez visto: </b>{{pet?.address}}.</p>      
+            
+          </section>
+        </mat-card-content>    
+      </div>
+    </mat-card> 
+  
+    <section>
+      <app-related [lostDetail]="lostDetail" [related]="relatedPets"></app-related>
+    </section>
+</div>
+  

@@ -24,7 +24,8 @@ export interface image{
 }
 export interface PetRescue{
     id: string,      
-    age: number,       
+    age: number,   
+    name?: string,    
     health: string,    
     location: string,
     description: string,
