@@ -9,6 +9,7 @@ import { PetsService } from 'src/app/services/pets.service';
 })
 export class LostPetsComponent implements OnInit{
   constructor(private petService: PetsService){}
+  lostDetail = true
   pets : PetRescue[] = []
   ngOnInit(): void {
     this.pets = this.petService.getLostPets()

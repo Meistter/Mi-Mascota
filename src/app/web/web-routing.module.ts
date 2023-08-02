@@ -70,7 +70,7 @@ const routes: Routes = [
       },
       {
         path: 'pet-rescue/:id',  
-        loadChildren: () => import('./pages/pet-rescue/pet-rescue.module').then((m) => m.PetRescueModule),
+        loadChildren: () => import('./pages/rescue-pet/pet-rescue.module').then((m) => m.PetRescueModule),
       },
 
     ]

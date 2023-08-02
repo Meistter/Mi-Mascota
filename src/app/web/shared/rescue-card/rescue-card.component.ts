@@ -7,7 +7,7 @@ import { PetRescue } from 'src/app/models/pet';
   styleUrls: ['./rescue-card.component.scss']
 })
 export class RescueCardComponent {
-  url = '/pet-rescue'
+  @Input() lostDetail : boolean = false
   @Input() pet : PetRescue = {
     id: 'string',    
     age: 0,
@@ -21,7 +21,11 @@ export class RescueCardComponent {
     remarks: 'string',
     address: ''
   }
-  
+  getUrl(){
+    if (this.lostDetail){
+      return '/pet-lost'
+    }else{return '/pet-rescue'}
+  }
   getCategory(){
     if(this.pet.category == '0'){
       return 'Perro'

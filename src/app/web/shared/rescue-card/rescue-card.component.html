@@ -13,7 +13,7 @@
       </article>
       <article class="info__right">
         <div class="location"><mat-icon style="font-size: 12px;">location_on</mat-icon><p>{{pet.location}}</p></div>
-        <button [routerLink]="[this.url,pet.id]" class="detail-button">Ver detalles</button>
+        <button [routerLink]="[this.getUrl(),pet.id]" class="detail-button">Ver detalles</button>
         <button class="adopt-button">¡Darle un Hogar!</button>
       </article>
     </mat-card-content>    
