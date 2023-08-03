@@ -8,7 +8,7 @@
             </div>
             <div class="header-top__login">
                 <p routerLink="/auth/login">Inicia Sesion/Registrate</p>
-                <mat-icon style="font-size: 24px; color: white;">account_box</mat-icon>
+                <mat-icon style="font-size: 30px; color: white;">account_box</mat-icon>
             </div>
         </div>
         <div class="header-top__search">
@@ -44,11 +44,11 @@
             </ul>
         </ul>
 
-        <a routerLink="rescue" class="header-menu__center">Rescatar</a>
+        <a routerLink="lost" class="header-menu__center">Extraviadas</a>
 
         <ul class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()">
             <mat-icon id="open-menu-right"
-                style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
+                style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black;margin-right: 3px; ">photo_camera</mat-icon>
             <a id="open-menu-right">Publicar Mascota</a>
             <ul class="animal-menu-right" (mouseleave)="closeRightMenu()">
                 <ul class="animal-menu-right-buttons" [ngClass]="statusRightMenu ? 'active':'inactive'">
