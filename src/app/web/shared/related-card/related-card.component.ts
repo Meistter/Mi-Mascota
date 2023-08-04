@@ -24,11 +24,15 @@ export class RelatedCardComponent {
     likes:0,
     category: '0'
   }
-  @Input() lostDetail : boolean = false
+  @Input() urlRedirect : string = 'false'
 
   getUrl(){
-    if (this.lostDetail){
+    if (this.urlRedirect == 'pet'){
+      return '/pet'
+    }else{if(this.urlRedirect == 'rescue'){
+      return '/pet-rescue'
+    }else{if(this.urlRedirect == 'lost'){
       return '/pet-lost'
-    }else{return '/pet-rescue'}
-  }
+    }else{return 'not-found'}}
+  }}
 }

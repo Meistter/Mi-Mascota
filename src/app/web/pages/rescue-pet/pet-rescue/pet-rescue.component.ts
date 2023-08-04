@@ -18,6 +18,7 @@ export class PetRescueComponent {
   constructor(private route: ActivatedRoute, private petService:PetsService, private categoryService: CategoryService){}
   relatedPets : PetRescue[]= []
   petId: string | null = null
+  urlRedirect = 'rescue'
   categoryName : string | undefined = ''
   //quitar el undefined al usar API
   pet :PetRescue | undefined = {

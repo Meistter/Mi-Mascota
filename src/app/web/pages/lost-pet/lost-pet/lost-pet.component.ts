@@ -15,7 +15,7 @@ export class LostPetComponent {
 
   constructor(private route: ActivatedRoute, private petService: PetsService, private categoryService: CategoryService) { }
   relatedPets: PetRescue[] = []
-  lostDetail = true
+  urlRedirect = 'lost'
   petId: string | null = null
   categoryName: string | undefined = ''
   //quitar el undefined al usar API

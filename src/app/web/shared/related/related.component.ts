@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Pet } from 'src/app/models/pet';
-import { PetsService } from 'src/app/services/pets.service';
 
 @Component({
   selector: 'app-related',
@@ -10,6 +8,6 @@ import { PetsService } from 'src/app/services/pets.service';
 export class RelatedComponent{
 
   @Input() related : any = []
-  @Input() lostDetail : boolean = false
+  @Input() urlRedirect : string = 'false'
   
 }

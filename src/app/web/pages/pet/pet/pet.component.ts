@@ -20,6 +20,7 @@ export class PetComponent implements OnInit{
   petId: string | null = null
   liked: boolean = false
   likeCount: number = 1
+  urlRedirect = 'pet'
   //quitar el undefined al usar API
   pet :Pet | undefined = {
     id: 'string',
