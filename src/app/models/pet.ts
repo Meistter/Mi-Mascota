@@ -1,10 +1,10 @@
-export interface Pet{
+export interface Pet {
     id: string,
     name: string,
-    owner_id: string,    
+    owner_id: string,
     age: number,
     castrated?: boolean,
-    disease: boolean,    
+    disease: boolean,
     health: string,
     vaccinated?: boolean,
     location: string,
@@ -17,16 +17,16 @@ export interface Pet{
     category: string,
     lastSeenAddress?: string
 }
-export interface image{
+export interface image {
     url_mobile: string,
     url_full: string,
     alt: string
 }
-export interface PetRescue{
-    id: string,      
-    age: number,   
-    name?: string,    
-    health: string,    
+export interface PetRescue {
+    id: string,
+    age: number,
+    name?: string,
+    health: string,
     location: string,
     description: string,
     remarks: string,
