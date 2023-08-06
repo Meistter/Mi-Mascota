@@ -3,24 +3,28 @@
     justify-content: center;
     width: 100%;
     min-height: 600px;
-    padding: 28px 46px 46px 46px;     
+    padding: 28px 46px 46px 46px;
+
     .contact-form {
         display: flex;
         align-items: center;
-        flex-direction: column;      
-        width: 100%; 
-        max-width: 410px;     
+        flex-direction: column;
+        width: 100%;
+        max-width: 410px;
+
         h1 {
             font-size: 28px;
             font-family: 'Inter';
             font-weight: 600;
             margin-bottom: 40px;
-        }    
+        }
+
         .contact-form__content {
             display: flex;
             align-items: center;
-            justify-content: space-between; 
-            width: 100%;          
+            justify-content: space-between;
+            width: 100%;
+
             p {
                 text-align: center;
                 font-size: 14px;
@@ -29,31 +33,32 @@
                 font-weight: 600;
                 width: 120px;
             }
+
             mat-form-field {
                 width: 100%;
             }
-            
         }
+
         .contact-form__checkbox {
             margin-bottom: 28px;
 
             .contact-form__checkbox-element {
-                font-size: 14px;                
+                font-size: 14px;
             }
         }
-        
-        
     }
+
     .contact-form__buttons {
         display: flex;
+
         .contact-form-button {
             margin: 10px 10px 20px 10px;
             color: black;
             font-size: 14px;
             font-family: 'Inter';
             font-weight: 550;
-            width: 110px ;
-            height: 35px;        
+            width: 110px;
+            height: 35px;
             border: solid;
             border-width: 1.5px;
             border-radius: 4px;
@@ -61,5 +66,5 @@
             background-color: var(--card-button-background);
             cursor: pointer;
         }
-    }    
+    }
 }

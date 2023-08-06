@@ -8,39 +8,39 @@ import { Router } from '@angular/router';
   styleUrls: ['./give-rescue.component.scss']
 })
 export class GiveRescueComponent {
-  constructor(private router: Router){}
+  constructor(private router: Router) { }
 
-  rescueForm = new FormGroup({  
-    breed : new FormControl('',[Validators.required]),   
-    photos : new FormControl('',[Validators.required]),
-    size : new FormControl('',[Validators.required]),
-    description : new FormControl('',[Validators.required]),   
-    hurt : new FormControl('',[Validators.required]),           
-    remarks : new FormControl('',[Validators.required]),
-    state : new FormControl('',[Validators.required]),
-    city : new FormControl('',[Validators.required]), 
-    address : new FormControl('',[Validators.required]),
-    location : new FormControl('',),    
-    }) 
+  rescueForm = new FormGroup({
+    breed: new FormControl('', [Validators.required]),
+    photos: new FormControl('', [Validators.required]),
+    size: new FormControl('', [Validators.required]),
+    description: new FormControl('', [Validators.required]),
+    hurt: new FormControl('', [Validators.required]),
+    remarks: new FormControl('', [Validators.required]),
+    state: new FormControl('', [Validators.required]),
+    city: new FormControl('', [Validators.required]),
+    address: new FormControl('', [Validators.required]),
+    location: new FormControl('',),
+  })
 
-    getRequiredMsg(){
-      return 'Este campo es Requerido'
-    }    
+  getRequiredMsg() {
+    return 'Este campo es Requerido'
+  }
 
-    breed = ['Perro','Gato','Ave']       
-    hurt = ['Si','No']
-    size = ['Pequeño','Mediano','Grande']
-    state = ['Lara','Distrito Capital','Carabobo','Zulia','Aragua']
-    city = ['Barquisimeto','Valencia','Caracas']
+  breed = ['Perro', 'Gato', 'Ave']
+  hurt = ['Si', 'No']
+  size = ['Pequeño', 'Mediano', 'Grande']
+  state = ['Lara', 'Distrito Capital', 'Carabobo', 'Zulia', 'Aragua']
+  city = ['Barquisimeto', 'Valencia', 'Caracas']
 
-    send(event: Event){
-      event.preventDefault();
-      if(this.rescueForm.valid){
-        console.log('formulario enviado');        
-        window.alert('formulario enviado')
-        this.router.navigate(['/home'])
-        
-      }else{}      
-      
-    }
+  send(event: Event) {
+    event.preventDefault();
+    if (this.rescueForm.valid) {
+      console.log('formulario enviado');
+      window.alert('formulario enviado')
+      this.router.navigate(['/home'])
+
+    } else { }
+
+  }
 }
