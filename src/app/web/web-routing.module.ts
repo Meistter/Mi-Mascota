@@ -17,68 +17,67 @@ const routes: Routes = [
         loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule),
       },
       {
-        path: 'location',       
+        path: 'location',
         loadChildren: () => import('./pages/location/location.module').then((m) => m.LocationModule),
       },
       {
-        path: 'terms',       
+        path: 'terms',
         loadChildren: () => import('./pages/terms/terms.module').then((m) => m.TermsModule),
       },
       {
-        path: 'pet/:id',       
+        path: 'pet/:id',
         loadChildren: () => import('./pages/pet/pet.module').then((m) => m.PetModule),
       },
       {
-        path: 'auth',  
+        path: 'auth',
         loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
       },
       {
-        path: 'report',  
+        path: 'report',
         loadChildren: () => import('./pages/abuse-report/abuse-report.module').then((m) => m.AbuseReportModule),
       },
       {
-        path: 'contact',  
+        path: 'contact',
         loadChildren: () => import('./pages/contact/contact.module').then((m) => m.ContactModule),
       },
       {
-        path: 'give-adoption',  
+        path: 'give-adoption',
         loadChildren: () => import('./pages/give-adoption/give-adoption.module').then((m) => m.GiveAdoptionModule),
       },
       {
-        path: 'give-rescue',  
+        path: 'give-rescue',
         loadChildren: () => import('./pages/give-rescue/give-rescue.module').then((m) => m.GiveRescueModule),
       },
       {
-        path: 'lost',  
+        path: 'lost',
         loadChildren: () => import('./pages/lost-pets/lost-pets.module').then((m) => m.LostPetsModule),
       },
       {
-        path: 'rescue',  
+        path: 'rescue',
         loadChildren: () => import('./pages/rescue-pets/rescue-pets.module').then((m) => m.RescuePetsModule),
       },
       {
-        path: 'rescue-request',  
+        path: 'rescue-request',
         loadChildren: () => import('./pages/rescue-request/rescue-request.module').then((m) => m.RescueRequestModule),
       },
       {
-        path: 'search',  
+        path: 'search',
         loadChildren: () => import('./pages/search/search.module').then((m) => m.SearchModule),
       },
       {
-        path: 'pet-category/:id',  
+        path: 'pet-category/:id',
         loadChildren: () => import('./pages/pet-categories/pet-categories.module').then((m) => m.PetCategoriesModule),
       },
       {
-        path: 'pet-rescue/:id',  
+        path: 'pet-rescue/:id',
         loadChildren: () => import('./pages/rescue-pet/pet-rescue.module').then((m) => m.PetRescueModule),
       },
       {
-        path: 'pet-lost/:id',  
+        path: 'pet-lost/:id',
         loadChildren: () => import('./pages/lost-pet/lost-pet.module').then((m) => m.LostPetModule),
-      },
-
+      }
     ]
-  },  
+  },
 ];
 
 @NgModule({
