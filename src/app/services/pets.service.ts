@@ -9,10 +9,10 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class PetsService{
+export class PetsService {
 
-  constructor(private http:HttpClient) { }
-  
+  constructor(private http: HttpClient) { }
+
   //Base de datos de las mascotas
   adoptionPets: Pet[] = adopt_pets
   rescuePets: PetRescue[] = rescue_pets
@@ -20,43 +20,38 @@ export class PetsService{
   searchPets: Pet[] = search_pets
   category_dog_pets: Pet[] = category_dog_pets
   //Funciones a usar mientras no exista backend
-  getAdoptionPet(id:string){    
-    return this.adoptionPets.find(rsp=> rsp.id == id)
+  getAdoptionPet(id: string) {
+    return this.adoptionPets.find(rsp => rsp.id == id)
   }
-  getAdoptionPets(){   
+  getAdoptionPets() {
     return this.adoptionPets
   }
-  getRescuePet(id:string){
-    return this.rescuePets.find(rsp=> rsp.id == id)
+  getRescuePet(id: string) {
+    return this.rescuePets.find(rsp => rsp.id == id)
   }
-  getRescuePets(){
+  getRescuePets() {
     return this.rescuePets
   }
   //devolemos el objeto completo como ejemplo
-  getRelatedPets(categoryId: string){ //debemos filtrar por categoria antes de retornar
-    // return this.adoptionPets
-    return this.adoptionPets.filter(rsp=> rsp.category == categoryId)
+  getRelatedPets(categoryId: string) { //debemos filtrar por categoria antes de retornar    
+    return this.adoptionPets.filter(rsp => rsp.category == categoryId)
   }
-  getRelatedRescuePets(categoryId: string){ //debemos filtrar por categoria antes de retornar
-    // return this.adoptionPets
-    return this.rescuePets.filter(rsp=> rsp.category == categoryId)
+  getRelatedRescuePets(categoryId: string) { //debemos filtrar por categoria antes de retornar   
+    return this.rescuePets.filter(rsp => rsp.category == categoryId)
   }
-  getRelatedLostPets(categoryId: string){ //debemos filtrar por categoria antes de retornar
-    // return this.adoptionPets
-    return this.lostPets.filter(rsp=> rsp.category == categoryId)
+  getRelatedLostPets(categoryId: string) { //debemos filtrar por categoria antes de retornar  
+    return this.lostPets.filter(rsp => rsp.category == categoryId)
   }
-  getLostPets(){
+  getLostPets() {
     return this.lostPets
   }
-  getLostPet(id:string){
-    return this.lostPets.find(rsp=> rsp.id == id)
+  getLostPet(id: string) {
+    return this.lostPets.find(rsp => rsp.id == id)
   }
-
-  getSearch(query : string){
+  getSearch(query: string) {
     return this.searchPets //ejemplo aqui deberia usar el query, enviarlo al back
   }
-  getPetsByCategory(id : string){//ejemplo aqui deberia usar el id, enviarlo al back y obtener la categoria
-    return this.category_dog_pets.filter(rsp=> rsp.category == id)
+  getPetsByCategory(id: string) {//ejemplo aqui deberia usar el id, enviarlo al back y obtener la categoria
+    return this.category_dog_pets.filter(rsp => rsp.category == id)
   }
-
 }

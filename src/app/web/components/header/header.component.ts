@@ -1,5 +1,5 @@
 import { Component, EventEmitter, HostListener, Output } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
@@ -7,74 +7,69 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  constructor(private router: Router){}
-  app_logo = {url:'https://i.postimg.cc/c4MgZPjb/logo-min.jpg', alt:'logo-mi-mascota'}
-  
+  constructor(private router: Router) { }
+
+  app_logo = { url: 'https://i.postimg.cc/c4MgZPjb/logo-min.jpg', alt: 'logo-mi-mascota' }
   statusFirstMenu: boolean = false;
   statusSecondMenu: boolean = false;
-
   statusRightMenu: boolean = false;
-  
- 
-  query = new FormControl('',[Validators.required])  
-       
+  query = new FormControl('', [Validators.required])
 
   //Listener para cerrar y abrir menu
   @HostListener('document:click', ['$event'])
   onClickEvent(event: MouseEvent) {
     var target = event.target as HTMLElement
-    var id = target['id']     
-    if(id != 'open-animal-right' && id!= 'open-animal-left' ){
+    var id = target['id']
+    if (id != 'open-animal-right' && id != 'open-animal-left') {
       this.closeFirstMenu()
-      this.closeSecondMenu()   
+      this.closeSecondMenu()
     }
-    if(id == 'open-animal-left'){
+    if (id == 'open-animal-left') {
       this.toggleFirstMenu()
     }
-    if(id != 'open-menu-right'){
-      this.closeRightMenu()      
+    if (id != 'open-menu-right') {
+      this.closeRightMenu()
     }
-    if(id == 'open-menu-right'){
+    if (id == 'open-menu-right') {
       this.openRightMenu()
     }
   }
   //Emitimos para abrir menu sidenav lateral
   @Output() sideNavOpen = new EventEmitter<string>();
-  openSideNav(){
+  openSideNav() {
     this.sideNavOpen.emit()
-  }  
-
-  send(event: { preventDefault: () => void; }){
-    event.preventDefault()    
-    if (this.query.valid){
+  }
+  send(event: { preventDefault: () => void; }) {
+    event.preventDefault()
+    if (this.query.valid) {
       this.router.navigate(['/search'], { queryParams: { query: this.query.value } })
     }
   }
-  toggleFirstMenu(){    
+  toggleFirstMenu() {
     this.statusFirstMenu = !this.statusFirstMenu;
   }
-  openFirstMenu(){
-    this.statusFirstMenu = true;     
-  } 
-  closeFirstMenu(){
-    this.statusFirstMenu = false;       
-  } 
-  toggleSecondMenu(){
-    this.statusSecondMenu = !this.statusSecondMenu;       
+  openFirstMenu() {
+    this.statusFirstMenu = true;
   }
-  openSecondMenu(){
-    this.statusSecondMenu = true;       
+  closeFirstMenu() {
+    this.statusFirstMenu = false;
   }
-  closeSecondMenu(){
-    this.statusSecondMenu = false;       
+  toggleSecondMenu() {
+    this.statusSecondMenu = !this.statusSecondMenu;
   }
-  toggleRightMenu(){
-    this.statusRightMenu = !this.statusRightMenu;       
+  openSecondMenu() {
+    this.statusSecondMenu = true;
   }
-  openRightMenu(){
-    this.statusRightMenu = true;     
-  } 
-  closeRightMenu(){
-    this.statusRightMenu = false;       
+  closeSecondMenu() {
+    this.statusSecondMenu = false;
+  }
+  toggleRightMenu() {
+    this.statusRightMenu = !this.statusRightMenu;
+  }
+  openRightMenu() {
+    this.statusRightMenu = true;
+  }
+  closeRightMenu() {
+    this.statusRightMenu = false;
   }
 }
