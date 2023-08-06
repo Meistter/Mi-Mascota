@@ -31,6 +31,7 @@
             <mat-icon  (click)="changeStatusSizeMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
 
             <ul class="size-menu" [ngClass]="statusSizeMenu ? 'active':'inactive'">
+                <li (click)="changeStatusSizeMenu(); " routerLink="/pet-category/0" [queryParams]="{filter: 'all'}">Todos</li>
                 <li (click)="changeStatusSizeMenu(); " routerLink="/pet-category/0" [queryParams]="{filter: 'big'}">Grande</li>
                 <li (click)="changeStatusSizeMenu(); " routerLink="/pet-category/0" [queryParams]="{filter: 'regular'}">Mediano</li>
                 <li (click)="changeStatusSizeMenu(); " routerLink="/pet-category/0" [queryParams]="{filter: 'small'}">Pequeño</li>

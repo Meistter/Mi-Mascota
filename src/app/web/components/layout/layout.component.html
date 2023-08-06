@@ -11,64 +11,19 @@
           </mat-panel-title>
         </mat-expansion-panel-header>
         <mat-accordion class="example-headers-align" multi="false">
-          <!-- <mat-expansion-panel class="mat-panel" (opened)="panelOpenState = true"(closed)="panelOpenState = false">
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>Perros</mat-panel-title>                     
-                      </mat-expansion-panel-header>
-                      <div class="menu__element--in-secondary" routerLink="pet-category/0" [queryParams]="{filter: 'all'}" (click)="drawer.toggle()"> <a>Todos</a></div>
-                      <div class="menu__element--in-secondary" routerLink="pet-category/0" [queryParams]="{filter: 'small'}" (click)="drawer.toggle()"> <a>Pequeños</a></div>
-                      <div class="menu__element--in-secondary" routerLink="pet-category/0" [queryParams]="{filter: 'regular'}" (click)="drawer.toggle()"> <a>Medianos</a></div>
-                      <div class="menu__element--in-secondary" routerLink="pet-category/0" [queryParams]="{filter: 'big'}" (click)="drawer.toggle()"> <a>Grandes</a></div>
-                    </mat-expansion-panel>   -->
-          <div class="menu__element--in" routerLink="pet-category/0" (click)="drawer.toggle()" [queryParams]="{filter: 'all'}"> <a>Perros</a></div>
+          <div class="menu__element--in" routerLink="pet-category/0" (click)="drawer.toggle()"
+            [queryParams]="{filter: 'all'}"> <a>Perros</a></div>
           <div class="menu__element--in" routerLink="pet-category/1" (click)="drawer.toggle()"> <a>Gatos</a></div>
-          <!-- <mat-expansion-panel hideToggle routerLink="pet-category/1" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                      Gatos
-                    </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel> -->
-          <!-- <mat-expansion-panel hideToggle routerLink="pet-category/2" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                      Aves
-                    </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel> -->
           <div class="menu__element--in" routerLink="pet-category/2" (click)="drawer.toggle()"> <a>Aves</a></div>
-          <!-- <mat-expansion-panel hideToggle routerLink="pet-category/3" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                      Tortugas
-                    </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel> -->
           <div class="menu__element--in" routerLink="pet-category/3" (click)="drawer.toggle()"> <a>Tortugas</a></div>
-          <!-- <mat-expansion-panel hideToggle routerLink="pet-category/4" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                      Conejos
-                    </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel> -->
           <div class="menu__element--in" routerLink="pet-category/4" (click)="drawer.toggle()"> <a>Conejos</a></div>
         </mat-accordion>
       </mat-expansion-panel>
-      <!-- <mat-expansion-panel hideToggle routerLink="lost" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                        Mascotas Extraviadas
-                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                  <mat-expansion-panel hideToggle routerLink="rescue" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                        Rescatar una Mascota
-                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                  <mat-expansion-panel hideToggle routerLink="give-adoption" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                        Publicar Mascota en Adopción
-                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel> 
-                  <mat-expansion-panel hideToggle routerLink="rescue-request" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                        Solicitar Rescate
-                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                  <mat-expansion-panel hideToggle routerLink="report" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                        Denunciar Maltrato
-                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                  <mat-expansion-panel hideToggle routerLink="contact" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                        Contacto
-                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                  <mat-expansion-panel hideToggle routerLink="location" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                        Ubicación
-                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                  <mat-expansion-panel hideToggle routerLink="terms" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                        Términos y condiciones
-                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>
-                  <mat-expansion-panel hideToggle routerLink="/auth/login" (click)="drawer.toggle()"><mat-expansion-panel-header><mat-panel-title>
-                        Iniciar Sesión
-                  </mat-panel-title></mat-expansion-panel-header></mat-expansion-panel>   -->
+
       <div class="menu__element" routerLink="lost" (click)="drawer.toggle()"> <a>Mascotas Extraviadas</a></div>
       <div class="menu__element" routerLink="rescue" (click)="drawer.toggle()"> <a>Rescatar una Mascota</a></div>
-      <div class="menu__element" routerLink="give-adoption" (click)="drawer.toggle()"> <a>Publicar Mascota en Adopción</a></div>
+      <div class="menu__element" routerLink="give-adoption" (click)="drawer.toggle()"> <a>Publicar Mascota en
+          Adopción</a></div>
       <div class="menu__element" routerLink="rescue-request" (click)="drawer.toggle()"> <a>Solicitar Rescate</a></div>
       <div class="menu__element" routerLink="report" (click)="drawer.toggle()"> <a>Denunciar Maltrato</a></div>
       <div class="menu__element" routerLink="location" (click)="drawer.toggle()"> <a>Ubicación</a></div>
@@ -81,6 +36,6 @@
 
   <app-header (sideNavOpen)="drawer.toggle()"></app-header>
   <router-outlet></router-outlet>
-  <app-footer></app-footer>
+  <app-footer class="footer"></app-footer>
 
 </mat-drawer-container>
