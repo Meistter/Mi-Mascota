@@ -6,3 +6,8 @@
      padding: 0px;
      margin-bottom: -6px;
 }
+@media (width >= 1024px) {
+     .swiper-image {             
+          height: 380px !important;         
+     }
+}
