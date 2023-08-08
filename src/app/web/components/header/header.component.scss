@@ -115,6 +115,7 @@
                     font-family: 'IBM Plex Sans KR';
                     font-size: 14px;
                     font-weight: 500;
+
                     p {
                         margin-left: 20px;
                     }
@@ -209,4 +210,35 @@
 .inactive {
     opacity: 0 !important;
     visibility: hidden;
+}
+
+@media (width >= 1024px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .header-top__search {
+        width: 46% !important;
+        margin: 0 30px !important;
+        max-width: 640px !important;
+    }
+
+    .header-top {
+        height: 50px !important;
+        padding: 7px 22px !important;
+    }
+}
+
+@media (width < 1024px) {
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
 }
