@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Pet } from 'src/app/models/pet';
 import { LocationService } from 'src/app/services/location.service';
@@ -19,6 +19,17 @@ export class SearchComponent implements OnInit {
   location = 'Cualquiera'
   statusMenu = false
   i = 0
+
+    //Listener para cerrar y abrir menu
+  @HostListener('document:click', ['$event'])
+  onClickEvent(event: MouseEvent) {
+    var target = event.target as HTMLElement
+    var id = target['id']
+    if (id != 'location') {
+      this.closeMenu()     
+    }    
+  }
+
   ngOnInit(): void {
     this.locations = this.locationService.getLocations()
     this.route.queryParamMap.subscribe(params => {
@@ -32,6 +43,9 @@ export class SearchComponent implements OnInit {
     this.statusMenu = !this.statusMenu  
   }
 
+  closeMenu(){
+    this.statusMenu = false
+  }
   updateLocation(){
     // this.location = this.locations[0]
   }

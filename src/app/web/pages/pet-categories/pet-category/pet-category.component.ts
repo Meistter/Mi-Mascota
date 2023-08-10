@@ -36,11 +36,8 @@ export class PetCategoryComponent {
     if (id != 'category' && id != 'location' && id != 'size') {
       this.closeMenu()
       this.closeCategoryMenu()
-      this.closeSizeMenu()
-      
-    }
-    console.log(id);
-    
+      this.closeSizeMenu()      
+    }    
   }
 
   ngOnInit(): void {

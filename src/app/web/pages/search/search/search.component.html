@@ -4,8 +4,8 @@
 
         <article class="locationMenu">
             <b>Ubicación: </b>
-            <p  (click)="changeStatusMenu()">{{this.location}}</p>
-            <mat-icon  (click)="changeStatusMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
+            <p id="location" (click)="changeStatusMenu()">{{this.location}}</p>
+            <mat-icon id="location" (click)="changeStatusMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
             <ul class="location-menu" [ngClass]="statusMenu ? 'active':'inactive'">
                 <li (click)="changeStatusMenu(); updateLocation()" *ngFor="let location of locations">{{location}}</li>
             </ul>
