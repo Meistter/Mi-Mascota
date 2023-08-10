@@ -9,6 +9,27 @@
         align-items: center;
         justify-content: space-between;
 
+        .header-location{
+           
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            p {
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-size: 13px;
+                line-height: 1px;
+            }
+            h1 {
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                line-height: 1px;              
+            }
+           
+        }
         .header-top__login {
             display: flex;
             align-items: center;
@@ -226,7 +247,7 @@
     .header-top__search {
         width: 46% !important;
         margin: 0 30px !important;
-        max-width: 540px !important;
+        max-width: 480px !important;
     }
 
     .header-top {

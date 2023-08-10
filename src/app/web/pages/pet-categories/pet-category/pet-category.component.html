@@ -3,8 +3,8 @@
     <div class="pet-search-content">
         <article class="categoryMenu" >
             <b>Especie: </b>
-            <p (click)="changeStatusCategoryMenu()">{{this.categoryName}}</p>
-            <mat-icon (click)="changeStatusCategoryMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
+            <p id="category"  (click)="changeStatusCategoryMenu(); closeMenu(); closeSizeMenu()">{{this.categoryName}}</p>
+            <mat-icon id="category"  (click)="changeStatusCategoryMenu(); closeMenu(); closeSizeMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
 
             <ul class="category-menu" [ngClass]="statusCategoryMenu ? 'active':'inactive'">
                 <li (click)="changeStatusCategoryMenu()" routerLink="/pet-category/0" [queryParams]="{filter: 'all'}">Perros</li>
@@ -16,19 +16,19 @@
         </article>
 
         <article class="locationMenu">
-            <b>Ubicación: </b>
-            <p  (click)="changeStatusMenu()">{{this.location}}</p>
-            <mat-icon  (click)="changeStatusMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
+            <b >Ubicación: </b>
+            <p id="location" (click)="changeStatusMenu(); closeCategoryMenu(); closeSizeMenu()">{{this.location}}</p>
+            <mat-icon id="location" (click)="changeStatusMenu(); closeCategoryMenu(); closeSizeMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
 
             <ul class="location-menu" [ngClass]="statusMenu ? 'active':'inactive'">
                 <li (click)="changeStatusMenu(); updateLocation()" *ngFor="let location of locations">{{location}}</li>
             </ul>
 
         </article>
-        <article class="sizeMenu" *ngIf="this.sizeFilter">
+        <article  class="sizeMenu" *ngIf="this.sizeFilter">
             <b>Tamaño: </b>
-            <p (click)="changeStatusSizeMenu()">{{this.getFilterName()}}</p>
-            <mat-icon  (click)="changeStatusSizeMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
+            <p id="size" (click)="changeStatusSizeMenu(); closeCategoryMenu(); closeMenu()">{{this.getFilterName()}}</p>
+            <mat-icon id="size" (click)="changeStatusSizeMenu(); closeCategoryMenu(); closeMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
 
             <ul class="size-menu" [ngClass]="statusSizeMenu ? 'active':'inactive'">
                 <li (click)="changeStatusSizeMenu(); " routerLink="/pet-category/0" [queryParams]="{filter: 'all'}">Todos</li>

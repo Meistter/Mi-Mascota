@@ -66,11 +66,20 @@
 <header class="desktop">
     <div class="header-top">
         <div class="header-top__menu">
+        
             <div class="header-top__login">
                 <mat-icon style="font-size: 30px; color: white; cursor: pointer; "
                 (click)="openSideNav()" (mouseenter)="openSideNav()">menu</mat-icon>
                 <img routerLink="home" src="{{app_logo.url}}" alt="{{app_logo.alt}}">
-            </div>            
+            </div>    
+            <div class="header-location">
+                <mat-icon style="font-size: 28px;color: white;">location_on</mat-icon>
+                <div class="location">
+                    <p>Ubicación</p>
+                    <h1>Barquisimeto <mat-icon style="font-size: 20px;">expand_more</mat-icon></h1>
+                </div>
+            </div>    
+        
             <div class="header-top__search">
                 <form class="header-top__form" (submit)="send($event)">
                     <input type="text" [formControl]="query" placeholder="Buscar">
@@ -78,10 +87,12 @@
                             style="font-size: 22px; color: black;">search</mat-icon></button>
                 </form>
             </div>
+            <p></p>
             <div class="header-top__login">
                 <p routerLink="/auth/login">Inicia Sesion/Registrate</p>
                 <mat-icon style="font-size: 30px; color: white;">account_box</mat-icon>
             </div>
+        
         </div>
         
     </div>

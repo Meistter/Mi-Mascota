@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Pet } from 'src/app/models/pet';
 import { CategoryService } from 'src/app/services/category.service';
@@ -28,6 +28,21 @@ export class PetCategoryComponent {
   size = 'Pequeño'
   i = 0
   
+  //Listener para cerrar y abrir menu
+  @HostListener('document:click', ['$event'])
+  onClickEvent(event: MouseEvent) {
+    var target = event.target as HTMLElement
+    var id = target['id']
+    if (id != 'category' && id != 'location' && id != 'size') {
+      this.closeMenu()
+      this.closeCategoryMenu()
+      this.closeSizeMenu()
+      
+    }
+    console.log(id);
+    
+  }
+
   ngOnInit(): void {
 
    this.locations = this.locationService.getLocations()
@@ -78,6 +93,16 @@ export class PetCategoryComponent {
   }
   updateLocation(){
     this.location = this.locations[0]
+  }
+
+  closeMenu(){
+    this.statusMenu = false
+  }  
+  closeCategoryMenu(){
+    this.statusCategoryMenu = false
+  }
+  closeSizeMenu(){
+    this.statusSizeMenu = false
   }
  
 }

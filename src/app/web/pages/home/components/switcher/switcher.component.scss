@@ -54,3 +54,17 @@
 .inactive {
     background-color: white
 }
+
+@media (width >= 1024px) {
+   .filter {
+    display: none;
+   }
+   .switcher-container {
+    justify-content: center;
+    }
+
+}
+
+@media (width < 1024px) {
+   
+}
