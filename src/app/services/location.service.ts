@@ -7,7 +7,7 @@ export class LocationService {
 
   constructor() { }
   //Base de datos de Ubicaciones
-  locations :  any =  ['Barquisimeto','Valencia','Caracas', 'Fort Worth']
+  locations :  any =  ['Barquisimeto','Valencia','Caracas', 'Maracaibo', 'Maracay', 'Fort Worth', 'Dallas']
   
   getLocations(){
     return this.locations

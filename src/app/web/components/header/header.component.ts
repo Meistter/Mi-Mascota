@@ -1,19 +1,25 @@
-import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LocationService } from 'src/app/services/location.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
-  constructor(private router: Router) { }
+export class HeaderComponent implements OnInit {
+  constructor(private router: Router, private location: LocationService) { }
 
   app_logo = { url: 'https://i.postimg.cc/c4MgZPjb/logo-min.jpg', alt: 'logo-mi-mascota' }
   statusFirstMenu: boolean = false;
   statusSecondMenu: boolean = false;
   statusRightMenu: boolean = false;
   query = new FormControl('', [Validators.required])
+  locations = []
+  locationMenuShow =false
+  ngOnInit(): void {
+    this.locations = this.location.getLocations()
+  }
 
   //Listener para cerrar y abrir menu
   @HostListener('document:click', ['$event'])
@@ -32,6 +38,9 @@ export class HeaderComponent {
     }
     if (id == 'open-menu-right') {
       this.openRightMenu()
+    }
+    if (id != 'locationMenu') {
+      this.locationMClose()
     }
   }
   //Emitimos para abrir menu sidenav lateral
@@ -71,5 +80,14 @@ export class HeaderComponent {
   }
   closeRightMenu() {
     this.statusRightMenu = false;
+  }
+  locationMShow(){
+    this.locationMenuShow = true
+  }
+  locationMtoggle(){
+    this.locationMenuShow = !this.locationMenuShow
+  }
+  locationMClose(){
+    this.locationMenuShow = false
   }
 }
