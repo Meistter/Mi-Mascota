@@ -47,6 +47,9 @@
                 border-color: rgb(0, 0, 0);
                 cursor: pointer;
             }  
+            button:hover{
+                background-color: #e9ecf1; 
+            }
             .location {
                 display: flex; 
                 align-items: center; 

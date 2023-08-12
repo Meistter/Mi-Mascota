@@ -1,12 +1,13 @@
 .card-container {
-    width: 100%;   
+    width: 100%;
     max-width: 360px;
     min-height: 420px;
     background-color: var(--card-background-gray);
     border-radius: 0px;
     padding: 14px;
     margin: 14px;
-    img{
+
+    img {
         width: 100%;
         height: 260px;
         object-fit: cover;
@@ -18,45 +19,55 @@
         justify-content: space-between;
         padding: 0;
         position: relative;
+
         // height: 100%;
-        .info__left{
+        .info__left {
             font-family: 'Inter';
             margin-bottom: 16px;
             min-height: 100px;
             height: 100%;
+
             h1 {
-                font-size: 18px;   
-                margin: 12px 0 12px 0;                       
+                font-size: 18px;
+                margin: 12px 0 12px 0;
             }
+
             h2 {
-                font-size: 13px;   
-                font-weight: 400;  
-                padding-right: 4px;  
+                font-size: 13px;
+                font-weight: 400;
+                padding-right: 4px;
                 min-height: 40px;
             }
+
             p {
-                font-weight: 500; 
-                font-size: 12px;            
+                font-weight: 500;
+                font-size: 12px;
             }
+
             .info__left-details {
                 position: absolute;
                 bottom: 0;
                 display: flex;
-                flex-direction: row;         
+                flex-direction: row;
             }
         }
+
         .info__right {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            p{font-size: 12px;}
+
+            p {
+                font-size: 12px;
+            }
+
             button {
-               
+
                 color: black;
                 font-size: 12px;
                 font-family: 'Inter';
                 font-weight: 550;
-                width:110px ;
+                width: 110px;
                 height: 30px;
                 margin: 8px;
                 margin-right: 0;
@@ -65,14 +76,24 @@
                 border-radius: 4px;
                 border-color: rgb(0, 0, 0);
                 cursor: pointer;
-            }        
+            }
+
             .adopt-button {
                 margin-top: 0;
-                background-color: var(--card-button-background);            
+                background-color: var(--card-button-background);
             }
+
+            button:hover {
+                background-color: #e9ecf1;
+            }
+
+            .adopt-button:hover {
+                background-color: #dde1e7;
+            }
+
             .location {
-                display: flex; 
-                align-items: center; 
+                display: flex;
+                align-items: center;
                 margin-right: 4px;
             }
         }

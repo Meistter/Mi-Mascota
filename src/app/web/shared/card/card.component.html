@@ -12,9 +12,9 @@
         </div>
       </article>
       <article class="info__right">
-        <div class="location"><mat-icon style="font-size: 14px;">location_on</mat-icon><p>{{pet.location}}</p></div>
+        <div class="location"><mat-icon style="font-size: 14px;color: var(--card-location-color)">location_on</mat-icon><p>{{pet.location}}</p></div>
         <button [routerLink]="['/pet',pet.id]" class="detail-button">Ver detalles</button>
-        <button class="adopt-button" routerLink="/auth/login">¡Darle un Hogar!</button>
+        <button class="adopt-button" routerLink="/auth/login">Darle un Hogar</button>
       </article>
     </mat-card-content>    
 </mat-card>

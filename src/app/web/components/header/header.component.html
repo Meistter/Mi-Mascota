@@ -21,7 +21,8 @@
     </div>
 
     <ul class="header-menu">
-        <ul class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()">
+        <!-- <ul class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()"> -->
+        <ul class="header-menu__left">
             <a id="open-animal-left">Mascotas y Razas</a><mat-icon id="open-animal-left"
                 style="font-size: 20px;">expand_more</mat-icon>
             <ul class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()">
@@ -68,7 +69,7 @@
         <div class="header-top__menu">
         
             <div class="header-top__login">
-                <mat-icon style="font-size: 30px; color: white; cursor: pointer; "
+                <mat-icon style="font-size: 30px; color: var(--golden-color); cursor: pointer; "
                 (click)="openSideNav()" (mouseenter)="openSideNav()">menu</mat-icon>
                 <img routerLink="home" src="{{app_logo.url}}" alt="{{app_logo.alt}}">
             </div>    
