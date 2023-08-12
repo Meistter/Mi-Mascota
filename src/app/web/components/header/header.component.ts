@@ -37,11 +37,13 @@ export class HeaderComponent implements OnInit {
       this.closeRightMenu()
     }
     if (id == 'open-menu-right') {
-      this.openRightMenu()
+      this.toggleRightMenu()
     }
     if (id != 'locationMenu') {
       this.locationMClose()
     }
+    console.log(id);
+    
   }
   //Emitimos para abrir menu sidenav lateral
   @Output() sideNavOpen = new EventEmitter<string>();

@@ -47,7 +47,8 @@
 
         <a routerLink="lost" class="header-menu__center">Extraviadas</a>
 
-        <ul class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()">
+        <!-- <ul class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()"> -->
+        <ul class="header-menu__right">
             <mat-icon id="open-menu-right"
                 style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black;margin-right: 3px; ">photo_camera</mat-icon>
             <a id="open-menu-right">Publicar Mascota</a>
@@ -73,11 +74,11 @@
                 (click)="openSideNav()" (mouseenter)="openSideNav()">menu</mat-icon>
                 <img routerLink="home" src="{{app_logo.url}}" alt="{{app_logo.alt}}">
             </div>    
-            <div id="locationMenu" class="header-location" (click)="locationMtoggle()">
+            <div id="locationMenu" class="header-location" (click)="locationMtoggle()" >
                 <mat-icon id="locationMenu" style="font-size: 28px;color: var(--golden-color)">location_on</mat-icon>
                 <div class="location">
-                    <p id="locationMenu">Ubicación</p>
-                    <h1 id="locationMenu">Barquisimeto <mat-icon style="font-size: 20px;">expand_more</mat-icon></h1>
+                    <p  id="locationMenu">Ubicación</p>
+                    <h1 id="locationMenu">Barquisimeto <mat-icon id="locationMenu" style="font-size: 20px;">expand_more</mat-icon></h1>
                 </div>
                 <div [ngClass]="locationMenuShow ? 'active':'inactive'" class="location-menu">
                     <ul *ngFor="let loc of locations">{{loc}}</ul>
@@ -91,7 +92,7 @@
                             style="font-size: 22px; color: black;">search</mat-icon></button>
                 </form>
             </div>
-            <p></p>
+            <p>ㅤㅤㅤㅤㅤㅤ</p>
             <div class="header-top__login">
                 <p routerLink="/auth/login">Inicia Sesion/Registrate</p>
                 <mat-icon style="font-size: 30px; color: var(--golden-color)">account_box</mat-icon>
