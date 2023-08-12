@@ -1,7 +1,7 @@
 [
   {"id":"4","name":"Max patitas", "size": "big",
   "description": "Es muy caprichoso y piqui para comer no come cualquier tipo de croqueta y le teme a la oscuridad, pero es bilingüe y es bonito",
-  "age":1, "health":"Buena", "location":"Fort Worth", "vaccinated":true,
+  "age":1, "health":"Buena", "location":"Dallas", "vaccinated":true,
   "owner_id":"Josue Perez",
   "castrated":true,"disease":false,
   "adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio",
@@ -14,7 +14,7 @@
 "age":0.5, "health":"Buena", "location":"Valencia", "vaccinated":true,
 "owner_id":"Flor Paredes",
 "castrated":false,"disease":false,"adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio","remarks":"En el pasado Max ha tenido episodios ansiedad por el calor donde es necesario llevarlo a un lugar fresco y tener cuidado con el calor en sus patitas",
-"photos":[{"url_mobile": "https://i.postimg.cc/3rGss5wN/descarga.jpg", "url_full":"", "alt":""}],
+"photos":[{"url_mobile": "https://i.postimg.cc/9XLjXj0t/turtle-carapace-portrait-nature-e1684341061229.webp", "url_full":"", "alt":""}],
 "likes":9, "category": "3"},
   
 {"id":"5","name":"Kira", 
