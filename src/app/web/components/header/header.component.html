@@ -103,7 +103,8 @@
     </div>
 
     <ul class="header-menu">
-        <ul class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()">
+    <!-- <ul class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()"> -->
+        <ul class="header-menu__left">
             <a id="open-animal-left">Mascotas y Razas</a><mat-icon id="open-animal-left"
                 style="font-size: 20px;">expand_more</mat-icon>
             <ul class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()">
@@ -132,7 +133,8 @@
         <a routerLink="report" class="header-menu__center">Denunciar Maltrato</a>
         <a routerLink="location" class="header-menu__center">Ubicación</a>        
 
-        <ul class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()">
+        <!-- <ul class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()"> -->
+        <ul class="header-menu__right">
             <mat-icon id="open-menu-right"
                 style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black;margin-right: 3px; ">photo_camera</mat-icon>
             <a id="open-menu-right">Publicar Mascota</a>

@@ -18,7 +18,7 @@ export class PetsService {
   rescuePets: PetRescue[] = rescue_pets
   lostPets: PetRescue[] = lost_pets
   searchPets: Pet[] = search_pets
-  category_dog_pets: Pet[] = category_dog_pets
+  category_dog_pets: Pet[] = adopt_pets
   //Funciones a usar mientras no exista backend
   getAdoptionPet(id: string) {
     return this.adoptionPets.find(rsp => rsp.id == id)
