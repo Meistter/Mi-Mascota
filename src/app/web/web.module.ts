@@ -8,7 +8,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ReactiveFormsModule } from '@angular/forms';
-// import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 @NgModule({
     declarations: [
         LayoutComponent,
@@ -21,9 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         MatIconModule,
         MatExpansionModule,        
         MatSidenavModule,
-        ReactiveFormsModule,
-        // NgxSkeletonLoaderModule
-       
+        ReactiveFormsModule       
     ]
 })
 export class WebModule { }

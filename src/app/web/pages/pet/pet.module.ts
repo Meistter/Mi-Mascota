@@ -6,7 +6,7 @@ import { SwiperModule } from 'swiper/angular';
 import { SharedModule } from '../../shared/shared.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
-
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 @NgModule({
   declarations: [
     PetComponent
@@ -17,7 +17,8 @@ import { MatCardModule } from '@angular/material/card';
     SwiperModule,
     SharedModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    NgxSkeletonLoaderModule
   ]
 })
 export class PetModule { }

@@ -6,7 +6,7 @@
   "castrated":true,"disease":false,
   "adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio",
   "remarks":"En el pasado Max ha tenido episodios ansiedad por el calor donde es necesario llevarlo a un lugar fresco y tener cuidado con el calor en sus patitas",
-  "photos":[{"url_mobile": "https://i.postimg.cc/JnrywnjZ/D-NQ-NP-602023-MCR70983413301-082023-O.webp", "url_full":"", "alt":""},{"url_mobile": "https://i.postimg.cc/3RFqhQD1/max2-min.jpg", "url_full":"", "alt":"max-photo2"},{"url_mobile": "https://i.postimg.cc/T124YNV6/max3-min.jpg", "url_full":"", "alt":"max-photo3"},{"url_mobile": "https://i.postimg.cc/jqZPLHBv/max4.jpg", "url_full":"", "alt":"max-photo4"},{"url_mobile": "https://i.postimg.cc/cL8n9VC5/max5.jpg", "url_full":"", "alt":"max-photo5"}],
+  "photos":[{"url_mobile": "https://i.postimg.cc/JnrywnjZ/D-NQ-NP-602023-MCR70983413301-082023-O.webp", "url_full":"", "alt":""}],
   "likes":23,"category": "0"},
  
   {"id":"41","name":"Zimba", 
@@ -16,7 +16,7 @@
   "castrated":true,"disease":false,
   "adoptionReason":"No tenemos espacio suficiente para mantenerlo",
   "remarks":"Se comio a 3 gatos de la cuadra y nos prohibieron tenerlo",
-  "photos":[{"url_mobile": "https://i.postimg.cc/1tv8yQKT/tigre-de-bengala.png", "url_full":"", "alt":""},{"url_mobile": "https://i.postimg.cc/3RFqhQD1/max2-min.jpg", "url_full":"", "alt":"max-photo2"},{"url_mobile": "https://i.postimg.cc/T124YNV6/max3-min.jpg", "url_full":"", "alt":"max-photo3"},{"url_mobile": "https://i.postimg.cc/jqZPLHBv/max4.jpg", "url_full":"", "alt":"max-photo4"},{"url_mobile": "https://i.postimg.cc/cL8n9VC5/max5.jpg", "url_full":"", "alt":"max-photo5"}],
+  "photos":[{"url_mobile": "https://i.postimg.cc/1tv8yQKT/tigre-de-bengala.png", "url_full":"", "alt":""}],
   "likes":23,"category": "1"}, 
 
   {"id":"42","name":"Rocky", 
@@ -26,6 +26,6 @@
   "castrated":true,"disease":false,
   "adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio",
   "remarks":"En el pasado Max ha tenido episodios ansiedad por el calor donde es necesario llevarlo a un lugar fresco y tener cuidado con el calor en sus patitas",
-  "photos":[{"url_mobile": "https://i.postimg.cc/kMh2Z7GR/pit-bull-dog-playing-in-an-open-field-at-sunset-free-photo.jpg", "url_full":"", "alt":""},{"url_mobile": "https://i.postimg.cc/3RFqhQD1/max2-min.jpg", "url_full":"", "alt":"max-photo2"},{"url_mobile": "https://i.postimg.cc/T124YNV6/max3-min.jpg", "url_full":"", "alt":"max-photo3"},{"url_mobile": "https://i.postimg.cc/jqZPLHBv/max4.jpg", "url_full":"", "alt":"max-photo4"},{"url_mobile": "https://i.postimg.cc/cL8n9VC5/max5.jpg", "url_full":"", "alt":"max-photo5"}],
+  "photos":[{"url_mobile": "https://i.postimg.cc/kMh2Z7GR/pit-bull-dog-playing-in-an-open-field-at-sunset-free-photo.jpg", "url_full":"", "alt":""}],
   "likes":23,"category": "0"}
   ]

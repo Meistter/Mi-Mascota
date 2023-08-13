@@ -2,8 +2,15 @@
     <div class="related__top-header">
         <h1>Mascotas Relacionadas</h1>
         <mat-icon style="font-size: 32px;">chevron_right</mat-icon>
-    </div>  
+    </div>
     <div class="related__pet-cards">
         <app-related-card [urlRedirect]="urlRedirect" [pet]="pet" *ngFor="let pet of related"></app-related-card>
+    </div>
+
+    <div class="skeleton" *ngIf="related.length == 0">
+        <div class="skeleton-cards" *ngFor="let number of numbers">
+            <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '240px',height: '210px'}" count="1"
+                appearance="line" animation=""></ngx-skeleton-loader>
+        </div>
     </div>
 </section>

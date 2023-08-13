@@ -22,32 +22,34 @@ export class PetRescueComponent {
   categoryName : string | undefined = ''
   //quitar el undefined al usar API
   pet :PetRescue | undefined = {
-    id: 'string',   
+    id: '-1',   
     age: 0, 
-    health: 'string',
-    location: 'string',
-    description: 'string',
+    health: '',
+    location: '',
+    description: '',
     photos: [{url_mobile:'', url_full:'',alt:''}],
     address: '',
     disease: true,
     gps: '',
     category: '0',
-    remarks: 'string',
+    remarks: '',
   }   
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params=>{
-      this.petId = params.get('id')
-      if(this.petId){
-        this.pet = this.petService.getRescuePet(this.petId)
-        if(this.pet?.category)
-        this.categoryName = this.categoryService.getCategoryName(this.pet?.category)         
-      if(this.pet?.category){
-        this.relatedPets = this.petService.getRelatedRescuePets(this.pet.category)
-      }
-      } 
-    })
-       
+    //solo para pruebas
+    setTimeout(() => {
+      this.route.paramMap.subscribe(params=>{
+        this.petId = params.get('id')
+        if(this.petId){
+          this.pet = this.petService.getRescuePet(this.petId)
+          if(this.pet?.category)
+          this.categoryName = this.categoryService.getCategoryName(this.pet?.category)         
+        if(this.pet?.category){
+          this.relatedPets = this.petService.getRelatedRescuePets(this.pet.category)
+        }
+        } 
+      })
+    }, 1000);  
     
   }
   config: SwiperOptions = {

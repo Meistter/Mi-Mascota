@@ -6,7 +6,7 @@ import { PetRescueRoutingModule } from './pet-rescue-routing.module';
 import { PetRescueComponent } from './pet-rescue/pet-rescue.component';
 import { SharedModule } from '../../shared/shared.module';
 import { SwiperModule } from 'swiper/angular';
-
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 @NgModule({
   declarations: [
     PetRescueComponent
@@ -17,7 +17,8 @@ import { SwiperModule } from 'swiper/angular';
     SharedModule,
     MatIconModule,
     MatCardModule,
-    SwiperModule
+    SwiperModule,
+    NgxSkeletonLoaderModule
   ]
 })
 export class PetRescueModule { }

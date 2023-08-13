@@ -34,12 +34,12 @@
         }
 
         .button-left {
-            border-radius: 4px 0 0 4px;
+            border-radius: 8px 0 0 8px;
             border-right: none;
         }
 
         .button-right {
-            border-radius: 0 4px 4px 0;
+            border-radius: 0 8px 8px 0;
         }
     }
 }
@@ -47,8 +47,7 @@
 .active {
     background-color: var(--second-golden-color);
     // background-color: var(--golden-color);
-    font-weight: 600;
-    
+    font-weight: 600;    
     font-size: 13.2px !important;
 }
 

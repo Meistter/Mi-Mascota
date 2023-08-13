@@ -21,35 +21,38 @@ export class PetComponent implements OnInit{
   urlRedirect = 'pet'
   //quitar el undefined al usar API
   pet :Pet | undefined = {
-    id: 'string',
-    name: 'string',
-    owner_id: 'string',    
+    id: '-1',
+    name: '',
+    owner_id: '',    
     age: 0,
     castrated: true,
     disease: true,    
-    health: 'string',
+    health: '',
     vaccinated: true,
-    location: 'string',
-    description: 'string',
-    adoptionReason: 'string',
-    remarks: 'string',
+    location: '',
+    description: '',
+    adoptionReason: '',
+    remarks: '',
     photos: [{url_mobile:'', url_full:'',alt:''}],
     likes: 0,
     category: '0'
   }   
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params=>{
-      this.petId = params.get('id')
-      if(this.petId){
-        this.pet = this.petService.getAdoptionPet(this.petId)        
-        } 
-
-        if(this.pet?.category){
-          this.relatedPets = this.petService.getRelatedPets(this.pet.category)
-        }
-        
-    })
+    
+    setTimeout(() => {
+      this.route.paramMap.subscribe(params=>{
+        this.petId = params.get('id')
+        if(this.petId){
+          this.pet = this.petService.getAdoptionPet(this.petId)        
+          } 
+  
+          if(this.pet?.category){
+            this.relatedPets = this.petService.getRelatedPets(this.pet.category)
+          }
+          
+      })
+    }, 1000);      
   }
   getSize(){
     if(this.pet?.size == 'Big'){
