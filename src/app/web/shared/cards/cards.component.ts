@@ -7,14 +7,10 @@ import { PetsService } from 'src/app/services/pets.service';
   templateUrl: './cards.component.html', 
   styleUrls: ['./cards.component.scss']
 })
-export class CardsComponent implements OnInit{
+export class CardsComponent {
 
   constructor(){}
   @Input() pets : Pet[] = []
   numbers = [1,2,3,4,5,6]
-  
-  ngOnInit(): void {
-    console.log(this.pets.length);
-    
-  }
+ 
 }

@@ -12,6 +12,9 @@ export class LostPetsComponent implements OnInit{
   lostDetail = true
   pets : PetRescue[] = []
   ngOnInit(): void {
-    this.pets = this.petService.getLostPets()
+    setTimeout(() => {
+      this.pets = this.petService.getLostPets()
+    }, 1000);
+    
   }
 }

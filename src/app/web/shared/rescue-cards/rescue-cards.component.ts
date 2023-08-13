@@ -11,4 +11,5 @@ export class RescueCardsComponent {
   constructor(){}
   @Input() pets : PetRescue[] = []
   @Input() lostDetail : boolean = false
+  numbers = [1,2,3,4,5,6]
 }

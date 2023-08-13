@@ -41,16 +41,18 @@ export class PetCategoryComponent {
   }
 
   ngOnInit(): void {
-
+ 
    this.locations = this.locationService.getLocations()
-
+ //solo para pruebas
+ setTimeout(() => {
+        
+    
     this.route.paramMap.subscribe(params=>{
-      this.categoryId = params.get('id')           
+      this.categoryId = params.get('id')              
       if(this.categoryId){
         this.MainPets = this.petService.getPetsByCategory(this.categoryId) 
-        this.pets = this.MainPets
-        this.categoryName = this.categoryService.getCategoryName(this.categoryId)    
-                      
+        this.pets = this.MainPets       
+        this.categoryName = this.categoryService.getCategoryName(this.categoryId)                          
       }
       
       if(this.categoryName == undefined){
@@ -64,7 +66,7 @@ export class PetCategoryComponent {
         else{this.pets = this.MainPets}
       }) 
     }) 
-      
+  }, 1000); 
   }
   getFilterName(){
     if(this.sizeFilter == 'big'){

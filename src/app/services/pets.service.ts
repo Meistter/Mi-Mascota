@@ -12,7 +12,6 @@ import { HttpClient } from '@angular/common/http';
 export class PetsService {
 
   constructor(private http: HttpClient) { }
-
   //Base de datos de las mascotas
   adoptionPets: Pet[] = adopt_pets
   rescuePets: PetRescue[] = rescue_pets

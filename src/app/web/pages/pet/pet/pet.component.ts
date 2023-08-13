@@ -5,8 +5,6 @@ import { PetsService } from 'src/app/services/pets.service';
 import SwiperCore, {Navigation, Pagination, Scrollbar, A11y, SwiperOptions, Swiper} from 'swiper';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 import { interval } from 'rxjs';
-
-
 @Component({
   selector: 'app-pet',
   templateUrl: './pet.component.html',

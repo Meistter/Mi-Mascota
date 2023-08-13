@@ -1,8 +1,7 @@
 <section class="card-container">
-    <!-- <app-card [pet]="pet" *ngFor="let pet of pets" class="app-card"></app-card> -->
+    <app-card [pet]="pet" *ngFor="let pet of pets" class="app-card"></app-card>
 
-    <!-- <div class="skeleton" *ngIf="pets.length !== 0"> -->
-    <div class="skeleton">
+    <div class="skeleton" *ngIf="pets.length == 0">    
         <div class="skeleton-cards" *ngFor="let number of numbers">
             <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '330px',height: '260px'}" count="1"
                 appearance="line" animation=""></ngx-skeleton-loader>
@@ -21,7 +20,5 @@
             <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '330px',height: '15px'}" count="1"
                 appearance="line" animation=""></ngx-skeleton-loader>
         </div>
-
     </div>
-
 </section>

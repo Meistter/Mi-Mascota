@@ -15,13 +15,15 @@ export class HomeComponent implements OnInit{
   petsRescueForFilter : PetRescue[] = []
   switcher = true
   ngOnInit(): void {
-    this.pets = this.petService.getAdoptionPets() //al usar api no debo hacer 4 solicitudes de la misma información
-   
-    setTimeout(() => {
-      this.petForFilter = this.petService.getAdoptionPets()
-    }, 10000);
+    this.pets = this.petService.getAdoptionPets() //al usar api no debo hacer 4 solicitudes de la misma información   
     this.petsRescue = this.petService.getRescuePets()
     this.petsRescueForFilter = this.petService.getRescuePets()
+
+    //solo para pruebas
+    setTimeout(() => {
+      this.petForFilter = this.petService.getAdoptionPets()
+    }, 1000);
+    
   }
   switchComponents(){
     this.switcher = !this.switcher

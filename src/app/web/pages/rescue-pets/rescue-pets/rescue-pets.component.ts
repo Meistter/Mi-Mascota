@@ -10,7 +10,10 @@ import { PetsService } from 'src/app/services/pets.service';
 export class RescuePetsComponent implements OnInit{
   constructor(private petService: PetsService){}
   pets : PetRescue[] = []
-  ngOnInit(): void {
-    this.pets = this.petService.getRescuePets()
+  ngOnInit(): void {    
+    //solo para pruebas
+    setTimeout(() => {
+      this.pets = this.petService.getRescuePets()
+    }, 1000);
   }
 }
