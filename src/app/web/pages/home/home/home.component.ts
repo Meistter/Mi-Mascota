@@ -16,7 +16,10 @@ export class HomeComponent implements OnInit{
   switcher = true
   ngOnInit(): void {
     this.pets = this.petService.getAdoptionPets() //al usar api no debo hacer 4 solicitudes de la misma información
-    this.petForFilter = this.petService.getAdoptionPets()
+   
+    setTimeout(() => {
+      this.petForFilter = this.petService.getAdoptionPets()
+    }, 10000);
     this.petsRescue = this.petService.getRescuePets()
     this.petsRescueForFilter = this.petService.getRescuePets()
   }

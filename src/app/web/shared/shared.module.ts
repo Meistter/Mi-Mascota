@@ -9,7 +9,7 @@ import { CardComponent } from './card/card.component';
 import { CardsComponent } from './cards/cards.component';
 import { RescueCardsComponent } from './rescue-cards/rescue-cards.component';
 import { RescueCardComponent } from './rescue-card/rescue-card.component';
-
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 
 @NgModule({
@@ -19,13 +19,14 @@ import { RescueCardComponent } from './rescue-card/rescue-card.component';
     CardComponent,
     CardsComponent,
     RescueCardsComponent,
-    RescueCardComponent
+    RescueCardComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     MatIconModule,
-    MatCardModule 
+    MatCardModule,
+    NgxSkeletonLoaderModule
   ],
   exports: [
     RelatedComponent,
