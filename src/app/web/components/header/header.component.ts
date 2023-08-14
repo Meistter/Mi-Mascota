@@ -1,6 +1,7 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { LocationService } from 'src/app/services/location.service';
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { LocationService } from 'src/app/services/location.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor(private router: Router, private location: LocationService) { }
+  constructor(private router: Router, private location: LocationService, private authService: AuthService) { }
 
   app_logo = { url: 'https://i.postimg.cc/c4MgZPjb/logo-min.jpg', alt: 'logo-mi-mascota' }
   statusFirstMenu: boolean = false;
@@ -19,6 +20,8 @@ export class HeaderComponent implements OnInit {
   locationMenuShow =false
   ngOnInit(): void {
     this.locations = this.location.getLocations()
+    console.log(this.authService.hasUser());
+    
   }
 
   //Listener para cerrar y abrir menu
@@ -42,7 +45,6 @@ export class HeaderComponent implements OnInit {
     if (id != 'locationMenu') {
       this.locationMClose()
     }
-    console.log(id);
     
   }
   //Emitimos para abrir menu sidenav lateral

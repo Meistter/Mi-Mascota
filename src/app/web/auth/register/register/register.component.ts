@@ -49,7 +49,8 @@ export class RegisterComponent {
         const valuePass = value.password
         if (valueEmail && valuePass)
         this.authService.createUser(valueEmail, valuePass)
-        .then(() => {
+        .then((rsp) => {
+          console.log(rsp);          
           this.router.navigate(['/auth/login']);
         });
       }

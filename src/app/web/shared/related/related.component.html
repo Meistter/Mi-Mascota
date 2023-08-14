@@ -10,7 +10,7 @@
     <div class="skeleton" *ngIf="related.length == 0">
         <div class="skeleton-cards" *ngFor="let number of numbers">
             <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '240px',height: '210px'}" count="1"
-                appearance="line" animation=""></ngx-skeleton-loader>
+                appearance="line" animation="progress"></ngx-skeleton-loader>
         </div>
     </div>
 </section>

@@ -4,7 +4,7 @@
     <div class="skeleton" *ngIf="pets.length == 0">    
         <div class="skeleton-cards" *ngFor="let number of numbers">
             <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '330px',height: '260px'}" count="1"
-                appearance="line" animation=""></ngx-skeleton-loader>
+                appearance="line" animation="progress"></ngx-skeleton-loader>
             <div class="bottom">
                 <div class="bottom-1">
                     <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '200px',height: '120px'}"
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '330px',height: '15px'}" count="1"
-                appearance="line" animation=""></ngx-skeleton-loader>
+                appearance="line" animation="progress"></ngx-skeleton-loader>
         </div>
     </div>
 </section>

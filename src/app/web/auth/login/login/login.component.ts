@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent {
 
   hide : boolean = true
   loginError : boolean = false //lo usaremos cuando las credenciales no sean correctas
-  constructor(private router: Router){}
+  constructor(private router: Router, private authService: AuthService){}
 
   loginForm = new FormGroup({
     email : new FormControl('',[Validators.required, Validators.email]), 
@@ -29,12 +30,18 @@ export class LoginComponent {
       return 'Usuario o clave incorrectos'
     }
 
-    login(event: Event){
-      event.preventDefault();
-      if(this.loginForm.valid){
-        console.log('logueado');
-        this.router.navigate(['/home'])
-      }else{}      
+    login(){
       
+      if(this.loginForm.valid){
+        const value = this.loginForm.value
+        const valueEmail = value.email
+        const valuePass = value.password
+        if (valueEmail && valuePass)
+        this.authService.login(valueEmail, valuePass)
+        .then((rsp) => {
+          console.log(rsp);          
+          this.router.navigate(['/home']);
+        });
+      }
     }
 }
