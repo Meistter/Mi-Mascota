@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit{
     //solo para pruebas
     setTimeout(() => {
       this.petForFilter = this.petService.getAdoptionPets()
-    }, 1000);
+    }, 700);
     
   }
   switchComponents(){

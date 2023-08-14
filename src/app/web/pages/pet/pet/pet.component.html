@@ -2,7 +2,8 @@
   <mat-card class="card-container" *ngIf="pet?.id !== '-1'">
     <div class="card__content">
       <div class="card__image">
-        <swiper [config]="config" (swiper)="automatico($event)">
+        <!-- <swiper [config]="config" (swiper)="automatico($event)"> -->
+        <swiper [config]="config">
           <ng-template swiperSlide *ngFor="let slide of pet?.photos">
             <img class="swiper-image" [src]="slide.url_mobile" alt="{{slide.alt}}" />
           </ng-template>

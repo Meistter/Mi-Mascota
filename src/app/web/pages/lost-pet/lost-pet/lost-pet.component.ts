@@ -20,36 +20,36 @@ export class LostPetComponent {
   categoryName: string | undefined = ''
   //quitar el undefined al usar API
   pet: PetRescue | undefined = {
-    id: 'string',
+    id: '-1',
     age: 0,
-    health: 'string',
-    location: 'string',
-    description: 'string',
+    health: '',
+    location: '',
+    description: '',
     photos: [{ url_mobile: '', url_full: '', alt: '' }],
     address: '',
     disease: true,
     gps: '',
     category: '0',
-    remarks: 'string',
+    remarks: '',
   }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      this.petId = params.get('id')
-      if (this.petId) {
-        this.pet = this.petService.getLostPet(this.petId)
-        if (this.pet?.category)
-          this.categoryName = this.categoryService.getCategoryName(this.pet?.category)
-        if (this.pet?.category) {
-          this.relatedPets = this.petService.getRelatedLostPets(this.pet.category)
+    setTimeout(() => {
+      this.route.paramMap.subscribe(params => {
+        this.petId = params.get('id')
+        if (this.petId) {
+          this.pet = this.petService.getLostPet(this.petId)
+          if (this.pet?.category)
+            this.categoryName = this.categoryService.getCategoryName(this.pet?.category)
+          if (this.pet?.category) {
+            this.relatedPets = this.petService.getRelatedLostPets(this.pet.category)
+          }
         }
-      }
-    })
-
-
+      })
+    }, 700);  
   }
   config: SwiperOptions = {
-    loop: true,
+    loop: false,
     slidesPerView: 1,
     spaceBetween: 0,
     navigation: true,

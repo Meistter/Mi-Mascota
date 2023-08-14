@@ -45,14 +45,12 @@ export class PetComponent implements OnInit{
         this.petId = params.get('id')
         if(this.petId){
           this.pet = this.petService.getAdoptionPet(this.petId)        
-          } 
-  
+          }   
           if(this.pet?.category){
             this.relatedPets = this.petService.getRelatedPets(this.pet.category)
-          }
-          
+          }          
       })
-    }, 1000);      
+    }, 700);      
   }
   getSize(){
     if(this.pet?.size == 'Big'){
@@ -65,7 +63,7 @@ export class PetComponent implements OnInit{
     }
   }
   config: SwiperOptions = {
-    loop: true,
+    loop: false,
     slidesPerView: 1,
     spaceBetween: 0,
     navigation: true,

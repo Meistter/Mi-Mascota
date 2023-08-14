@@ -1,66 +1,69 @@
 <div class="pet-container">
-    <mat-card class="card-container" *ngIf="pet?.id !== '-1'">    
-      <div class="card__content">  
-        <div class="card__image">
-          <swiper [config]="config" (swiper)="automatico($event)">
-            <ng-template swiperSlide *ngFor="let slide of pet?.photos">            
-                     <img class="swiper-image" [src]="slide.url_mobile" alt="{{slide.alt}}" />            
-           </ng-template>
+  <mat-card class="card-container" *ngIf="pet?.id !== '-1'">
+    <div class="card__content">
+      <div class="card__image">
+        <!-- <swiper [config]="config" (swiper)="automatico($event)"> -->
+        <swiper [config]="config">
+          <ng-template swiperSlide *ngFor="let slide of pet?.photos">
+            <img class="swiper-image" [src]="slide.url_mobile" alt="{{slide.alt}}" />
+          </ng-template>
         </swiper>
-          <div class="location">
-            <mat-icon style="font-size: 16px;">location_on</mat-icon><p>{{pet?.location}}</p>
-          </div>
-        </div>    
-        <mat-card-content>
-          <div class="info-container-top">
-            <section class="info-container__left">
-              <h1>Especie: {{this.categoryName}}</h1>               
-            </section>
-            <section class="info-container__right">  
-              <div class="info-container-icons">
-                <mat-icon>share</mat-icon><mat-icon>bookmark</mat-icon><mat-icon>report</mat-icon>
-              </div>   
-              <div class="info-container-like-button">                
-                <button class="adopt-button" routerLink="/auth/login" >Declarar como recuperado</button>
-              </div>
-            </section>
-          </div>
-          <section class="info-container-bottom">        
-            <p><b>Salud: </b>{{pet?.health}}</p> 
-            <p *ngIf="pet?.disease; else elseDisease"><b> Enfermo: </b>Si </p>
-            <ng-template #elseDisease><p><b> Enfermo: </b>No</p></ng-template>
-            <br>
-            <p><b>Descripcion del animal: </b> {{pet?.description}}.</p>
-            <br>
-            <p><b>Dirección: </b>{{pet?.address}}.</p>
-            <br>
-            <p><b>LINK Ubicación GPS: </b>{{pet?.gps}}.</p>
+        <div class="location">
+          <mat-icon style="font-size: 16px;">location_on</mat-icon>
+          <p>{{pet?.location}}</p>
+        </div>
+      </div>
+      <mat-card-content>
+        <div class="info-container-top">
+          <section class="info-container__left">
+            <h1>Especie: {{this.categoryName}}</h1>
           </section>
-        </mat-card-content>    
+          <section class="info-container__right">
+            <div class="info-container-icons">
+              <mat-icon>share</mat-icon><mat-icon>bookmark</mat-icon><mat-icon>report</mat-icon>
+            </div>
+            <div class="info-container-like-button">
+              <button class="adopt-button" routerLink="/auth/login">Declarar como recuperado</button>
+            </div>
+          </section>
+        </div>
+        <section class="info-container-bottom">
+          <p><b>Salud: </b>{{pet?.health}}</p>
+          <p *ngIf="pet?.disease; else elseDisease"><b> Enfermo: </b>Si </p>
+          <ng-template #elseDisease>
+            <p><b> Enfermo: </b>No</p>
+          </ng-template>
+          <br>
+          <p><b>Descripcion del animal: </b> {{pet?.description}}.</p>
+          <br>
+          <p><b>Dirección: </b>{{pet?.address}}.</p>
+          <br>
+          <p><b>LINK Ubicación GPS: </b>{{pet?.gps}}.</p>
+        </section>
+      </mat-card-content>
+    </div>
+  </mat-card>
+
+  <div class="skeleton" *ngIf="pet?.id == '-1'">
+    <div class="skeleton-cards">
+      <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '100%',height: '260px'}" count="1"
+        appearance="line" animation=""></ngx-skeleton-loader>
+      <div class="bottom">
+        <div class="bottom-1">
+          <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '200px',height: '120px'}" count="1"
+            appearance="line" animation="progress-dark"></ngx-skeleton-loader>
+        </div>
+        <div class="bottom-2">
+          <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '110px',height: '40px'}" count="1"
+            appearance="line" animation="progress-dark"></ngx-skeleton-loader>
+        </div>
       </div>
-    </mat-card> 
-  
-    <div class="skeleton" *ngIf="pet?.id == '-1'">    
-      <div class="skeleton-cards" >
-          <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '100%',height: '260px'}" count="1"
-              appearance="line" animation=""></ngx-skeleton-loader>
-          <div class="bottom">
-              <div class="bottom-1">
-                  <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '200px',height: '120px'}"
-                      count="1" appearance="line" animation="progress-dark"></ngx-skeleton-loader>
-              </div>
-              <div class="bottom-2">
-                  <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '110px',height: '40px'}"
-                      count="1" appearance="line" animation="progress-dark"></ngx-skeleton-loader>                
-              </div>
-          </div>
-          <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '330px',height: '180px'}" count="1"
-              appearance="line" animation=""></ngx-skeleton-loader>
-      </div>
+      <ngx-skeleton-loader [theme]="{'background-color': '#ced1d5',width: '330px',height: '180px'}" count="1"
+        appearance="line" animation=""></ngx-skeleton-loader>
+    </div>
   </div>
 
-    <section>
-      <app-related [urlRedirect]="urlRedirect" [related]="relatedPets"></app-related>
-    </section>
-  </div>
-  
+  <section>
+    <app-related [urlRedirect]="urlRedirect" [related]="relatedPets"></app-related>
+  </section>
+</div>

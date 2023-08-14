@@ -49,11 +49,11 @@ export class PetRescueComponent {
         }
         } 
       })
-    }, 1000);  
+    }, 700);  
     
   }
   config: SwiperOptions = {
-    loop: true,
+    loop: false,
     slidesPerView: 1,
     spaceBetween: 0,
     navigation: true,
