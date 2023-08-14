@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -18,7 +19,7 @@ export class RegisterComponent {
   toggleResponsability(event: any){if(!event.checked){this.responsabilityRequired = true}else{this.responsabilityRequired = false}}
   
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private authService: AuthService){}
 
   registerForm = new FormGroup({
     name: new FormControl('',[Validators.required]),
@@ -41,11 +42,17 @@ export class RegisterComponent {
       return 'Error al realizar el registro, por favor intenta más tarde'
     }
 
-    register(event: Event){
-      event.preventDefault();      
-      if(this.registerForm.valid && !this.responsabilityRequired && !this.termsRequired){        
-        this.router.navigate(['/home'])
-      }else{}   
+    register(){
+      if(this.registerForm.valid){
+        const value = this.registerForm.value
+        const valueEmail = value.email
+        const valuePass = value.password
+        if (valueEmail && valuePass)
+        this.authService.createUser(valueEmail, valuePass)
+        .then(() => {
+          this.router.navigate(['/auth/login']);
+        });
+      }
       
          
       
