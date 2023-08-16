@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
-
+import { UserLogedGuard } from '../guards/userLogued.guard';
 const routes: Routes = [
   {
     path: '',
@@ -42,6 +42,7 @@ const routes: Routes = [
       },
       {
         path: 'give-adoption',
+        canActivate: [ UserLogedGuard ],
         loadChildren: () => import('./pages/give-adoption/give-adoption.module').then((m) => m.GiveAdoptionModule),
       },
       {
@@ -58,6 +59,7 @@ const routes: Routes = [
       },
       {
         path: 'rescue-request',
+        canActivate: [ UserLogedGuard ],
         loadChildren: () => import('./pages/rescue-request/rescue-request.module').then((m) => m.RescueRequestModule),
       },
       {

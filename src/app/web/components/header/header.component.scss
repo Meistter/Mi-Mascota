@@ -67,6 +67,38 @@
             display: flex;
             align-items: center;
             cursor: pointer;
+            position: relative;
+
+            .profile-menu {
+                position: absolute;
+                z-index: 3;
+                right: 0;
+                top: 30px;
+                background-color: var(--background-gray);
+                transition: opacity 0.2s ease-in-out;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 125px;
+                    height: 30px;
+                    background-color: var(--background-gray);
+                    border: solid;
+                    border-color: var(--menu-border-color);
+                    border-width: 1px;
+                    transition: all 0.15s ease-out;
+                    cursor: pointer;
+                    color: var(--black);
+                    font-family: 'IBM Plex Sans KR';
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+                button:hover {
+                    background-color: var(--navbar-selected-first);
+                }
+            }
 
             p {
                 margin: 0;
@@ -130,8 +162,9 @@
     align-items: center;
     padding: 0 8px 0 8px;
     margin: 0;
-    box-shadow: 0px 0px 2px black;  
+    box-shadow: 0px 0px 2px black;
     z-index: 2;
+
     a {
         font-family: 'IBM Plex Sans KR';
         font-size: 14px;

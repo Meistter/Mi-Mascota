@@ -15,13 +15,22 @@ export class HeaderComponent implements OnInit {
   statusFirstMenu: boolean = false;
   statusSecondMenu: boolean = false;
   statusRightMenu: boolean = false;
+  userLogued: boolean = false
+  statusProfileMenu : boolean = false;
+  userEmail: any = null
   query = new FormControl('', [Validators.required])
   locations = []
-  locationMenuShow =false
+  locationMenuShow = false
   ngOnInit(): void {
     this.locations = this.location.getLocations()
-    console.log(this.authService.hasUser());
-    
+    this.authService.hasUser().subscribe(rsp=>{if(rsp !== null){this.userLogued = true}else{this.userLogued = false} this.userEmail = rsp?.email;
+    })
+  }
+
+  logout() {
+    this.authService.logout()
+    this.userLogued = false
+    this.router.navigate(['/home'])
   }
 
   //Listener para cerrar y abrir menu
@@ -45,7 +54,7 @@ export class HeaderComponent implements OnInit {
     if (id != 'locationMenu') {
       this.locationMClose()
     }
-    
+
   }
   //Emitimos para abrir menu sidenav lateral
   @Output() sideNavOpen = new EventEmitter<string>();
@@ -85,13 +94,16 @@ export class HeaderComponent implements OnInit {
   closeRightMenu() {
     this.statusRightMenu = false;
   }
-  locationMShow(){
+  locationMShow() {
     this.locationMenuShow = true
   }
-  locationMtoggle(){
+  locationMtoggle() {
     this.locationMenuShow = !this.locationMenuShow
   }
-  locationMClose(){
+  locationMClose() {
     this.locationMenuShow = false
+  }
+  toggleProfileMenu(){
+    this.statusProfileMenu = !this.statusProfileMenu
   }
 }
