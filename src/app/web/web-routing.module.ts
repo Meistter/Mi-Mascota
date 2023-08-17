@@ -63,6 +63,11 @@ const routes: Routes = [
         loadChildren: () => import('./pages/rescue-request/rescue-request.module').then((m) => m.RescueRequestModule),
       },
       {
+        path: 'give-lost',
+        canActivate: [ UserLogedGuard ],
+        loadChildren: () => import('./pages/rescue-request/rescue-request.module').then((m) => m.RescueRequestModule),
+      },
+      {
         path: 'search',
         loadChildren: () => import('./pages/search/search.module').then((m) => m.SearchModule),
       },

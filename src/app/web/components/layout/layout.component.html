@@ -28,8 +28,10 @@
       <div class="menu__element" routerLink="report" (click)="drawer.toggle()"> <a>Denunciar Maltrato</a></div>
       <div class="menu__element" routerLink="location" (click)="drawer.toggle()"> <a>Ubicación</a></div>
       <div class="menu__element" routerLink="terms" (click)="drawer.toggle()"> <a>Términos y condiciones</a></div>
-      <div class="menu__element" routerLink="/auth/login" (click)="drawer.toggle()"> <a>Iniciar Sesión</a></div>
+      <div class="menu__element" routerLink="/auth/login" *ngIf="!userLogued" (click)="drawer.toggle()"> <a>Iniciar Sesión</a></div>
+      <div class="menu__element" routerLink="/home" *ngIf="userLogued" (click)="drawer.toggle(); logout()"> <a>Cerrar Sesión</a></div>
 
+      
     </mat-accordion>
 
   </mat-drawer>

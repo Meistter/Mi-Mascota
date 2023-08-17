@@ -8,20 +8,22 @@
             </div>
             <div class="header-top__login">
                 <p routerLink="/auth/login" *ngIf="!userEmail">Inicia Sesion/Registrate</p>
-                <p (click)="toggleProfileMenu()" *ngIf="userEmail">{{userEmail}}</p>
-                <mat-icon (click)="toggleProfileMenu()" style="font-size: 30px; color: var(--golden-color)">account_box</mat-icon>
-                <div (click)="toggleProfileMenu()" class="profile-menu" [ngClass]="statusProfileMenu ? 'active':'inactive'">
+                <p id="user_email" (click)="openProfileMenu()" *ngIf="userEmail">{{userEmail}}</p>
+                <mat-icon id="account_box" (click)="openProfileMenu()"
+                    style="font-size: 30px; color: var(--golden-color)">account_box</mat-icon>
+                <div (click)="openProfileMenu()" class="profile-menu"
+                    [ngClass]="statusProfileMenu ? 'active':'inactive'">
                     <button>Perfil</button>
                     <button routerLink="contact">Contacto</button>
-                    <button (click)="logout()" *ngIf="userLogued">Cerrar Sesión</button>    
-                    <button routerLink="/auth/login" *ngIf="!userLogued">Iniciar Sesión</button> 
+                    <button (click)="logout()" *ngIf="userLogued">Cerrar Sesión</button>
+                    <button routerLink="/auth/login" *ngIf="!userLogued">Iniciar Sesión</button>
                 </div>
             </div>
         </div>
         <div class="header-top__search">
             <form class="header-top__form" (submit)="send($event)">
                 <input type="text" [formControl]="query" placeholder="Buscar">
-                <button id="search-button" type="submit"> <mat-icon
+                <button type="submit"> <mat-icon
                         style="font-size: 22px; color: black;">search</mat-icon></button>
             </form>
         </div>
@@ -61,12 +63,18 @@
             <a id="open-menu-right">Publicar Mascota</a>
             <ul class="animal-menu-right" (mouseleave)="closeRightMenu()">
                 <ul class="animal-menu-right-buttons" [ngClass]="statusRightMenu ? 'active':'inactive'">
-                    <button routerLink="give-adoption"><mat-icon
-                            style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>Dar
-                        mi mascota en Adopción</button>
-                    <button routerLink="give-rescue"><mat-icon
-                            style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>Publicar
-                        mascota Callejera</button>
+                    <button routerLink="give-adoption">
+                        <mat-icon style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
+                        Publicar mascota en Adopción
+                    </button>
+                    <button routerLink="give-lost">
+                        <mat-icon style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
+                        Publicar mascota Extraviada
+                    </button>
+                    <button routerLink="give-rescue">
+                        <mat-icon style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
+                        Publicar mascota Callejera
+                    </button>
                 </ul>
             </ul>
         </ul>
@@ -96,20 +104,22 @@
             <div class="header-top__search">
                 <form class="header-top__form" (submit)="send($event)">
                     <input type="text" [formControl]="query" placeholder="Buscar">
-                    <button id="search-button" type="submit"> <mat-icon
+                    <button  type="submit"> <mat-icon
                             style="font-size: 22px; color: black;">search</mat-icon></button>
                 </form>
             </div>
             <p>ㅤㅤㅤㅤㅤㅤ</p>
             <div class="header-top__login">
                 <p routerLink="/auth/login" *ngIf="!userEmail">Inicia Sesion/Registrate</p>
-                <p (click)="toggleProfileMenu()" *ngIf="userEmail">{{userEmail}}</p>
-                <mat-icon (click)="toggleProfileMenu()" style="font-size: 30px; color: var(--golden-color)">account_box</mat-icon>
-                <div (click)="toggleProfileMenu()" class="profile-menu" [ngClass]="statusProfileMenu ? 'active':'inactive'">
+                <p id="user_email" (click)="openProfileMenu()" *ngIf="userEmail">{{userEmail}}</p>
+                <mat-icon id="account_box" (click)="openProfileMenu()"
+                    style="font-size: 30px; color: var(--golden-color)">account_box</mat-icon>
+                <div (click)="openProfileMenu()" class="profile-menu"
+                    [ngClass]="statusProfileMenu ? 'active':'inactive'">
                     <button>Perfil</button>
                     <button routerLink="contact">Contacto</button>
-                    <button (click)="logout()" *ngIf="userLogued">Cerrar Sesión</button>    
-                    <button routerLink="/auth/login" *ngIf="!userLogued">Iniciar Sesión</button> 
+                    <button (click)="logout()" *ngIf="userLogued">Cerrar Sesión</button>
+                    <button routerLink="/auth/login" *ngIf="!userLogued">Iniciar Sesión</button>
                 </div>
             </div>
 
@@ -156,8 +166,12 @@
             <ul class="animal-menu-right" (mouseleave)="closeRightMenu()">
                 <ul class="animal-menu-right-buttons" [ngClass]="statusRightMenu ? 'active':'inactive'">
                     <button routerLink="give-adoption"><mat-icon
-                            style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>Dar
-                        mi mascota en Adopción</button>
+                            style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
+                            Publicar mascota en Adopción</button>
+                        <button routerLink="give-lost">
+                            <mat-icon style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
+                            Publicar mascota Extraviada
+                        </button>
                     <button routerLink="give-rescue"><mat-icon
                             style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>Publicar
                         mascota Callejera</button>

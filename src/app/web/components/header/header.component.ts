@@ -10,29 +10,23 @@ import { LocationService } from 'src/app/services/location.service';
 })
 export class HeaderComponent implements OnInit {
   constructor(private router: Router, private location: LocationService, private authService: AuthService) { }
-
   app_logo = { url: 'https://i.postimg.cc/c4MgZPjb/logo-min.jpg', alt: 'logo-mi-mascota' }
   statusFirstMenu: boolean = false;
   statusSecondMenu: boolean = false;
   statusRightMenu: boolean = false;
   userLogued: boolean = false
-  statusProfileMenu : boolean = false;
+  statusProfileMenu: boolean = false;
   userEmail: any = null
   query = new FormControl('', [Validators.required])
   locations = []
   locationMenuShow = false
+
   ngOnInit(): void {
     this.locations = this.location.getLocations()
-    this.authService.hasUser().subscribe(rsp=>{if(rsp !== null){this.userLogued = true}else{this.userLogued = false} this.userEmail = rsp?.email;
+    this.authService.hasUser().subscribe(rsp => {
+      if (rsp !== null) { this.userLogued = true } else { this.userLogued = false } this.userEmail = rsp?.email;
     })
   }
-
-  logout() {
-    this.authService.logout()
-    this.userLogued = false
-    this.router.navigate(['/home'])
-  }
-
   //Listener para cerrar y abrir menu
   @HostListener('document:click', ['$event'])
   onClickEvent(event: MouseEvent) {
@@ -54,6 +48,9 @@ export class HeaderComponent implements OnInit {
     if (id != 'locationMenu') {
       this.locationMClose()
     }
+    if(id != 'account_box' && id != 'user_email'){
+      this.closeProfileMenu()
+    }
 
   }
   //Emitimos para abrir menu sidenav lateral
@@ -61,6 +58,12 @@ export class HeaderComponent implements OnInit {
   openSideNav() {
     this.sideNavOpen.emit()
   }
+  logout() {
+    this.authService.logout()
+    this.userLogued = false
+    this.router.navigate(['/home'])
+  }
+
   send(event: { preventDefault: () => void; }) {
     event.preventDefault()
     if (this.query.valid) {
@@ -103,7 +106,10 @@ export class HeaderComponent implements OnInit {
   locationMClose() {
     this.locationMenuShow = false
   }
-  toggleProfileMenu(){
-    this.statusProfileMenu = !this.statusProfileMenu
+  openProfileMenu() {
+    this.statusProfileMenu = true
+  }
+  closeProfileMenu() {
+    this.statusProfileMenu = false
   }
 }
