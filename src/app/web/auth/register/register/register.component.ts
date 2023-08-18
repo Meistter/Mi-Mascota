@@ -25,7 +25,7 @@ export class RegisterComponent {
     name: new FormControl('',[Validators.required]),
     lastname: new FormControl('',[Validators.required]),
     email : new FormControl('',[Validators.required, Validators.email]), 
-    password : new FormControl('',[Validators.required, Validators.minLength(5)]),
+    password : new FormControl('',[Validators.required, Validators.minLength(6)]),
     date: new FormControl('',[Validators.required]),
     terms: new FormControl(false,[Validators.required]),
     responsability: new FormControl(false,[Validators.required]),
@@ -49,9 +49,10 @@ export class RegisterComponent {
         const valuePass = value.password
         if (valueEmail && valuePass)
         this.authService.createUser(valueEmail, valuePass)
-        .then((rsp) => {
-          console.log(rsp);          
-          this.router.navigate(['/auth/login']);
+        .then((rsp) => {        
+          
+            this.router.navigate(['/home']);
+          
         });
       }
       
