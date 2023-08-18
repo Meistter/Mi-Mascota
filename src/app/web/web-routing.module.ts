@@ -26,7 +26,7 @@ const routes: Routes = [
       },
       {
         path: 'pet/:id',
-        loadChildren: () => import('./pages/pet/pet.module').then((m) => m.PetModule),
+        loadChildren: () => import('./pages/adopt-pet/pet.module').then((m) => m.PetModule),
       },
       {
         path: 'auth',
@@ -73,7 +73,7 @@ const routes: Routes = [
       },
       {
         path: 'pet-category/:id',
-        loadChildren: () => import('./pages/pet-categories/pet-categories.module').then((m) => m.PetCategoriesModule),
+        loadChildren: () => import('./pages/adopt-pets/pet-categories.module').then((m) => m.PetCategoriesModule),
       },
       {
         path: 'pet-rescue/:id',
