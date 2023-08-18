@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-
+import { MatDialog } from '@angular/material/dialog';
+import { SucessPopupComponent } from '../sucess-popup/sucess-popup.component';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -19,7 +20,7 @@ export class RegisterComponent {
   toggleResponsability(event: any){if(!event.checked){this.responsabilityRequired = true}else{this.responsabilityRequired = false}}
   
 
-  constructor(private router: Router, private authService: AuthService){}
+  constructor(private router: Router, private matDialog: MatDialog, private authService: AuthService){}
 
   registerForm = new FormGroup({
     name: new FormControl('',[Validators.required]),
@@ -41,7 +42,9 @@ export class RegisterComponent {
     getRegisterError(){
       return 'Error al realizar el registro, por favor intenta más tarde'
     }
-
+    openDialog(){
+      this.matDialog.open(SucessPopupComponent)
+    }
     register(){
       if(this.registerForm.valid){
         const value = this.registerForm.value
@@ -50,7 +53,7 @@ export class RegisterComponent {
         if (valueEmail && valuePass)
         this.authService.createUser(valueEmail, valuePass)
         .then((rsp) => {        
-          
+            this.openDialog()
             this.router.navigate(['/home']);
           
         });

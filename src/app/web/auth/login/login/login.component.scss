@@ -28,11 +28,19 @@
             margin-bottom: 20px;
         }
         mat-form-field{
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             width: 100%;            
         }
-        .login__button--login {
+        h3 {
+            font-size: 12px;
+            font-family: 'Inter';
+            font-weight: 550;
             margin-bottom: 20px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .login__button--login {
+            margin: 0 14px 26px 14px;
             color: black;
             font-size: 14px;
             font-family: 'Inter';
@@ -47,7 +55,7 @@
             cursor: pointer;
         }
         .login__label--register {
-            margin-bottom: 20px;
+            margin-bottom: 14px;
             font-family: 'Inter';
             font-size: 14px;
             font-weight: 550;

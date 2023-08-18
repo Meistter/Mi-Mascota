@@ -8,11 +8,13 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
+import { SucessPopupComponent } from './sucess-popup/sucess-popup.component';
+import {MatDialogModule} from '@angular/material/dialog'
 
 @NgModule({
   declarations: [
-    RegisterComponent
+    RegisterComponent,
+    SucessPopupComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDialogModule
    
   ],
   providers: [

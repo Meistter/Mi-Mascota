@@ -15,7 +15,9 @@ export class LoginComponent implements OnInit{
   loginError: boolean = false //lo usaremos cuando las credenciales no sean correctas
   redirectRoute : string | null = ''
   constructor(private router: Router, private authService: AuthService, private route:ActivatedRoute) { }
+  
 
+ 
   ngOnInit(): void {
     this.route.queryParamMap.subscribe(params => {
       if(params.get('query')){
@@ -26,7 +28,7 @@ export class LoginComponent implements OnInit{
   }
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
   })
 
   getRequiredMsg() {
@@ -39,6 +41,7 @@ export class LoginComponent implements OnInit{
   getLoginError() {
     return 'Usuario o clave incorrectos'
   }
+
 
   login() {
 
