@@ -13,13 +13,15 @@ export class LoginComponent implements OnInit{
   hide: boolean = true
   message : boolean = false
   loginError: boolean = false //lo usaremos cuando las credenciales no sean correctas
+  redirectRoute : string | null = ''
   constructor(private router: Router, private authService: AuthService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.queryParamMap.subscribe(params => {
       if(params.get('query')){
         this.message = true
-      }        
+      }    
+      this.redirectRoute = params.get('route')    
     })   
   }
   loginForm = new FormGroup({
@@ -47,8 +49,12 @@ export class LoginComponent implements OnInit{
       if (valueEmail && valuePass)
         this.authService.login(valueEmail, valuePass)
           .then((rsp) => {
-            console.log(rsp);
-            this.router.navigate(['/home']);
+            if(this.redirectRoute){
+              this.router.navigate(['/',this.redirectRoute]);
+            }else{
+              this.router.navigate(['/home']);
+            }
+            
           });
     }
   }

@@ -9,17 +9,20 @@ import { AuthService } from '../services/auth.service';
 export class UserLogedGuard implements CanActivate {
 
   constructor(private router: Router, private authService: AuthService){}
-
+redirectRoute = ''
 
 canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-
+  
       return this.authService.hasUser()
       .pipe(
         map(user => user === null ? false : true),
-        tap(hasUser => {
-          if (!hasUser) {this.router.navigate(['/auth/login'], { queryParams: { query: 'message' } })} 
+        tap(hasUser => { 
+          route.url.map(path=>this.redirectRoute = path.path)
+          
+          
+          if (!hasUser) {this.router.navigate(['/auth/login'], { queryParams: { query: 'message', route: this.redirectRoute } })} 
         })
       )
   }
