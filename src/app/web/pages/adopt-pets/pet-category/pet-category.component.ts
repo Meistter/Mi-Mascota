@@ -12,22 +12,54 @@ import { PetsService } from 'src/app/services/pets.service';
 })
 export class PetCategoryComponent {
 
-  constructor(private locationService: LocationService, private petService: PetsService, private route: ActivatedRoute,private router: Router, private categoryService: CategoryService){}
-  
-  pets : Pet[] = []
-  MainPets : Pet[] = []
+  constructor(private locationService: LocationService, private petService: PetsService, private route: ActivatedRoute, private router: Router, private categoryService: CategoryService) { }
+
+  pets: Pet[] = []
+  MainPets: Pet[] = []
+  LocPets: Pet[] = []
   locations = []
   statusMenu = false
   statusCategoryMenu = false
   statusSizeMenu = false
-  categoryName : string | undefined= undefined
-  categoryId : string | null = null
-  sizeFilter: string |null = null
+  categoryName: string | undefined = undefined
+  categoryId: string | null = null
+  sizeFilter: string | null = null
   breed = 'Perro'
-  location = 'Cualquiera'
+  location : string | null  = 'Cualquiera'
   size = 'Pequeño'
-  i = 0
-  
+ 
+
+  ngOnInit(): void {
+    this.locations = this.locationService.getLocations()
+    this.locationService.location$.subscribe(rsp=>{if(rsp)this.location = rsp})
+    //solo para pruebas
+    setTimeout(() => {
+      this.route.paramMap.subscribe(params => {
+        this.categoryId = params.get('id')
+        if (this.categoryId) {
+          this.MainPets = this.petService.getPetsByCategory(this.categoryId)
+          if(this.location !== 'Cualquiera'){
+            this.LocPets = this.MainPets.filter(rsp => rsp.location == this.location)
+            this.pets = this.LocPets
+          }
+          else{this.pets = this.MainPets, this.LocPets=this.MainPets}
+          
+          this.categoryName = this.categoryService.getCategoryName(this.categoryId)
+        }
+
+        if (this.categoryName == undefined) {
+          this.router.navigate(['/none'])
+        }
+
+        this.route.queryParamMap.subscribe(params => {
+          this.sizeFilter = params.get('filter')
+          if (this.sizeFilter !== 'all')
+            this.pets = this.LocPets.filter(rsp => rsp.size == this.sizeFilter)
+          else { if(this.location == 'Cualquiera'){this.pets = this.MainPets}else{this.pets = this.LocPets} }
+        })
+      })
+    }, 1000);
+  }
   //Listener para cerrar y abrir menu
   @HostListener('document:click', ['$event'])
   onClickEvent(event: MouseEvent) {
@@ -36,72 +68,41 @@ export class PetCategoryComponent {
     if (id != 'category' && id != 'location' && id != 'size') {
       this.closeMenu()
       this.closeCategoryMenu()
-      this.closeSizeMenu()      
-    }    
+      this.closeSizeMenu()
+    }
   }
-
-  ngOnInit(): void {
- 
-   this.locations = this.locationService.getLocations()
- //solo para pruebas
- setTimeout(() => {
-        
-    
-    this.route.paramMap.subscribe(params=>{
-      this.categoryId = params.get('id')              
-      if(this.categoryId){
-        this.MainPets = this.petService.getPetsByCategory(this.categoryId) 
-        this.pets = this.MainPets       
-        this.categoryName = this.categoryService.getCategoryName(this.categoryId)                          
-      }
-      
-      if(this.categoryName == undefined){
-        this.router.navigate(['/none'])
-      }
-
-      this.route.queryParamMap.subscribe(params => {
-        this.sizeFilter = params.get('filter')    
-        if(this.sizeFilter !== 'all')
-        this.pets = this.MainPets.filter(rsp=> rsp.size == this.sizeFilter)  
-        else{this.pets = this.MainPets}
-      }) 
-    }) 
-  }, 1000); 
-  }
-  getFilterName(){
-    if(this.sizeFilter == 'big'){
+  getFilterName() {
+    if (this.sizeFilter == 'big') {
       return 'Grande'
-    }else{
-      if(this.sizeFilter == 'regular'){
+    } else {
+      if (this.sizeFilter == 'regular') {
         return 'Mediano'
-      }else{
-        if(this.sizeFilter == 'small'){
+      } else {
+        if (this.sizeFilter == 'small') {
           return 'Pequeño'
-        }else{return 'Todos'}
+        } else { return 'Todos' }
       }
     }
   }
-  changeStatusMenu(){
-    this.statusMenu = !this.statusMenu  
+  changeStatusMenu() {
+    this.statusMenu = !this.statusMenu
   }
-  changeStatusCategoryMenu(){
-    this.statusCategoryMenu = !this.statusCategoryMenu  
+  changeStatusCategoryMenu() {
+    this.statusCategoryMenu = !this.statusCategoryMenu
   }
-  changeStatusSizeMenu(){
-    this.statusSizeMenu = !this.statusSizeMenu  
+  changeStatusSizeMenu() {
+    this.statusSizeMenu = !this.statusSizeMenu
   }
-  updateLocation(){
-    this.location = this.locations[0]
+  updateLocation() {
+    this.locationService.location$.next('UBICACION SELECCIONADA')
   }
-
-  closeMenu(){
+  closeMenu() {
     this.statusMenu = false
-  }  
-  closeCategoryMenu(){
+  }
+  closeCategoryMenu() {
     this.statusCategoryMenu = false
   }
-  closeSizeMenu(){
+  closeSizeMenu() {
     this.statusSizeMenu = false
   }
- 
 }

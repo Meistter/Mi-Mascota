@@ -6,7 +6,6 @@
                     (mouseenter)="openSideNav()">menu</mat-icon>
                 <img routerLink="home" src="{{app_logo.url}}" alt="{{app_logo.alt}}">
             </div>
-            <h1>{{this.show}}</h1>
             <div class="header-top__login">
                 <p routerLink="/auth/login" *ngIf="!userEmail">Inicia Sesion/Registrate</p>
                 <p id="user_email" (click)="openProfileMenu()" *ngIf="userEmail">{{userEmail}}</p>
