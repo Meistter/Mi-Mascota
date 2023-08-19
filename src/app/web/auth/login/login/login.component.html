@@ -20,7 +20,8 @@
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
-          </mat-form-field>          
+          </mat-form-field> 
+          <mat-checkbox formControlName="responsability" class="login__checkbox">Mantener Sesión Iniciada</mat-checkbox>                     
           <h3>Olvidé mi contraseña</h3>
 
           <div>

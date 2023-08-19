@@ -32,25 +32,26 @@
             width: 100%;            
         }
         h3 {
-            font-size: 12px;
+            font-size: 13px;
             font-family: 'Inter';
             font-weight: 550;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-decoration: underline;
             cursor: pointer;
         }
         .login__button--login {
-            margin: 0 14px 26px 14px;
+            margin: 0 8px 26px 8px;
             color: black;
             font-size: 14px;
             font-family: 'Inter';
             font-weight: 550;
             width: 110px ;
             height: 35px;        
-            border: solid;
+            border: none;
+            box-shadow: 1px 1px 4px black;
             border-width: 1.5px;
             border-radius: 4px;
-            border-color: rgb(0, 0, 0);
+            // border-color: rgb(0, 0, 0);
             background-color: var(--card-button-background);
             cursor: pointer;
         }
@@ -66,6 +67,12 @@
         .login__label--error {
             font-size: 14px;
             font-weight: 600;
+        }
+        .login__checkbox {
+            font-family: 'Inter';
+            font-weight: 550;
+            font-size: 13px;
+            margin-right: 40px;
         }
     }   
 }
