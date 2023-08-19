@@ -55,9 +55,9 @@
 "photos":[{"url_mobile": "https://i.postimg.cc/65Nkwj70/como-hacer-una-jaula-para-conejos-casera-24564-600-square.jpg", "url_full":"", "alt":""}],
 "likes":9, "category": "4"},
 
-{"id":"40","name":"Topanga", 
+{"id":"40","name":"Topanga", "size": "small",
 "description": "Pensabamos que era un rottweiler y esta creciendo hacia atras en lugar de hacia arriba",
-"age":1, "health":"Buena", "location":"Caracas", "vaccinated":true,
+"age":1, "health":"Buena", "location":"Barquisimeto", "vaccinated":true,
 "owner_id":"Josue Perez",
 "castrated":true,"disease":false,
 "adoptionReason":"Hemos tenido dias dificiles y actualmente no tenemos dinero para mantenerlo y no queremos dejarlo en un refugio",
@@ -75,7 +75,7 @@
 "photos":[{"url_mobile": "https://i.postimg.cc/1tv8yQKT/tigre-de-bengala.png", "url_full":"", "alt":""}],
 "likes":23,"category": "1"}, 
 
-{"id":"42","name":"Rocky", 
+{"id":"42","name":"Rocky", "size": "big",
 "description": "Rocky es muy bonito pero necesita cuidados especiales y entrenamiento",
 "age":1, "health":"Buena", "location":"Valencia", "vaccinated":true,
 "owner_id":"Josue Perez",
