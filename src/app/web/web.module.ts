@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
     declarations: [
         LayoutComponent,
@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ],
     imports: [
         CommonModule,
+        FormsModule,
         WebRoutingModule,
         MatIconModule,
         MatExpansionModule,        

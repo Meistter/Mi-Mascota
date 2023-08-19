@@ -25,25 +25,24 @@ export class PetCategoryComponent {
   categoryId: string | null = null
   sizeFilter: string | null = null
   breed = 'Perro'
-  location : string | null  = 'Cualquiera'
+  location: string | null = 'Cualquiera'
   size = 'Pequeño'
- 
+
 
   ngOnInit(): void {
     this.locations = this.locationService.getLocations()
-    this.locationService.location$.subscribe(rsp=>{if(rsp)this.location = rsp})
+    this.locationService.location$.subscribe(rsp => { if (rsp) this.location = rsp })
     //solo para pruebas
     setTimeout(() => {
       this.route.paramMap.subscribe(params => {
         this.categoryId = params.get('id')
         if (this.categoryId) {
           this.MainPets = this.petService.getPetsByCategory(this.categoryId)
-          if(this.location !== 'Cualquiera'){
+          if (this.location !== 'Cualquiera') {
             this.LocPets = this.MainPets.filter(rsp => rsp.location == this.location)
             this.pets = this.LocPets
           }
-          else{this.pets = this.MainPets, this.LocPets=this.MainPets}
-          
+          else { this.pets = this.MainPets, this.LocPets = this.MainPets }
           this.categoryName = this.categoryService.getCategoryName(this.categoryId)
         }
 
@@ -55,7 +54,7 @@ export class PetCategoryComponent {
           this.sizeFilter = params.get('filter')
           if (this.sizeFilter !== 'all')
             this.pets = this.LocPets.filter(rsp => rsp.size == this.sizeFilter)
-          else { if(this.location == 'Cualquiera'){this.pets = this.MainPets}else{this.pets = this.LocPets} }
+          else { if (this.location == 'Cualquiera') { this.pets = this.MainPets } else { this.pets = this.LocPets } }
         })
       })
     }, 1000);
@@ -93,8 +92,8 @@ export class PetCategoryComponent {
   changeStatusSizeMenu() {
     this.statusSizeMenu = !this.statusSizeMenu
   }
-  updateLocation() {
-    this.locationService.location$.next('UBICACION SELECCIONADA')
+  updateLocation(location: string) {
+    this.locationService.location$.next(location)
   }
   closeMenu() {
     this.statusMenu = false

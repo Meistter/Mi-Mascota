@@ -20,10 +20,11 @@ export class HeaderComponent implements OnInit {
   query = new FormControl('', [Validators.required])
   locations = []
   locationMenuShow = false
-  show : string | null = ''
+  selectedLocation : string | null = 'Cualquiera'
+
   ngOnInit(): void {
     this.locations = this.location.getLocations()
-    this.location.location$.subscribe(rsp=>{this.show=rsp})
+    this.location.location$.subscribe(rsp=>{if(rsp)this.selectedLocation=rsp})
     this.authService.hasUser().subscribe(rsp => {
       if (rsp !== null) { this.userLogued = true } else { this.userLogued = false } this.userEmail = rsp?.email;
     })
@@ -64,7 +65,10 @@ export class HeaderComponent implements OnInit {
     this.userLogued = false
     this.router.navigate(['/home'])
   }
-
+  setLocation(selected :string){
+    this.location.location$.next(selected)
+    this.selectedLocation = selected    
+  }
   send(event: { preventDefault: () => void; }) {
     event.preventDefault()
     if (this.query.valid) {

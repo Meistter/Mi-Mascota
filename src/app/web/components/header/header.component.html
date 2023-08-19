@@ -89,15 +89,16 @@
                     (mouseenter)="openSideNav()">menu</mat-icon>
                 <img routerLink="home" src="{{app_logo.url}}" alt="{{app_logo.alt}}">
             </div>
-            <div id="locationMenu" class="header-location" (click)="locationMtoggle()">
+            <div id="locationMenu" class="header-location" >
                 <mat-icon id="locationMenu" style="font-size: 28px;color: var(--golden-color)">location_on</mat-icon>
-                <div class="location">
+                <div class="location" (click)="locationMtoggle()">
                     <p id="locationMenu">Ubicación</p>
-                    <h1 id="locationMenu">Barquisimeto <mat-icon id="locationMenu"
+                    <h1 id="locationMenu">{{selectedLocation}} <mat-icon id="locationMenu"
                             style="font-size: 20px;">expand_more</mat-icon></h1>
                 </div>
+<!-- ! Aqui menu desplegable -->
                 <div [ngClass]="locationMenuShow ? 'active':'inactive'" class="location-menu">
-                    <ul *ngFor="let loc of locations">{{loc}}</ul>
+                    <option (click)="setLocation(loc)" [value]="loc" *ngFor="let loc of locations">{{loc}}</option>
                 </div>
             </div>
 

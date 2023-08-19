@@ -8,33 +8,42 @@ import { PetsService } from 'src/app/services/pets.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit{
-  constructor(private petService: PetsService, private locationService: LocationService){}
-  pets : Pet[] = []
-  petForFilter : Pet[] = []
-  petsRescue : PetRescue[] = []
-  petsRescueForFilter : PetRescue[] = []
+export class HomeComponent implements OnInit {
+  constructor(private petService: PetsService, private locationService: LocationService) { }
+  pets: Pet[] = []
+  petForFilter: Pet[] = []
+  petsRescue: PetRescue[] = []
+  petsRescueForFilter: PetRescue[] = []
   switcher = true
-  
-  ngOnInit(): void {     
-    this.pets = this.petService.getAdoptionPets() //al usar api no debo hacer 4 solicitudes de la misma información   
-    this.petsRescue = this.petService.getRescuePets()
-    this.petsRescueForFilter = this.petService.getRescuePets()
-    this.locationService.location$.subscribe(location=>{this.getLocation(location)})
-    //solo para pruebas
+
+  ngOnInit(): void {
     setTimeout(() => {
-      this.petForFilter = this.petService.getAdoptionPets()
+      this.pets = this.petService.getAdoptionPets() //al usar api no debo hacer 4 solicitudes de la misma información   
+      this.petsRescue = this.petService.getRescuePets()
+      this.locationService.location$.subscribe(location => {
+        if (location) {
+          if (location == 'Cualquiera') {
+            this.petForFilter = this.pets
+            this.petsRescueForFilter = this.petsRescue
+          } else {            //   // this.getLocation(location)
+            this.petForFilter = this.pets.filter(rsp => rsp.location == location)
+            this.petsRescueForFilter = this.petsRescue.filter(rsp => rsp.location == location)
+          }
+        } else {
+          this.petForFilter = this.pets
+          this.petsRescueForFilter = this.petsRescue
+        }
+      })
     }, 700);
-    
+
   }
-  switchComponents(){
+  switchComponents() {
     this.switcher = !this.switcher
   }
-  getLocation(location : string | null){
-    if(location){
-      this.petForFilter = this.pets.filter(rsp=> rsp.location == location)    
-      this.petsRescueForFilter = this.petsRescue.filter(rsp=> rsp.location == location) 
+  getLocation(location: string | null) {
+    if (location) {
+
     }
-      
+
   }
 }
