@@ -2,9 +2,10 @@
     width: 240px;   
     height:  220px;
     background-color: var(--card-background-gray);
-    border-radius: 0px;
+    border-radius: 4px;
     padding: 14px;
     margin: 6px 10px 6px 2px;
+    box-shadow: 1px 1px 4px black;
     img{
         width: 212px;
         height: 140px;
@@ -41,10 +42,10 @@
                 height: 30px;
                 margin: 6px 8px 12px 8px;
                 margin-right: 0;
-                border: solid;
+                border: none;
+                box-shadow: 0.5px 0.5px 3px black;
                 border-width: 1.5px;
                 border-radius: 4px;
-                border-color: rgb(0, 0, 0);
                 cursor: pointer;
             }  
             button:hover{

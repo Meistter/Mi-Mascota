@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RelatedComponent } from './related/related.component';
+import { RelatedComponent } from './related-cards/related.component';
 import { RelatedCardComponent } from './related-card/related-card.component';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';

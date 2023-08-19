@@ -48,10 +48,9 @@
             width: 110px ;
             height: 35px;        
             border: none;
-            box-shadow: 1px 1px 4px black;
+            box-shadow: 0.5px 0.5px 3px black;
             border-width: 1.5px;
             border-radius: 4px;
-            // border-color: rgb(0, 0, 0);
             background-color: var(--card-button-background);
             cursor: pointer;
         }
