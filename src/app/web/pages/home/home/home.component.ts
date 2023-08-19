@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pet, PetRescue } from 'src/app/models/pet';
+import { LocationService } from 'src/app/services/location.service';
 import { PetsService } from 'src/app/services/pets.service';
 
 @Component({
@@ -8,17 +9,18 @@ import { PetsService } from 'src/app/services/pets.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
-  constructor(private petService: PetsService){}
+  constructor(private petService: PetsService, private locationService: LocationService){}
   pets : Pet[] = []
   petForFilter : Pet[] = []
   petsRescue : PetRescue[] = []
   petsRescueForFilter : PetRescue[] = []
   switcher = true
-  ngOnInit(): void {
+  
+  ngOnInit(): void {     
     this.pets = this.petService.getAdoptionPets() //al usar api no debo hacer 4 solicitudes de la misma información   
     this.petsRescue = this.petService.getRescuePets()
     this.petsRescueForFilter = this.petService.getRescuePets()
-
+    this.locationService.location$.subscribe(location=>{this.getLocation(location)})
     //solo para pruebas
     setTimeout(() => {
       this.petForFilter = this.petService.getAdoptionPets()
@@ -28,8 +30,11 @@ export class HomeComponent implements OnInit{
   switchComponents(){
     this.switcher = !this.switcher
   }
-  switchLocation($event : string){
-    this.petForFilter = this.pets.filter(rsp=> rsp.location == $event)    
-    this.petsRescueForFilter = this.petsRescue.filter(rsp=> rsp.location == $event)   
+  getLocation(location : string | null){
+    if(location){
+      this.petForFilter = this.pets.filter(rsp=> rsp.location == location)    
+      this.petsRescueForFilter = this.petsRescue.filter(rsp=> rsp.location == location) 
+    }
+      
   }
 }

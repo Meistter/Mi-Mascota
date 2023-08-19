@@ -20,7 +20,6 @@ export class SwitcherComponent implements OnInit {
   locationList = new FormControl('')
 
   @Output() switcherEvent = new EventEmitter<string>();
-  @Output() switcherLocationEvent = new EventEmitter<string>();
 
   activarBtnIzquierda() {
     if (!this.btnIzquierda && this.btnDerecha) {
@@ -43,7 +42,7 @@ export class SwitcherComponent implements OnInit {
   }
   sendSwitchLocationMessage() {
     if (this.locationList.value)
-      this.switcherLocationEvent.emit(this.locationList.value);
+      this.locationService.location$.next(this.locationList.value)
   }
 
 }

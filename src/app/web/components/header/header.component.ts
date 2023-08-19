@@ -20,9 +20,10 @@ export class HeaderComponent implements OnInit {
   query = new FormControl('', [Validators.required])
   locations = []
   locationMenuShow = false
-
+  show : string | null = ''
   ngOnInit(): void {
     this.locations = this.location.getLocations()
+    this.location.location$.subscribe(rsp=>{this.show=rsp})
     this.authService.hasUser().subscribe(rsp => {
       if (rsp !== null) { this.userLogued = true } else { this.userLogued = false } this.userEmail = rsp?.email;
     })
