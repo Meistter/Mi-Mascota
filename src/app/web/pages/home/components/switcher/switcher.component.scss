@@ -1,7 +1,7 @@
 .switcher-container {
     width: 100%;
     height: 60px;
-    padding: 18px 5vw 18px 5vw;    
+    padding: 18px 5vw 18px 5vw;
     margin-top: 6px;
     margin-bottom: 20px;
     display: flex;
@@ -21,15 +21,15 @@
         margin-top: 28px;
 
         button {
-            font-size: 12.5px;
+            font-size: 13px;
+            font-weight: 600;
             color: black;
             width: 70px;
             height: 38px;
             margin: 0;
             padding: 0;
-            border: solid;
-            border-color: black;
-            border-width: 1px;
+            border: none;
+            box-shadow: 0.5px 0.5px 3px black;
             cursor: pointer;
         }
 
@@ -46,25 +46,18 @@
 
 .active {
     background-color: var(--second-golden-color);
-    // background-color: var(--golden-color);
-    font-weight: 600;    
-    font-size: 13.2px !important;
 }
 
 .inactive {
     background-color: white
 }
 
-@media (width >= 1024px) {
-   .filter {
-    display: none;
-   }
-   .switcher-container {
-    justify-content: center;
+@media (width >=1024px) {
+    .filter {
+        display: none;
     }
 
-}
-
-@media (width < 1024px) {
-   
+    .switcher-container {
+        justify-content: center;
+    }
 }
