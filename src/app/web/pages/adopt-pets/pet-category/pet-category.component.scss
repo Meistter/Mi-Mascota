@@ -148,3 +148,8 @@
     opacity: 0 !important;
     visibility: hidden;
 }
+@media (width >= 1024px) {
+    .locationMenu {
+        display: none !important;
+    }
+}

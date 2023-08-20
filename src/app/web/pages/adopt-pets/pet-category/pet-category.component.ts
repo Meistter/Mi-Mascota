@@ -24,40 +24,56 @@ export class PetCategoryComponent {
   categoryName: string | undefined = undefined
   categoryId: string | null = null
   sizeFilter: string | null = null
-  breed = 'Perro'
+  breed = ''
   location: string | null = 'Cualquiera'
-  size = 'Pequeño'
+  size = ''
 
 
   ngOnInit(): void {
+
+    // ! Todo este proceso esta basado en 3 filtrados, primero por ID de categoria (tipo de animal), luego por ubicacion y por ultimo por tamaño, siendo este ultimo el que controla el array a mostrar
     this.locations = this.locationService.getLocations()
-    this.locationService.location$.subscribe(rsp => { if (rsp) this.location = rsp })
-    //solo para pruebas
     setTimeout(() => {
       this.route.paramMap.subscribe(params => {
         this.categoryId = params.get('id')
         if (this.categoryId) {
+
           this.MainPets = this.petService.getPetsByCategory(this.categoryId)
-          if (this.location !== 'Cualquiera') {
-            this.LocPets = this.MainPets.filter(rsp => rsp.location == this.location)
-            this.pets = this.LocPets
-          }
-          else { this.pets = this.MainPets, this.LocPets = this.MainPets }
           this.categoryName = this.categoryService.getCategoryName(this.categoryId)
+          if (this.categoryName == undefined) {
+            this.router.navigate(['/none'])
+          }
         }
 
-        if (this.categoryName == undefined) {
-          this.router.navigate(['/none'])
-        }
+        this.locationService.location$.subscribe(location => {
+          this.sizeFilter = 'all'
+          if (location) {
+            if (location == 'Cualquiera') {
+              this.LocPets = this.MainPets
+            } else {
+              this.location = location
+              this.LocPets = this.MainPets.filter(rsp => rsp.location == location)
+            }
+          } else {
+            this.LocPets = this.MainPets
+          }
 
-        this.route.queryParamMap.subscribe(params => {
-          this.sizeFilter = params.get('filter')
-          if (this.sizeFilter !== 'all')
-            this.pets = this.LocPets.filter(rsp => rsp.size == this.sizeFilter)
-          else { if (this.location == 'Cualquiera') { this.pets = this.MainPets } else { this.pets = this.LocPets } }
+          this.route.queryParamMap.subscribe(params => {
+            this.sizeFilter = params.get('filter')
+            if (this.sizeFilter) {
+              if (this.sizeFilter !== 'all') {
+                this.pets = this.LocPets.filter(rsp => rsp.size == this.sizeFilter)
+              } else { this.pets = this.LocPets }
+            } else {
+              this.pets = this.LocPets
+            }
+          })
         })
       })
-    }, 1000);
+    }, 1000); 
+    //! Si no entiendo esta logica la proxima vez, debo deternerme a pensar porque si esta enredada jajaja
+    //! El tercer filtro controla lo que se muestra, todos se ejecutan al cambiar de categoria, el 2do y tercero al cambiar ubicacion y el tercero independiente
+    //! Realmente no se si es buena practica anidar subscribes ya que no se si se duplican al ejecutarse continuamente
   }
   //Listener para cerrar y abrir menu
   @HostListener('document:click', ['$event'])
@@ -94,6 +110,7 @@ export class PetCategoryComponent {
   }
   updateLocation(location: string) {
     this.locationService.location$.next(location)
+    this.location = location
   }
   closeMenu() {
     this.statusMenu = false
