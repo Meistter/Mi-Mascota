@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LocationService {
 
-  location$ = new BehaviorSubject<string | null>(null)
+  location$ = new BehaviorSubject<string | null>('Cualquiera')
   constructor() { }
   //Base de datos de Ubicaciones
   locations :  any =  ['Cualquiera','Barquisimeto','Valencia','Caracas', 'Maracaibo', 'Maracay', 'Fort Worth', 'Dallas']

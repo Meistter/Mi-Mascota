@@ -4,14 +4,14 @@ import adopt_pets from '../../assets/json/adopt_pets.json';
 import rescue_pets from '../../assets/json/rescue_pets.json';
 import lost_pets from '../../assets/json/lost_pets.json';
 import search_pets from '../../assets/json/search_pets.json';
-import category_dog_pets from '../../assets/json/category_dog_pets.json';
 import { HttpClient } from '@angular/common/http';
+import { LocationService } from './location.service';
 @Injectable({
   providedIn: 'root'
 })
 export class PetsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private locationService : LocationService) { }
   //Base de datos de las mascotas
   adoptionPets: Pet[] = adopt_pets
   rescuePets: PetRescue[] = rescue_pets
@@ -31,9 +31,15 @@ export class PetsService {
   getRescuePets() {
     return this.rescuePets
   }
-  //devolemos el objeto completo como ejemplo
-  getRelatedPets(categoryId: string) { //debemos filtrar por categoria antes de retornar    
-    return this.adoptionPets.filter(rsp => rsp.category == categoryId)
+  getRelatedPets(categoryId: string) {     
+    const categoryFiltered = this.adoptionPets.filter(rsp => rsp.category == categoryId)
+    
+    if(this.location() != 'Cualquiera'){
+      return categoryFiltered.filter(rsp => rsp.location == this.location())
+    }else{
+      return categoryFiltered
+    }
+   
   }
   getRelatedRescuePets(categoryId: string) { //debemos filtrar por categoria antes de retornar   
     return this.rescuePets.filter(rsp => rsp.category == categoryId)
@@ -52,5 +58,9 @@ export class PetsService {
   }
   getPetsByCategory(id: string) {//ejemplo aqui deberia usar el id, enviarlo al back y obtener la categoria
     return this.category_dog_pets.filter(rsp => rsp.category == id)
+  }
+
+  private location(){
+    return this.locationService.location$.getValue()
   }
 }
