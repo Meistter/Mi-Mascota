@@ -11,42 +11,47 @@ import { PetsService } from 'src/app/services/pets.service';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private locationService: LocationService, private petService: PetsService, private route: ActivatedRoute){}
-  
-  pets : Pet[] = [] 
-  searchQuery : any  
+  constructor(private locationService: LocationService, private petService: PetsService, private route: ActivatedRoute) { }
+
+  pets: Pet[] = []
+  searchQuery: any
   locations = []
-  location = 'Cualquiera'
+  location: string | null = ''
   statusMenu = false
   i = 0
 
-    //Listener para cerrar y abrir menu
+  //Listener para cerrar y abrir menu
   @HostListener('document:click', ['$event'])
   onClickEvent(event: MouseEvent) {
     var target = event.target as HTMLElement
     var id = target['id']
     if (id != 'location') {
-      this.closeMenu()     
-    }    
+      this.closeMenu()
+    }
   }
 
   ngOnInit(): void {
     this.locations = this.locationService.getLocations()
+    this.locationService.location$.subscribe(rsp => { this.location = rsp, this.getSearch() })
     this.route.queryParamMap.subscribe(params => {
-      this.searchQuery = params.get('query')      
-        // this.petService.getSearch(this.searchQuery).subscribe(data=>{this.finishPage = data.total_pages,this.resultados = data.results})
-    })        
+      this.searchQuery = params.get('query')
+      this.getSearch()
+    })
+
+  }
+
+  changeStatusMenu() {
+    this.statusMenu = !this.statusMenu
+  }
+
+  getSearch() {
     this.pets = this.petService.getSearch(this.searchQuery) //ejemplo, aqui deberia traer lo q me retorna el back al mandarle el query
   }
-
-  changeStatusMenu(){
-    this.statusMenu = !this.statusMenu  
-  }
-
-  closeMenu(){
+  closeMenu() {
     this.statusMenu = false
   }
-  updateLocation(){
-    // this.location = this.locations[0]
+  updateLocation(location: string) {
+    this.locationService.location$.next(location)
+    this.location = location
   }
 }

@@ -3,12 +3,14 @@
     <div class="pet-search-content">     
 
         <article class="locationMenu">
-            <b>Ubicación: </b>
+            <b >Ubicación: </b>
             <p id="location" (click)="changeStatusMenu()">{{this.location}}</p>
             <mat-icon id="location" (click)="changeStatusMenu()" style="font-size: 20px;cursor: pointer;">expand_more</mat-icon>
+
             <ul class="location-menu" [ngClass]="statusMenu ? 'active':'inactive'">
-                <li (click)="changeStatusMenu(); updateLocation()" *ngFor="let location of locations">{{location}}</li>
+                <li (click)="changeStatusMenu(); updateLocation(location)" *ngFor="let location of locations">{{location}}</li>
             </ul>
+
         </article>
         
     </div>

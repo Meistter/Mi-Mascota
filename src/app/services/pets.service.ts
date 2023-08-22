@@ -54,7 +54,13 @@ export class PetsService {
     return this.lostPets.find(rsp => rsp.id == id)
   }
   getSearch(query: string) {
-    return this.searchPets //ejemplo aqui deberia usar el query, enviarlo al back
+    
+    if(this.location() != 'Cualquiera'){
+      return this.searchPets.filter(rsp => rsp.location == this.location())
+    }else{
+      return this.searchPets
+    }
+    // return this.searchPets //ejemplo aqui deberia usar el query, enviarlo al back
   }
   getPetsByCategory(id: string) {//ejemplo aqui deberia usar el id, enviarlo al back y obtener la categoria
     return this.category_dog_pets.filter(rsp => rsp.category == id)
