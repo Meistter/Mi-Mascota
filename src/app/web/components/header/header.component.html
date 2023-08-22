@@ -113,15 +113,15 @@
             <p>ㅤㅤㅤㅤㅤㅤ</p>
             <div class="header-top__login">
                 <p routerLink="/auth/login" *ngIf="!userEmail">Inicia Sesion/Registrate</p>
-                <p id="user_email" (click)="openProfileMenu()" *ngIf="userEmail">{{userEmail}}</p>
-                <mat-icon id="account_box" (click)="openProfileMenu()"
+                <p id="user_email" (click)="toggleProfileMenu()" *ngIf="userEmail">{{userEmail}}</p>
+                <mat-icon id="account_box" (click)="toggleProfileMenu()"
                     style="font-size: 30px; color: var(--golden-color)">account_box</mat-icon>
-                <div (click)="openProfileMenu()" class="profile-menu"
+                <div *ngIf="userLogued" (click)="toggleProfileMenu()" class="profile-menu" 
                     [ngClass]="statusProfileMenu ? 'active':'inactive'">
                     <button>Perfil</button>
                     <button routerLink="contact">Contacto</button>
+                    <button disabled><h3 style="font-size:12px; color:gray;">Version 1.32</h3></button>
                     <button (click)="logout()" *ngIf="userLogued">Cerrar Sesión</button>
-                    <button routerLink="/auth/login" *ngIf="!userLogued">Iniciar Sesión</button>
                 </div>
             </div>
 

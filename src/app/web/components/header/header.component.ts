@@ -114,6 +114,9 @@ export class HeaderComponent implements OnInit {
   openProfileMenu() {
     this.statusProfileMenu = true
   }
+  toggleProfileMenu() {
+    this.statusProfileMenu = !this.statusProfileMenu
+  }
   closeProfileMenu() {
     this.statusProfileMenu = false
   }
