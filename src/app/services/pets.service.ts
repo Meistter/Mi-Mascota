@@ -60,10 +60,15 @@ export class PetsService {
     }else{
       return this.searchPets
     }
-    // return this.searchPets //ejemplo aqui deberia usar el query, enviarlo al back
+    
   }
   getPetsByCategory(id: string) {//ejemplo aqui deberia usar el id, enviarlo al back y obtener la categoria
-    return this.category_dog_pets.filter(rsp => rsp.category == id)
+    const filtered = this.category_dog_pets.filter(rsp => rsp.category == id)
+    if(this.location() != 'Cualquiera'){
+    return filtered.filter(rsp => rsp.location == this.location())
+    }else{
+      return filtered
+    }
   }
 
   private location(){
