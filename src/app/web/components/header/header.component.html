@@ -15,8 +15,8 @@
                     [ngClass]="statusProfileMenu ? 'active':'inactive'">
                     <button>Perfil</button>
                     <button routerLink="contact">Contacto</button>
-                    <button (click)="logout()" *ngIf="userLogued">Cerrar Sesión</button>
-                    <button routerLink="/auth/login" *ngIf="!userLogued">Iniciar Sesión</button>
+                    <button (click)="logout()" *ngIf="userLogued">Cerrar Sesion</button>
+                    <button routerLink="/auth/login" *ngIf="!userLogued">Iniciar Sesion</button>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
             <div id="locationMenu" class="header-location" (click)="locationMtoggle()">
                 <mat-icon id="locationMenu" style="font-size: 28px;color: var(--golden-color)">location_on</mat-icon>
                 <div class="location">
-                    <p id="locationMenu">Ubicación</p>
+                    <p id="locationMenu">Ubicacion</p>
                     <h1 id="locationMenu">{{selectedLocation}} <mat-icon id="locationMenu"
                             style="font-size: 20px;">expand_more</mat-icon></h1>
                 </div>
@@ -121,7 +121,7 @@
                     <button>Perfil</button>
                     <button routerLink="contact">Contacto</button>
                     <button disabled><h3 style="font-size:12px; color:gray;">Version 1.32</h3></button>
-                    <button (click)="logout()" *ngIf="userLogued">Cerrar Sesión</button>
+                    <button (click)="logout()" *ngIf="userLogued">Cerrar Sesion</button>
                 </div>
             </div>
 
