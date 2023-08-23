@@ -13,7 +13,7 @@
             <mat-error *ngIf="this.loginForm.controls['email'].hasError('email')">{{getEmailMsg()}}</mat-error>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field>
             <mat-label>Ingresa tu contraseña</mat-label>
             <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
             <mat-error *ngIf="this.loginForm.controls['password'].hasError('required')">{{getRequiredMsg()}}</mat-error>
