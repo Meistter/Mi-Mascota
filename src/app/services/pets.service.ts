@@ -11,7 +11,7 @@ import { LocationService } from './location.service';
 })
 export class PetsService {
 
-  constructor(private http: HttpClient, private locationService : LocationService) { }
+  constructor(private http: HttpClient, private locationService: LocationService) { }
   //Base de datos de las mascotas
   adoptionPets: Pet[] = adopt_pets
   rescuePets: PetRescue[] = rescue_pets
@@ -23,55 +23,69 @@ export class PetsService {
     return this.adoptionPets.find(rsp => rsp.id == id)
   }
   getAdoptionPets() {
-    return this.adoptionPets
+    if (this.location() != 'Cualquiera') {
+      return this.adoptionPets.filter(rsp => rsp.location == this.location())
+    } else { return this.adoptionPets }
+
   }
   getRescuePet(id: string) {
     return this.rescuePets.find(rsp => rsp.id == id)
   }
   getRescuePets() {
-    return this.rescuePets
+    if (this.location() != 'Cualquiera') {
+      return this.rescuePets.filter(rsp => rsp.location == this.location())
+    } else { return this.rescuePets }
   }
-  getRelatedPets(categoryId: string) {     
+  getRelatedPets(categoryId: string) {
     const categoryFiltered = this.adoptionPets.filter(rsp => rsp.category == categoryId)
-    
-    if(this.location() != 'Cualquiera'){
+
+    if (this.location() != 'Cualquiera') {
       return categoryFiltered.filter(rsp => rsp.location == this.location())
-    }else{
+    } else {
       return categoryFiltered
     }
-   
+
   }
   getRelatedRescuePets(categoryId: string) { //debemos filtrar por categoria antes de retornar   
-    return this.rescuePets.filter(rsp => rsp.category == categoryId)
+    const filtered = this.rescuePets.filter(rsp => rsp.category == categoryId)
+    if (this.location() != 'Cualquiera') {
+      return filtered.filter(rsp => rsp.location == this.location())
+    } else {
+      return filtered
+    }
   }
   getRelatedLostPets(categoryId: string) { //debemos filtrar por categoria antes de retornar  
-    return this.lostPets.filter(rsp => rsp.category == categoryId)
+    const filtered = this.lostPets.filter(rsp => rsp.category == categoryId)
+    if (this.location() != 'Cualquiera') {
+      return filtered.filter(rsp => rsp.location == this.location())
+    } else {
+      return filtered
+    }
   }
   getLostPets() {
-    return this.lostPets
+    if (this.location() != 'Cualquiera') {
+      return this.lostPets.filter(rsp => rsp.location == this.location())
+    } else { return this.lostPets }
   }
   getLostPet(id: string) {
     return this.lostPets.find(rsp => rsp.id == id)
   }
   getSearch(query: string) {
-    
-    if(this.location() != 'Cualquiera'){
+    if (this.location() != 'Cualquiera') {
       return this.searchPets.filter(rsp => rsp.location == this.location())
-    }else{
+    } else {
       return this.searchPets
     }
-    
   }
   getPetsByCategory(id: string) {//ejemplo aqui deberia usar el id, enviarlo al back y obtener la categoria
     const filtered = this.category_dog_pets.filter(rsp => rsp.category == id)
-    if(this.location() != 'Cualquiera'){
-    return filtered.filter(rsp => rsp.location == this.location())
-    }else{
+    if (this.location() != 'Cualquiera') {
+      return filtered.filter(rsp => rsp.location == this.location())
+    } else {
       return filtered
     }
   }
-
-  private location(){
+  private location() {
     return this.locationService.location$.getValue()
   }
 }

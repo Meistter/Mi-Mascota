@@ -39,10 +39,9 @@ export class LostPetComponent {
         this.petId = params.get('id')
         if (this.petId) {
           this.pet = this.petService.getLostPet(this.petId)
-          if (this.pet?.category)
-            this.categoryName = this.categoryService.getCategoryName(this.pet?.category)
-          if (this.pet?.category) {
-            this.relatedPets = this.petService.getRelatedLostPets(this.pet.category)
+          if (this.pet?.category){
+            this.categoryName = this.categoryService.getCategoryName(this.pet?.category)          
+            this.relatedPets = this.petService.getRelatedLostPets(this.pet?.category)
           }
         }
       })

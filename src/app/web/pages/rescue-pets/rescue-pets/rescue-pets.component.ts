@@ -14,17 +14,10 @@ export class RescuePetsComponent implements OnInit{
   petForFilter : PetRescue[] = []
   ngOnInit(): void {    
     //solo para pruebas
-    setTimeout(() => {
-      this.pets = this.petService.getRescuePets()
+    setTimeout(() => {      
       this.locationService.location$.subscribe(location => {
         if (location) {
-          if (location == 'Cualquiera') {
-            this.petForFilter = this.pets            
-          } else {            //   // this.getLocation(location)
-            this.petForFilter = this.pets.filter(rsp => rsp.location == location)            
-          }
-        } else {
-          this.petForFilter = this.pets          
+          this.pets = this.petService.getRescuePets()
         }})
     }, 1000);
   }

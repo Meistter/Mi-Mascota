@@ -18,13 +18,7 @@ export class LostPetsComponent implements OnInit{
       this.pets = this.petService.getLostPets()
       this.locationService.location$.subscribe(location => {
         if (location) {
-          if (location == 'Cualquiera') {
-            this.petForFilter = this.pets            
-          } else {            //   // this.getLocation(location)
-            this.petForFilter = this.pets.filter(rsp => rsp.location == location)            
-          }
-        } else {
-          this.petForFilter = this.pets          
+          this.pets = this.petService.getLostPets()
         }})
     }, 1000);
     
