@@ -37,37 +37,35 @@ export class PetCategoryComponent {
       this.route.paramMap.subscribe(params => {
         this.categoryId = params.get('id')
         if (this.categoryId) {
-
           this.pets = this.petService.getPetsByCategory(this.categoryId)
           this.categoryName = this.categoryService.getCategoryName(this.categoryId)
           if (this.categoryName == undefined) {
             this.router.navigate(['/none'])
           }
         }
-
-        this.locationService.location$.subscribe(location => {
-          this.sizeFilter = 'all'
-          if(this.categoryId){
-            if (location) {
-              this.LocPets = this.petService.getPetsByCategory(this.categoryId)
-              this.pets = this.LocPets
-            }
+      })
+      this.locationService.location$.subscribe(location => {
+        this.sizeFilter = 'all'
+        if (this.categoryId) {
+          if (location) {
+            this.LocPets = this.petService.getPetsByCategory(this.categoryId)
+            this.pets = this.LocPets
           }
-          
+        }
 
-          this.route.queryParamMap.subscribe(params => {
-            this.sizeFilter = params.get('filter')
-            if (this.sizeFilter) {
-              if (this.sizeFilter !== 'all') {
-                this.pets = this.LocPets.filter(rsp => rsp.size == this.sizeFilter)
-              } else { this.pets = this.LocPets }
-            } else {
-              this.pets = this.LocPets
-            }
-          })
+        this.route.queryParamMap.subscribe(params => {
+          this.sizeFilter = params.get('filter')
+          if (this.sizeFilter) {
+            if (this.sizeFilter !== 'all') {
+              this.pets = this.LocPets.filter(rsp => rsp.size == this.sizeFilter)
+            } else { this.pets = this.LocPets }
+          } else {
+            this.pets = this.LocPets
+          }
         })
       })
-    }, 1000); 
+
+    }, 1000);
     //! Si no entiendo esta logica la proxima vez, debo deternerme a pensar porque si esta enredada jajaja
     //! El tercer filtro controla lo que se muestra, todos se ejecutan al cambiar de categoria, el 2do y tercero al cambiar ubicacion y el tercero independiente
     //! Realmente no se si es buena practica anidar subscribes ya que no se si se duplican al ejecutarse continuamente
