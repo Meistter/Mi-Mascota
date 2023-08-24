@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -42,23 +44,27 @@ export class LoginComponent implements OnInit{
     return 'Usuario o clave incorrectos'
   }
 
-
   login() {
 
     if (this.loginForm.valid) {
       const value = this.loginForm.value
       const valueEmail = value.email
       const valuePass = value.password
-      if (valueEmail && valuePass)
-        this.authService.login(valueEmail, valuePass)
-          .then((rsp) => {
+      if (valueEmail && valuePass) 
+      this.authService.login(valueEmail, valuePass) // ! esto es lo que responde el error de logueo
+          .then((rsp) => {                      
             if(this.redirectRoute){
               this.router.navigate(['/',this.redirectRoute]);
             }else{
               this.router.navigate(['/home']);
-            }
+            }            
+          })
+         
+          
+   
+      
             
-          });
+          
     }
   }
 }
