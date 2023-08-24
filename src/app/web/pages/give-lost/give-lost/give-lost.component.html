@@ -1,0 +1,112 @@
+<section class="give-lost-container">
+  <form class="give-lost-form" [formGroup]="requestForm" (ngSubmit)="send($event)">
+    <h1>Publicar Mascota Perdida</h1>
+    <div class="give-lost-form__content">
+      <p>Especie:</p>
+      <mat-form-field>
+        <mat-label>Seleccione</mat-label>
+        <mat-select formControlName="breed">
+          <mat-option *ngFor="let opcion of breed" [value]="opcion">{{opcion}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="this.requestForm.controls['breed'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="give-lost-form__content">
+      <p>Tamaño:</p>
+      <mat-form-field>
+        <mat-label>Seleccione</mat-label>
+        <mat-select formControlName="size">
+          <mat-option *ngFor="let opcion of size" [value]="opcion">{{opcion}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="this.requestForm.controls['size'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="give-lost-form__content">
+      <p>Fotografias:</p>
+      <mat-form-field>
+        <input matInput formControlName="photos">
+        <mat-error *ngIf="this.requestForm.controls['photos'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="give-lost-form__content">
+      <p>Descripción:</p>
+      <mat-form-field>
+        <mat-label>Cuéntanos más</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+        <mat-error
+          *ngIf="this.requestForm.controls['description'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="give-lost-form__content">
+      <p>Detalles:</p>
+      <mat-form-field>
+        <mat-label>Cuéntanos más</mat-label>
+        <textarea matInput formControlName="reason"></textarea>
+        <mat-error *ngIf="this.requestForm.controls['reason'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="give-lost-form__content">
+      <p>Salud:</p>
+      <mat-form-field>
+        <mat-label>Seleccione</mat-label>
+        <mat-select formControlName="health">
+          <mat-option *ngFor="let opcion of health" [value]="opcion">{{opcion}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="this.requestForm.controls['health'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="give-lost-form__content">
+      <p>Edad:</p>
+      <mat-form-field>
+        <mat-label>Seleccione</mat-label>
+        <mat-select formControlName="age">
+          <mat-option *ngFor="let opcion of age" [value]="opcion">{{opcion}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="this.requestForm.controls['age'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="give-lost-form__content">
+      <p>Enfermedad:</p>
+      <mat-form-field>
+        <mat-label>Seleccione</mat-label>
+        <mat-select formControlName="sick">
+          <mat-option *ngFor="let opcion of sick" [value]="opcion">{{opcion}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="this.requestForm.controls['sick'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="give-lost-form__content">
+      <p>Última vez visto:</p>
+      <mat-form-field>
+        <mat-label>Cuéntanos más</mat-label>
+        <textarea matInput formControlName="remarks"></textarea>
+        <mat-error *ngIf="this.requestForm.controls['remarks'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="give-lost-form__content">
+      <p>Estado:</p>
+      <mat-form-field>
+        <mat-label>Seleccione</mat-label>
+        <mat-select formControlName="state">
+          <mat-option *ngFor="let opcion of state" [value]="opcion">{{opcion}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="this.requestForm.controls['state'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="give-lost-form__content">
+      <p>Ciudad:</p>
+      <mat-form-field>
+        <mat-label>Seleccione</mat-label>
+        <mat-select formControlName="city">
+          <mat-option *ngFor="let opcion of city" [value]="opcion">{{opcion}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="this.requestForm.controls['city'].hasError('required')">{{getRequiredMsg()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="give-lost-form__buttons">
+      <button class="give-lost-form-button" type="submit">Enviar</button>
+      <button class="give-lost-form-button" routerLink="/home">Cancelar</button>
+    </div>
+  </form>
+</section>

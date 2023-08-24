@@ -12,7 +12,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { environment } from './../enviroments/enviroments';
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
