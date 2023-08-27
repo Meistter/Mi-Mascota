@@ -42,9 +42,9 @@
         </mat-form-field>     
         <section class="register__checkbox">
             <mat-error class="terms__error"  *ngIf="this.termsRequired">{{getRequiredMsg()}}</mat-error>
-            <mat-checkbox (change)="toggleTerms($event)" formControlName="terms" class="register__checkbox-element">Acepto los términos y condiciones</mat-checkbox>       
+            <mat-checkbox (change)="toggleTerms()" formControlName="terms" class="register__checkbox-element">Acepto los términos y condiciones</mat-checkbox>       
             <mat-error class="responsability__error"  *ngIf="this.responsabilityRequired">{{getRequiredMsg()}}</mat-error>
-            <mat-checkbox (change)="toggleResponsability($event)" class="register__checkbox-element">Acepto que soy mayor de edad y responsable del uso de esta APP</mat-checkbox>            
+            <mat-checkbox (change)="toggleResponsability()" class="register__checkbox-element">Acepto que soy mayor de edad y responsable del uso de esta APP</mat-checkbox>            
             
         </section>
 
