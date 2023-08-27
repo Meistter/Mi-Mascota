@@ -16,6 +16,8 @@ export class RegisterComponent {
   registerError: boolean = false //lo usaremos cuando las credenciales no sean correctas
   termsRequired: boolean = false
   responsabilityRequired: boolean = false
+  termsMessage : boolean = true
+  responsabilityMessage : boolean = true
 
   constructor(private router: Router, private matDialog: MatDialog, private authService: AuthService) { }
 
@@ -44,9 +46,11 @@ export class RegisterComponent {
   }
   toggleTerms() {
     this.termsRequired = !this.termsRequired
+    this.termsMessage = !this.termsMessage
   }
   toggleResponsability() {
     this.responsabilityRequired = !this.responsabilityRequired
+    this.responsabilityMessage = !this.responsabilityMessage
   }
   register() {
     if (this.registerForm.valid && this.termsRequired && this.responsabilityRequired) {
