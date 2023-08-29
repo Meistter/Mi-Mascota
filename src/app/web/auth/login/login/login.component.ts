@@ -21,9 +21,7 @@ export class LoginComponent implements OnInit {
   redirectRoute: string | null = ''
   valor : string | null = null
   constructor(private router: Router, private authService: AuthService, private route: ActivatedRoute) { }
-
-
-
+  
   ngOnInit(): void {
     this.route.queryParamMap.subscribe(params => {
       if (params.get('query')) {
