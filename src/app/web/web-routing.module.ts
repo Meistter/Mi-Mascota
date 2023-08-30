@@ -82,6 +82,11 @@ const routes: Routes = [
       {
         path: 'pet-lost/:id',
         loadChildren: () => import('./pages/lost-pet/lost-pet.module').then((m) => m.LostPetModule),
+      },
+      {
+        path: 'soon',
+        canActivate: [ UserLogedGuard ],
+        loadChildren: () => import('../shared/coming-soon/coming-soon.module').then((m) => m.ComingSoonModule),
       }
     ]
   },

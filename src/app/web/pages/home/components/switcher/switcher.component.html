@@ -1,8 +1,8 @@
 <section class="switcher-container"> 
     <mat-form-field class="filter">
-        <mat-label>Filtrar ubicación</mat-label>
+        <mat-label>Ubicación</mat-label>
         <mat-select disableRipple [formControl]="locationList" (selectionChange)="sendSwitchLocationMessage()" >
-          <mat-option *ngFor="let location of locations" [value]="location">
+          <mat-option *ngFor="let location of locations" [value]="location" >
             {{location}}
           </mat-option>
         </mat-select>
