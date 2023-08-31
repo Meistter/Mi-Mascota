@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  app_logo = {url:'https://i.postimg.cc/c4MgZPjb/logo-min.jpg', alt:'logo-mi-mascota'}
+  app_logo = {url:'https://i.postimg.cc/d0jhD8SD/Mi-mascota-BLANCO.png', alt:'logo-mi-mascota'}
 }
