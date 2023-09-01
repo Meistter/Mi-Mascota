@@ -25,14 +25,14 @@ export class PetCategoryComponent {
   categoryId: string | null = null
   sizeFilter: string | null = null
   breed = ''
-  location: string | null = 'Cualquiera'
+  location: string | null = ''
   size = ''
 
 
   ngOnInit(): void {
 
     // ! Todo este proceso esta basado en 3 filtrados, primero por ID de categoria (tipo de animal), luego por ubicacion y por ultimo por tamaño, siendo este ultimo el que controla el array a mostrar
-    // this.locations = this.locationService.getLocations()
+    this.locations = this.locationService.getLocations()
     setTimeout(() => {
       this.route.paramMap.subscribe(params => {
         this.categoryId = params.get('id')
@@ -48,6 +48,7 @@ export class PetCategoryComponent {
         this.sizeFilter = 'all'
         if (this.categoryId) {
           if (location) {
+            this.location = location
             this.LocPets = this.petService.getPetsByCategory(this.categoryId)
             this.pets = this.LocPets
           }

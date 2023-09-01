@@ -13,7 +13,8 @@ export class SwitcherComponent implements OnInit {
   locations = []
   ngOnInit(): void {
     this.locations = this.locationService.getLocations()
-    this.locationList.setValue('Cualquiera')
+    this.locationService.location$.subscribe(location=>{if(location){this.locationList.setValue(location)}else{this.locationList.setValue('Cualquiera')}})
+    
   }
   btnIzquierda: boolean = true
   btnDerecha: boolean = false
