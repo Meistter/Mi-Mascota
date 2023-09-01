@@ -69,7 +69,7 @@
             align-items: center;
             cursor: pointer;
             position: relative;
-
+           
             .profile-menu {
                 position: absolute;
                 z-index: 3;
@@ -99,6 +99,7 @@
                 button:hover {
                     background-color: var(--navbar-selected-first);
                 }
+                
             }
 
             p {
@@ -111,6 +112,7 @@
 
             img {
                 height: 36px;
+                width: 72px;
                 margin-left: 16px;
                 cursor: pointer;
             }
