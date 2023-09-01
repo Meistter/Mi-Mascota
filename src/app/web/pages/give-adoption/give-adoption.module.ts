@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { SwiperModule } from 'swiper/angular';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MatSelectModule } from '@angular/material/select';
     GiveAdoptionRoutingModule,
     MatInputModule,
     MatIconModule,
+    SwiperModule,  
     ReactiveFormsModule,
     MatSelectModule
   ]

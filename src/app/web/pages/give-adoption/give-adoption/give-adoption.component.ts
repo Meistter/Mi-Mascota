@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { interval } from 'rxjs';
+import Swiper, { SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-give-adoption',
@@ -9,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class GiveAdoptionComponent {
   constructor(private router: Router) { }
+
+  slide = 'https://i.postimg.cc/8PBp4sCQ/B2.jpg'
 
   requestForm = new FormGroup({
     breed: new FormControl('', [Validators.required]),
@@ -47,5 +51,21 @@ export class GiveAdoptionComponent {
 
     } else { }
 
+  }
+
+  config: SwiperOptions = {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: false,
+    pagination: { clickable: true },
+    scrollbar: { draggable: true },
+  };
+
+  automatico(swiper: Swiper) {
+    const segundos = interval(25000);
+    segundos.subscribe(() => {
+      swiper.slideNext(850);
+    });
   }
 }
