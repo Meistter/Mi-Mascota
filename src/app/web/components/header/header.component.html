@@ -28,13 +28,13 @@
         </div>
     </div>
 
-    <ul class="header-menu">
-        <!-- <ul class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()"> -->
-        <ul class="header-menu__left">
+    <div class="header-menu">
+        <!-- <div class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()"> -->
+        <div class="header-menu__left">
             <a id="open-animal-left">Mascotas y Razas</a><mat-icon id="open-animal-left"
                 style="font-size: 20px;">expand_more</mat-icon>
-            <ul class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()">
-                <ul class="animal-menu__left" [ngClass]="statusFirstMenu ? 'active':'inactive'">
+            <div class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()">
+                <div class="animal-menu__left" [ngClass]="statusFirstMenu ? 'active':'inactive'">
                     <button id="open-animal-right" (click)="openSecondMenu()" (mouseenter)="openSecondMenu()"
                         [ngClass]="statusSecondMenu ? 'activeButton':'none'">
                         <p id="open-animal-right">Perros</p><mat-icon id="open-animal-right">chevron_right</mat-icon>
@@ -43,25 +43,25 @@
                     <button routerLink="pet-category/2" (mouseenter)="closeSecondMenu()">Aves</button>
                     <button routerLink="pet-category/3" (mouseenter)="closeSecondMenu()">Tortugas</button>
                     <button routerLink="pet-category/4" (mouseenter)="closeSecondMenu()">Conejos</button>
-                </ul>
-                <ul class="animal-menu__right" [ngClass]="statusSecondMenu ? 'active':'inactive'">
+                </div>
+                <div class="animal-menu__right" [ngClass]="statusSecondMenu ? 'active':'inactive'">
                     <button routerLink="pet-category/0" [queryParams]="{filter: 'all'}">Todos</button>
                     <button routerLink="pet-category/0" [queryParams]="{filter: 'big'}">Grandes</button>
                     <button routerLink="pet-category/0" [queryParams]="{filter: 'regular'}">Medianos</button>
                     <button routerLink="pet-category/0" [queryParams]="{filter: 'small'}">Pequeños</button>
-                </ul>
-            </ul>
-        </ul>
+                </div>
+            </div>
+        </div>
 
         <a routerLink="lost" class="header-menu__center">Extraviadas</a>
 
-        <!-- <ul class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()"> -->
-        <ul class="header-menu__right">
+        <!-- <div class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()"> -->
+        <div class="header-menu__right">
             <mat-icon id="open-menu-right"
                 style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black;margin-right: 3px; ">photo_camera</mat-icon>
             <a id="open-menu-right">Publicar Mascotas</a>
-            <ul class="animal-menu-right" (mouseleave)="closeRightMenu()">
-                <ul class="animal-menu-right-buttons" [ngClass]="statusRightMenu ? 'active':'inactive'">
+            <div class="animal-menu-right" (mouseleave)="closeRightMenu()">
+                <div class="animal-menu-right-buttons" [ngClass]="statusRightMenu ? 'active':'inactive'">
                     <button routerLink="give-adoption">
                         <mat-icon
                             style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
@@ -77,10 +77,10 @@
                             style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
                         Publicar mascota Callejera
                     </button>
-                </ul>
-            </ul>
-        </ul>
-    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 <header class="desktop">
     <div class="header-top">
@@ -129,13 +129,13 @@
 
     </div>
 
-    <ul class="header-menu">
-        <!-- <ul class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()"> -->
-        <ul class="header-menu__left">
+    <div class="header-menu">
+        <!-- <div class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()"> -->
+        <div class="header-menu__left">
             <a id="open-animal-left">Mascotas y Razas</a><mat-icon id="open-animal-left"
                 style="font-size: 20px;">expand_more</mat-icon>
-            <ul class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()">
-                <ul class="animal-menu__left" [ngClass]="statusFirstMenu ? 'active':'inactive'">
+            <div class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()">
+                <div class="animal-menu__left" [ngClass]="statusFirstMenu ? 'active':'inactive'">
                     <button id="open-animal-right" (click)="openSecondMenu()" (mouseenter)="openSecondMenu()"
                         [ngClass]="statusSecondMenu ? 'activeButton':'none'">
                         <p id="open-animal-right">Perros</p><mat-icon id="open-animal-right">chevron_right</mat-icon>
@@ -144,15 +144,15 @@
                     <button routerLink="pet-category/2" (mouseenter)="closeSecondMenu()">Aves</button>
                     <button routerLink="pet-category/3" (mouseenter)="closeSecondMenu()">Tortugas</button>
                     <button routerLink="pet-category/4" (mouseenter)="closeSecondMenu()">Conejos</button>
-                </ul>
-                <ul class="animal-menu__right" [ngClass]="statusSecondMenu ? 'active':'inactive'">
+                </div>
+                <div class="animal-menu__right" [ngClass]="statusSecondMenu ? 'active':'inactive'">
                     <button routerLink="pet-category/0" [queryParams]="{filter: 'all'}">Todos</button>
                     <button routerLink="pet-category/0" [queryParams]="{filter: 'big'}">Grandes</button>
                     <button routerLink="pet-category/0" [queryParams]="{filter: 'regular'}">Medianos</button>
                     <button routerLink="pet-category/0" [queryParams]="{filter: 'small'}">Pequeños</button>
-                </ul>
-            </ul>
-        </ul>
+                </div>
+            </div>
+        </div>
 
         <a routerLink="lost" class="header-menu__center">Mascotas Extraviadas</a>
         <a routerLink="rescue" class="header-menu__center">Rescatar Mascotas</a>
@@ -160,13 +160,13 @@
         <a routerLink="report" class="header-menu__center">Denunciar Maltrato</a>
         <a routerLink="location" class="header-menu__center">Ubicacion</a>
 
-        <!-- <ul class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()"> -->
-        <ul class="header-menu__right">
+        <!-- <div class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()"> -->
+        <div class="header-menu__right">
             <mat-icon id="open-menu-right"
                 style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black;margin-right: 3px; ">photo_camera</mat-icon>
             <a id="open-menu-right">Publicar Mascotas</a>
-            <ul class="animal-menu-right" (mouseleave)="closeRightMenu()">
-                <ul class="animal-menu-right-buttons" [ngClass]="statusRightMenu ? 'active':'inactive'">
+            <div class="animal-menu-right" (mouseleave)="closeRightMenu()">
+                <div class="animal-menu-right-buttons" [ngClass]="statusRightMenu ? 'active':'inactive'">
                     <button routerLink="give-adoption"><mat-icon
                             style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
                         Publicar mascota en Adopción</button>
@@ -178,8 +178,8 @@
                     <button routerLink="give-rescue"><mat-icon
                             style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>Publicar
                         mascota Callejera</button>
-                </ul>
-            </ul>
-        </ul>
-    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
