@@ -23,7 +23,7 @@
         <div class="header-top__search">
             <form class="header-top__form" (submit)="send($event)">
                 <input type="text" [formControl]="query" placeholder="Buscar">
-                <button type="submit"> <mat-icon style="font-size: 22px; color: black;">search</mat-icon></button>
+                <button type="submit" aria-label="search"> <mat-icon style="font-size: 22px; color: black;">search</mat-icon></button>
             </form>
         </div>
     </div>
@@ -107,7 +107,7 @@
             <div class="header-top__search">
                 <form class="header-top__form" (submit)="send($event)">
                     <input type="text" [formControl]="query" placeholder="Buscar">
-                    <button type="submit"> <mat-icon style="font-size: 22px; color: black;">search</mat-icon></button>
+                    <button type="submit" aria-label="search"> <mat-icon style="font-size: 22px; color: black;">search</mat-icon></button>
                 </form>
             </div>
             <p>ㅤㅤㅤㅤㅤㅤ</p>
