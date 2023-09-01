@@ -27,7 +27,7 @@ export class PetCategoryComponent {
   breed = ''
   location: string | null = ''
   size = ''
-
+  emptyMessage = false
 
   ngOnInit(): void {
 
@@ -39,6 +39,11 @@ export class PetCategoryComponent {
         if (this.categoryId) {
           this.pets = this.petService.getPetsByCategory(this.categoryId)
           this.categoryName = this.categoryService.getCategoryName(this.categoryId)
+          if(this.pets.length == 0){
+            this.emptyMessage = true
+          }else{
+            this.emptyMessage = false
+          }
           if (this.categoryName == undefined) {
             this.router.navigate(['/none'])
           }
@@ -51,6 +56,11 @@ export class PetCategoryComponent {
             this.location = location
             this.LocPets = this.petService.getPetsByCategory(this.categoryId)
             this.pets = this.LocPets
+            if(this.pets.length == 0){
+              this.emptyMessage = true
+            }else{
+              this.emptyMessage = false
+            }
           }
         }
 
@@ -62,6 +72,11 @@ export class PetCategoryComponent {
             } else { this.pets = this.LocPets }
           } else {
             this.pets = this.LocPets
+          }
+          if(this.pets.length == 0){
+            this.emptyMessage = true
+          }else{
+            this.emptyMessage = false
           }
         })
       })

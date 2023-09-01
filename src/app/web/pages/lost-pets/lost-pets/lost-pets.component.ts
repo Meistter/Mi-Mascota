@@ -13,12 +13,18 @@ export class LostPetsComponent implements OnInit{
   lostDetail = true
   pets : PetRescue[] = []
   petForFilter : PetRescue[] = []
+  emptyMessage = false
   ngOnInit(): void {
     setTimeout(() => {
       this.pets = this.petService.getLostPets()
       this.locationService.location$.subscribe(location => {
         if (location) {
           this.pets = this.petService.getLostPets()
+          if(this.pets.length == 0){
+            this.emptyMessage = true
+          }else{
+            this.emptyMessage = false
+          }
         }})
     }, 1000);
     

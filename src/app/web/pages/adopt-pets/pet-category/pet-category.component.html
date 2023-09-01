@@ -40,4 +40,11 @@
         </article>
     </div>
 </section>
-<app-cards [pets]="pets"></app-cards>
+<app-cards *ngIf="!this.emptyMessage" [pets]="pets"></app-cards>
+
+<div class="empty" *ngIf="this.emptyMessage">
+
+    <h1>No se encuentran registros para esta ubicación</h1>
+    <img src="https://i.postimg.cc/zDy85GQb/sad-pug-dog-kawaii-dog-breeds-illustration-vector.jpg" alt="">
+
+</div>

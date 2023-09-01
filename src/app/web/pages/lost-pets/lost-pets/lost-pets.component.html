@@ -1,5 +1,13 @@
-<section class="lost-pets-container">
+<section *ngIf="!this.emptyMessage" class="lost-pets-container">
     <h1>Mascotas Extraviadas</h1>
     <h2>Ayuda una mascota a volver a su hogar</h2>
-    <app-rescue-cards [lostDetail]="lostDetail" [pets]="pets"></app-rescue-cards>
+    <app-rescue-cards  [lostDetail]="lostDetail" [pets]="pets"></app-rescue-cards>
+
+   
 </section>
+<div class="empty" *ngIf="this.emptyMessage">
+
+    <h1>No se encuentran registros para esta ubicación</h1>
+    <img src="https://i.postimg.cc/zDy85GQb/sad-pug-dog-kawaii-dog-breeds-illustration-vector.jpg" alt="">
+
+</div>
