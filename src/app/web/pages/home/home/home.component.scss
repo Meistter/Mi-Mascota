@@ -4,3 +4,17 @@
 .inactive {
     display: none;
 }
+.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 160px;
+    text-align: center;
+
+    img {
+        width: 100%;
+        max-width: 380px;
+    }
+}

@@ -1,4 +1,18 @@
 <app-carousel></app-carousel>
 <app-switcher (switcherEvent)="switchComponents()"></app-switcher>
-<app-cards [ngClass]="switcher ? 'active' : 'inactive'" [pets]="pets"></app-cards>
-<app-rescue-cards [ngClass]="switcher ? 'inactive' : 'active'" [pets]="petsRescue"></app-rescue-cards>
+<app-cards *ngIf="!this.emptyAdoptMessage" [ngClass]="switcher ? 'active' : 'inactive'" [pets]="pets"></app-cards>
+<app-rescue-cards *ngIf="!this.emptyRescueMessage" [ngClass]="switcher ? 'inactive' : 'active'" [pets]="petsRescue"></app-rescue-cards>
+
+<div class="empty" *ngIf="this.emptyAdoptMessage && switcher">
+
+    <h1>No se encuentran registros para esta ubicación</h1>
+    <img src="https://i.postimg.cc/zDy85GQb/sad-pug-dog-kawaii-dog-breeds-illustration-vector.jpg" alt="">
+
+</div>
+
+<div class="empty" *ngIf="this.emptyRescueMessage && !switcher" >
+
+    <h1>No se encuentran registros para esta ubicación</h1>
+    <img src="https://i.postimg.cc/zDy85GQb/sad-pug-dog-kawaii-dog-breeds-illustration-vector.jpg" alt="">
+
+</div>

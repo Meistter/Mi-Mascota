@@ -13,14 +13,27 @@ export class HomeComponent implements OnInit {
   pets: Pet[] = []
   petsRescue: PetRescue[] = []
   switcher = true
-
+  emptyAdoptMessage = false
+  emptyRescueMessage = false
   ngOnInit(): void {
     setTimeout(() => {
       
-      this.petsRescue = this.petService.getRescuePets()
+      
       this.locationService.location$.subscribe(location => {
         if (location) {
           this.pets = this.petService.getAdoptionPets() 
+          this.petsRescue = this.petService.getRescuePets()
+          if(this.pets.length == 0 ){
+            this.emptyAdoptMessage = true
+          }else{
+            this.emptyAdoptMessage = false
+          }
+          if(this.petsRescue.length == 0 ){
+            this.emptyRescueMessage = true
+          }else{
+            this.emptyRescueMessage = false
+          }
+
         }
       })
     }, 700);
