@@ -31,7 +31,7 @@
     <div class="header-menu">
         <!-- <div class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()"> -->
         <div class="header-menu__left">
-            <a id="open-animal-left">Mascotas y Razas</a><mat-icon id="open-animal-left"
+            <a id="open-animal-left">Mascotas</a><mat-icon id="open-animal-left"
                 style="font-size: 20px;">expand_more</mat-icon>
             <div class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()">
                 <div class="animal-menu__left" [ngClass]="statusFirstMenu ? 'active':'inactive'">
@@ -53,29 +53,29 @@
             </div>
         </div>
 
-        <a routerLink="lost" class="header-menu__center">Extraviadas</a>
+        <a routerLink="lost" class="header-menu__center">Mascotas Perdidas</a>
 
         <!-- <div class="header-menu__right" (mouseenter)="openRightMenu()" (mouseleave)="closeRightMenu()"> -->
         <div class="header-menu__right">
             <mat-icon id="open-menu-right"
                 style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black;margin-right: 3px; ">photo_camera</mat-icon>
-            <a id="open-menu-right">Publicar Mascotas</a>
+            <a id="open-menu-right">Publicar</a>
             <div class="animal-menu-right" (mouseleave)="closeRightMenu()">
                 <div class="animal-menu-right-buttons" [ngClass]="statusRightMenu ? 'active':'inactive'">
                     <button routerLink="give-adoption">
                         <mat-icon
                             style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
-                        Publicar mascota en Adopción
+                        Mascota en Adopción
                     </button>
                     <button routerLink="give-lost">
                         <mat-icon
                             style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
-                        Publicar mascota Extraviada
+                        Mascota Perdida
                     </button>
                     <button routerLink="give-rescue">
                         <mat-icon
                             style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
-                        Publicar mascota Callejera
+                        Mascota Callejera
                     </button>
                 </div>
             </div>
@@ -132,7 +132,7 @@
     <div class="header-menu">
         <!-- <div class="header-menu__left" (mouseenter)="openFirstMenu()" (mouseleave)="closeFirstMenu()"> -->
         <div class="header-menu__left">
-            <a id="open-animal-left">Mascotas y Razas</a><mat-icon id="open-animal-left"
+            <a id="open-animal-left">Mascotas</a><mat-icon id="open-animal-left"
                 style="font-size: 20px;">expand_more</mat-icon>
             <div class="animal-menu" (mouseleave)="closeFirstMenu();closeSecondMenu()">
                 <div class="animal-menu__left" [ngClass]="statusFirstMenu ? 'active':'inactive'">
@@ -154,7 +154,7 @@
             </div>
         </div>
 
-        <a routerLink="lost" class="header-menu__center">Mascotas Extraviadas</a>
+        <a routerLink="lost" class="header-menu__center">Mascotas Perdidas</a>
         <a routerLink="rescue" class="header-menu__center">Rescatar Mascotas</a>
         <a routerLink="rescue-request" class="header-menu__center">Solicitar Un Rescate</a>
         <a routerLink="report" class="header-menu__center">Denunciar Maltrato</a>
@@ -164,20 +164,20 @@
         <div class="header-menu__right">
             <mat-icon id="open-menu-right"
                 style="font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black;margin-right: 3px; ">photo_camera</mat-icon>
-            <a id="open-menu-right">Publicar Mascotas</a>
+            <a id="open-menu-right">Publicar</a>
             <div class="animal-menu-right" (mouseleave)="closeRightMenu()">
                 <div class="animal-menu-right-buttons" [ngClass]="statusRightMenu ? 'active':'inactive'">
                     <button routerLink="give-adoption"><mat-icon
                             style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
-                        Publicar mascota en Adopción</button>
+                        Mascota en Adopción</button>
                     <button routerLink="give-lost">
                         <mat-icon
                             style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>
-                        Publicar mascota Extraviada
+                        Mascota Perdida
                     </button>
                     <button routerLink="give-rescue"><mat-icon
                             style="margin-left: 4px;margin-right:4px;font-size: 18px; color: white; text-shadow: 0px 0px 1.5px black; ">photo_camera</mat-icon>Publicar
-                        mascota Callejera</button>
+                        Mascota Callejera</button>
                 </div>
             </div>
         </div>
