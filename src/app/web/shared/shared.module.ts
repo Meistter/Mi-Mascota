@@ -10,6 +10,8 @@ import { CardsComponent } from './cards/cards.component';
 import { RescueCardsComponent } from './rescue-cards/rescue-cards.component';
 import { RescueCardComponent } from './rescue-card/rescue-card.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { LostCardComponent } from './lost-card/lost-card.component';
+import { LostCardsComponent } from './lost-cards/lost-cards.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     CardsComponent,
     RescueCardsComponent,
     RescueCardComponent,
+    LostCardComponent,
+    LostCardsComponent,
   ],
   imports: [
     CommonModule,
@@ -33,7 +37,9 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     CardComponent,
     CardsComponent,
     RescueCardsComponent,
-    RescueCardComponent
+    RescueCardComponent,
+    LostCardComponent,
+    LostCardsComponent
   ]
 })
 export class SharedModule { }
