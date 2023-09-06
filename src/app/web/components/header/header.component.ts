@@ -66,7 +66,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/home'])
   }
   setLocation(selected :string){
-    this.location.location$.next(selected)
+    this.location.setLocation(selected)
     this.selectedLocation = selected    
   }
   send(event: { preventDefault: () => void; }) {

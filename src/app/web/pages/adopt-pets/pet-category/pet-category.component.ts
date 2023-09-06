@@ -120,7 +120,7 @@ export class PetCategoryComponent {
     this.statusSizeMenu = !this.statusSizeMenu
   }
   updateLocation(location: string) {
-    this.locationService.location$.next(location)
+    this.locationService.setLocation(location)
     this.location = location
   }
   closeMenu() {
