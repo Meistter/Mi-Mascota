@@ -14,4 +14,17 @@ export class LocationService {
   getLocations(){
     return this.locations
   }
+
+  setLocation(location: string){
+    localStorage.setItem('mi-mascota-location',location)
+    this.location$.next(location)
+  }
+  getLocation(){
+    const location = localStorage.getItem('mi-mascota-location')
+    if(location){
+      return location
+    }else{
+      return this.location$.getValue()
+    }
+  }
 }

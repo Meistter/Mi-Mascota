@@ -11,8 +11,13 @@ export class SwitcherComponent implements OnInit {
 
   constructor(private locationService: LocationService) { }
   locations = []
+  location : string | null = ''
   ngOnInit(): void {
     this.locations = this.locationService.getLocations()
+    // this.location = this.locationService.getLocation()
+    // if(this.location){      
+    //   this.locationList.setValue(this.location)      
+    // }
     this.locationService.location$.subscribe(location=>{if(location){this.locationList.setValue(location)}else{this.locationList.setValue('Cualquiera')}})
     
   }
@@ -44,7 +49,8 @@ export class SwitcherComponent implements OnInit {
   }
   sendSwitchLocationMessage() {
     if (this.locationList.value)
-      this.locationService.location$.next(this.locationList.value)
+      // this.locationService.location$.next(this.locationList.value)
+      this.locationService.setLocation(this.locationList.value)
   }
 
 }
