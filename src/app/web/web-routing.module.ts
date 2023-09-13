@@ -46,7 +46,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/give-adoption/give-adoption.module').then((m) => m.GiveAdoptionModule),
       },
       {
-        path: 'give-rescue',
+        path: 'give-rescue',        
+        canActivate: [ UserLogedGuard ],
         loadChildren: () => import('./pages/give-rescue/give-rescue.module').then((m) => m.GiveRescueModule),
       },
       {
