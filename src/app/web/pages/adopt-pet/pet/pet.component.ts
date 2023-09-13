@@ -48,6 +48,7 @@ export class PetComponent implements OnInit{
           }   
           if(this.pet?.category){
             this.relatedPets = this.petService.getRelatedPets(this.pet.category)
+            this.relatedPets = this.relatedPets.filter(rsp => rsp.id !== this.pet?.id)
           }          
       })
     }, 700);      

@@ -46,6 +46,7 @@ export class PetRescueComponent {
           this.categoryName = this.categoryService.getCategoryName(this.pet?.category)         
         if(this.pet?.category){
           this.relatedPets = this.petService.getRelatedRescuePets(this.pet.category)
+          this.relatedPets = this.relatedPets.filter(rsp => rsp.id !== this.pet?.id)
         }
         } 
       })

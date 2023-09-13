@@ -42,6 +42,7 @@ export class LostPetComponent {
           if (this.pet?.category){
             this.categoryName = this.categoryService.getCategoryName(this.pet?.category)          
             this.relatedPets = this.petService.getRelatedLostPets(this.pet?.category)
+            this.relatedPets = this.relatedPets.filter(rsp => rsp.id !== this.pet?.id)
           }
         }
       })

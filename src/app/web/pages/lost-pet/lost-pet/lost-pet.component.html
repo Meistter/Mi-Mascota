@@ -65,7 +65,7 @@
     </div>
   </div>
 
-  <section>
+  <section *ngIf="this.relatedPets.length != 0">
     <app-related [urlRedirect]="urlRedirect" [related]="relatedPets"></app-related>
   </section>
 </div>
