@@ -1,5 +1,6 @@
 <div class="banner">
- <img [src]="slide" alt="">
+ <img class="banner-mobile" [src]="slide" alt="">
+ <img class="banner-desktop" [src]="slideDesktop" alt="">
 </div>
 <section class="give-adoption-container">
     <form class="give-adoption-form" [formGroup]="requestForm" (ngSubmit)="send($event)">

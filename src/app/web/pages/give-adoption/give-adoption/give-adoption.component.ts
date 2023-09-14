@@ -12,8 +12,8 @@ import Swiper, { SwiperOptions } from 'swiper';
 export class GiveAdoptionComponent {
   constructor(private router: Router) { }
 
-  slide = 'https://i.postimg.cc/8PBp4sCQ/B2.jpg'
-
+  slide = 'https://i.postimg.cc/s2ZR99sr/celular.jpg'
+  slideDesktop = 'https://i.postimg.cc/9FNS8RxF/Escritorio.jpg'
   requestForm = new FormGroup({
     breed: new FormControl('', [Validators.required]),
     size: new FormControl('', [Validators.required]),

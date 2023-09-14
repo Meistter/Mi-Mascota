@@ -3,7 +3,7 @@
     justify-content: center;
     width: 100%;
     min-height: 600px;
-    padding: 28px 46px 46px 46px;
+    padding: 28px 36px 46px 36px;
 
     .give-adoption-form {
         display: flex;
@@ -67,11 +67,22 @@
         object-fit: cover;
     }
 }
+.banner-desktop {
+    display: none;
+}
 
 @media (width >= 1024px) {
     .banner { 
         img {
             height: 340px !important;        
         }                     
+    }
+}
+@media (width >= 500px) {
+    .banner-mobile { 
+        display: none;                    
+    }
+    .banner-desktop { 
+        display: block;                    
     }
 }
