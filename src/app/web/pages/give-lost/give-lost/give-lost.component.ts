@@ -11,6 +11,9 @@ export class GiveLostComponent {
 
   constructor(private router: Router) { }
 
+  slide = 'https://i.postimg.cc/RhxRd87k/EXTRAVIADAS-CELULAR.jpg'
+  slideDesktop = 'https://i.postimg.cc/VNSW81Dy/EXTRAVIADAS-ESCRITORIO.jpg'
+  
   requestForm = new FormGroup({
     breed: new FormControl('', [Validators.required]),
     size: new FormControl('', [Validators.required]),

@@ -1,4 +1,8 @@
-<section class="give-lost-container">
+<div class="banner">
+  <img class="banner-mobile" [src]="slide" alt="">
+  <img class="banner-desktop" [src]="slideDesktop" alt="">
+ </div>
+ <section class="give-lost-container">
   <form class="give-lost-form" [formGroup]="requestForm" (ngSubmit)="send($event)">
     <h1>Publicar Mascota Perdida</h1>
     <div class="give-lost-form__content">
