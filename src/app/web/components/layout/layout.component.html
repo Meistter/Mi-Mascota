@@ -24,17 +24,20 @@
       <div class="menu__element" routerLink="rescue" (click)="drawer.toggle()"> <a>Mascotas Para Rescatar</a></div>
       <div class="menu__element" routerLink="give-adoption" (click)="drawer.toggle()"> <a>Publicar Mascota en
           Adopción</a></div>
-      <div class="menu__element" routerLink="give-rescue" (click)="drawer.toggle()"> <a>Publicar Mascota Perdida</a></div>
-      <div class="menu__element" routerLink="give-lost" (click)="drawer.toggle()"> <a>Publicar Mascota Callejera</a></div>          
+      <div class="menu__element" routerLink="give-lost" (click)="drawer.toggle()"> <a>Publicar Mascota Perdida</a></div>
+      <div class="menu__element" routerLink="give-rescue" (click)="drawer.toggle()"> <a>Publicar Mascota Callejera</a>
+      </div>
       <div class="menu__element" routerLink="rescue-request" (click)="drawer.toggle()"> <a>Solicitar Rescate</a></div>
       <div class="menu__element" routerLink="report" (click)="drawer.toggle()"> <a>Denunciar Maltrato</a></div>
       <div class="menu__element" routerLink="location" (click)="drawer.toggle()"> <a>Ubicación</a></div>
       <div class="menu__element" routerLink="terms" (click)="drawer.toggle()"> <a>Términos y condiciones</a></div>
       <div class="menu__element" routerLink="contact" (click)="drawer.toggle()"> <a>Contacto</a></div>
-      <div class="menu__element" routerLink="/auth/login" *ngIf="!userLogued" (click)="drawer.toggle()"> <a>Iniciar Sesión</a></div>      
-      <div class="menu__element" routerLink="home" *ngIf="userLogued" (click)="drawer.toggle(); logout()"> <a>Cerrar Sesión</a></div>
+      <div class="menu__element" routerLink="/auth/login" *ngIf="!userLogued" (click)="drawer.toggle()"> <a>Iniciar
+          Sesión</a></div>
+      <div class="menu__element" routerLink="home" *ngIf="userLogued" (click)="drawer.toggle(); logout()"> <a>Cerrar
+          Sesión</a></div>
 
-      
+
     </mat-accordion>
 
   </mat-drawer>
